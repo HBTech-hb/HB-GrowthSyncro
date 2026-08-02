@@ -6,12 +6,11 @@ import {
   FiArrowRight,
   FiMessageSquare,
   FiZap,
-  FiHelpCircle,
 } from "react-icons/fi";
 
 const Pricing = () => {
-  // Toggle for billing frequency perspective (optional UI accent for agency positioning)
-  const [isAnnual, setIsAnnual] = useState(true);
+  // WhatsApp Contact Number
+  const whatsappNumber = "918080224138";
 
   // Core Pricing Plans Data
   const plans = [
@@ -25,28 +24,30 @@ const Pricing = () => {
         "Ideal for startups and local businesses looking to establish a high-trust digital foundation.",
       featured: false,
       ctaText: "Book Consultation",
-      whatsappMsg: "Hi HB GrowthSyncro, I want to discuss the Business Launch plan (₹14,999).",
+      whatsappMsg:
+        "Hi HB GrowthSyncro, I want to discuss the Business Launch plan (₹14,999).",
       features: [
-        "Business Website (React Built)",
+        "High-Performance React Website",
         "Fully Mobile Responsive UI",
         "Direct WhatsApp Booking Integration",
         "Google Business Profile Setup",
         "Basic On-Page Technical SEO",
         "SSL Security & Fast Hosting Setup",
-        "7 Days Post-Launch Support",
+        "14 Days Post-Launch Support",
       ],
     },
     {
       id: "growth",
       name: "Business Growth",
       badge: "Most Popular",
-      price: "Custom Quote",
+      price: "Starting ₹29,999",
       priceSub: "Tailored to scale",
       description:
         "For growing brands needing high local Google search visibility and consistent customer acquisition.",
       featured: true,
       ctaText: "Request Proposal",
-      whatsappMsg: "Hi HB GrowthSyncro, I want to request a proposal for the Business Growth plan.",
+      whatsappMsg:
+        "Hi HB GrowthSyncro, I want to request a proposal for the Business Growth plan.",
       features: [
         "Everything in Business Launch",
         "Advanced Local SEO Strategy",
@@ -67,7 +68,8 @@ const Pricing = () => {
         "A full-service digital partnership for businesses ready to dominate their local market.",
       featured: false,
       ctaText: "Become a Growth Partner",
-      whatsappMsg: "Hi HB GrowthSyncro, I want to explore becoming a Growth Partner.",
+      whatsappMsg:
+        "Hi HB GrowthSyncro, I want to explore becoming a Growth Partner.",
       features: [
         "Everything in Business Growth",
         "Smart AI Business Automation",
@@ -185,7 +187,7 @@ const Pricing = () => {
                 <div className="mb-8 pb-6 border-b border-slate-100/20">
                   <div className="flex items-baseline gap-2">
                     <span
-                      className={`text-4xl sm:text-5xl font-extrabold tracking-tight ${
+                      className={`text-3xl sm:text-4xl font-extrabold tracking-tight ${
                         plan.featured ? "text-white" : "text-slate-900"
                       }`}
                     >
@@ -236,7 +238,7 @@ const Pricing = () => {
               {/* Action Trigger Button */}
               <div>
                 <a
-                  href={`https://wa.me/918080224138?text=${encodeURIComponent(plan.whatsappMsg)}`}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(plan.whatsappMsg)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-sm font-semibold transition-all duration-200 shadow-md group ${
@@ -360,7 +362,7 @@ const Pricing = () => {
 
           <div className="relative z-10 shrink-0 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <a
-              href="https://wa.me/918080224138?text=Hi%20HB%20Digital,%20I'd%20like%20to%20discuss%20a%20custom%20digital%20solution"
+              href={`https://wa.me/${whatsappNumber}?text=Hi%20HB%20GrowthSyncro,%20I'd%20like%20to%20discuss%20a%20custom%20digital%20solution`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base transition-colors shadow-lg shadow-blue-600/25 group"
@@ -370,7 +372,7 @@ const Pricing = () => {
             </a>
 
             <a
-              href="https://wa.me/918080224138?text=Hi%20HB%20Digital,%20I'd%20like%20to%20chat%20about%20my%20business%20website"
+              href={`https://wa.me/${whatsappNumber}?text=Hi%20HB%20GrowthSyncro,%20I'd%20like%20to%20chat%20about%20my%20business%20website`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white font-semibold text-base transition-colors shadow-lg shadow-green-600/20"

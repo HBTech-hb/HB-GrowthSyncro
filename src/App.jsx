@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 // import ThemeToggle from "./components/ThemeToggle";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import ExitIntentModal from "./components/ExitIntentModal";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";

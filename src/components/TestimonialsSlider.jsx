@@ -168,7 +168,7 @@ const TestimonialSection = () => {
                 Google Verified Business Partner
               </h3>
               <p className="text-slate-400 text-sm mt-1">
-                Based on 25+ verified five-star client reviews across local business domains.
+                Based on 20+ verified five-star client reviews across local business domains.
               </p>
             </div>
           </div>

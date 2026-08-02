@@ -12,28 +12,10 @@ import {
 
 const services = [
   {
-    title: "Social Media Management",
+    title: "Website Development",
     description:
-      "Content planning, scheduling, audience engagement, and account growth strategies designed to build brand authority.",
-    icon: FiShare2,
-  },
-  {
-    title: "Reel Editing",
-    description:
-      "Professional short-form videos with captions, dynamic transitions, and engaging edits built for high audience retention.",
-    icon: FiVideo,
-  },
-  {
-    title: "Canva Design",
-    description:
-      "Eye-catching social media posts, banners, stories, and promotional creatives that build immediate consumer trust.",
-    icon: FiLayout,
-  },
-  {
-    title: "Content Strategy",
-    description:
-      "Data-driven content planning and marketing strategies that turn casual viewers into active business inquiries.",
-    icon: FiTrendingUp,
+      "Modern, lightning-fast, and responsive web platforms built to capture leads and establish online credibility.",
+    icon: FiGlobe,
   },
   {
     title: "AI Growth Systems",
@@ -42,10 +24,28 @@ const services = [
     icon: FiCpu,
   },
   {
-    title: "Website Development",
+    title: "Content Strategy",
     description:
-      "Modern, lightning-fast, and responsive web platforms built to capture leads and establish online credibility.",
-    icon: FiGlobe,
+      "Data-driven content planning and marketing strategies that turn casual viewers into active business inquiries.",
+    icon: FiTrendingUp,
+  },
+  {
+    title: "Graphic Design",
+    description:
+      "Eye-catching social media posts, banners, stories, and promotional creatives that build immediate consumer trust.",
+    icon: FiLayout,
+  },
+  {
+    title: "Reel Editing",
+    description:
+      "Professional short-form videos with captions, dynamic transitions, and engaging edits built for high audience retention.",
+    icon: FiVideo,
+  },
+  {
+    title: "Social Media Management",
+    description:
+      "Content planning, scheduling, audience engagement, and account growth strategies designed to build brand authority.",
+    icon: FiShare2,
   },
 ];
 

@@ -46,7 +46,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-blue-600 font-semibold hover:underline"
                 >
-                  www.hbdigital.in
+                  www.hb-growth-syncro.vercel.app
                 </a>
               </p>
               <p className="text-slate-600">
