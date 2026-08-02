@@ -50,8 +50,8 @@ const Footer = () => {
                 </a>
               </p>
               <p className="text-slate-600">
-                <a href="mailto:bansodeharshad098@gmail.com" className="hover:text-blue-600 transition">
-                  bansodeharshad098@gmail.com
+                <a href="mailto:hbgrowthsyncro@gmail.com" className="hover:text-blue-600 transition">
+                  hbgrowthsyncro@gmail.com
                 </a>
               </p>
             </div>

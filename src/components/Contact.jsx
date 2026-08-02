@@ -36,7 +36,7 @@ ${formData.message}
 Sent via website contact form (HB GrowthSyncro Growth Partner)
 `;
 
-      window.location.href = `mailto:bansodeharshad098@gmail.com?subject=${encodeURIComponent(
+      window.location.href = `mailto:hbgrowthsyncro@gmail.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
@@ -71,13 +71,13 @@ Sent via website contact form (HB GrowthSyncro Growth Partner)
         {/* Contact Links */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
           <a
-            href="mailto:bansodeharshad098@gmail.com"
+            href="mailto:hbgrowthsyncro@gmail.com"
             className="p-4 bg-white border border-slate-200 rounded-2xl flex items-center gap-3 shadow-sm hover:border-blue-600 transition"
           >
             <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center font-bold">@</div>
             <div>
               <p className="text-xs text-slate-500 font-semibold uppercase">Email Us</p>
-              <p className="text-sm font-bold text-slate-800">bansodeharshad098@gmail.com</p>
+              <p className="text-sm font-bold text-slate-800">hbgrowthsyncro@gmail.com</p>
             </div>
           </a>
 
