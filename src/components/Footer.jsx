@@ -41,7 +41,7 @@ const Footer = () => {
               </p>
               <p>
                 <a
-                  href="https://hbdigital.in"
+                  href="https://hb-growth-syncro.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 font-semibold hover:underline"
