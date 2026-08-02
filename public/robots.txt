@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hb-growth-syncro.vercel.app/sitemap.xml
