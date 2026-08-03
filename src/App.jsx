@@ -1,82 +1,98 @@
-import { useState, useEffect } from "react";
-// import ThemeToggle from "./components/ThemeToggle";
-import FloatingWhatsApp from "./components/FloatingWhatsApp";
-import ExitIntentModal from "./components/ExitIntentModal";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 
+// Floating Action Component
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
+
+// Layout & Page Components
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Services";
-
-// Path matches your components/Portfolio/portfolio.jsx file
 import Portfolio from "./components/Portfolio/portfolio";
-
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
+import Blog from "./components/Blog";
+import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import TestimonialsSlider from "./components/TestimonialsSlider";
 
-function App() {
-  const [activeSection, setActiveSection] = useState("home");
+// Automatically scrolls to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "home",
-        "about",
-        "services",
-        "portfolio",
-        "pricing",
-        "contact",
-      ];
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
+  return null;
+};
 
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          const scrollPosition = window.scrollY + 150;
-
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+const MainContent = () => {
+  const location = useLocation();
+  // Extracts current route name for Navbar active highlight
+  const currentPath = location.pathname.replace("/", "") || "home";
 
   return (
-    <div className="font-poppins">
-      <Navbar activeSection={activeSection} />
-      {/* <ThemeToggle /> */}
-      
-      <Home />
-      <About />
-      <Services />
-      
-      {/* Renders your portfolio component */}
-      <Portfolio />
-      
-      <Pricing />
-      <TestimonialsSlider />
-      <Contact />
+    <div className="font-poppins flex flex-col min-h-screen">
+      {/* Scroll to top when changing pages */}
+      <ScrollToTop />
+
+      {/* Header Navigation */}
+      <Navbar activeSection={currentPath} />
+
+      {/* Main Routes */}
+      <main className="flex-grow">
+        <Routes>
+          {/* Main Landing Route */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Home />
+                <About />
+                <Services />
+                <Portfolio />
+                <Pricing />
+                <TestimonialsSlider />
+                <Contact />
+              </>
+            }
+          />
+
+          {/* Sub-Pages */}
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* Fallback Catch-all Route */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+
       <Footer />
-      
-      {/* FLOATING BUTTON (GLOBAL) */}
+
+      {/* Floating Action Button */}
       <FloatingWhatsApp />
     </div>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <MainContent />
+    </Router>
   );
 }
 

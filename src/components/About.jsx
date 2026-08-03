@@ -11,10 +11,10 @@ import clientSupport from "../assets/services/client-support.webp";
 const About = () => {
   return (
     <section id="about" className="py-20 lg:py-28 px-6 sm:px-10 bg-white text-slate-900">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto space-y-20">
 
-        {/* SECTION 1: HERO */}
-        <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-20">
+        {/* SECTION 1: HERO & HEADING */}
+        <div className="text-center max-w-4xl mx-auto">
           <span className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-4 border border-blue-100">
             Digital Growth Partner
           </span>
@@ -28,30 +28,94 @@ const About = () => {
           </p>
         </div>
 
-        {/* SECTION 2: WHAT WE DO */}
-        <div className="bg-slate-900 text-white p-8 md:p-12 rounded-[24px] shadow-2xl mb-16 border border-slate-800 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-          
-          <div className="relative z-10 max-w-3xl mx-auto text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-400 block mb-2">
-              Our Core Mission
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
-              What HB GrowthSyncro Does For Your Business
-            </h2>
+        {/* SECTION 2: MISSION & VISION */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Mission Card */}
+          <div className="p-8 sm:p-10 rounded-[24px] bg-slate-900 text-white shadow-xl border border-slate-800 relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-400 block mb-2">
+                Our Purpose
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">Our Mission</h2>
+              <p className="text-slate-300 text-base leading-relaxed">
+                To empower local business owners with practical, affordable, and high-converting digital tools. We bridge the gap between technical web development and real-world sales by creating systems that drive measurable growth.
+              </p>
+            </div>
+          </div>
 
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              We help local businesses grow by improving their online presence in a simple, practical way. This includes conversion-focused websites, social content, and digital systems that bring real customer enquiries.
-            </p>
-
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed mt-4">
-              Our focus is never on complicated marketing jargon — we focus on what actually drives revenue: getting real clients through your door.
-            </p>
+          {/* Vision Card */}
+          <div className="p-8 sm:p-10 rounded-[24px] bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">
+                The Future
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-slate-900">Our Vision</h2>
+              <p className="text-slate-600 text-base leading-relaxed">
+                To become the premier growth partner for local businesses across India — trusted for delivering clean digital products, transparent communication, and genuine business revenue instead of empty vanity metrics.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* SECTION 3: STATISTICS */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        {/* SECTION 3: WHAT WE DO */}
+        <div className="bg-slate-50 p-8 md:p-12 rounded-[24px] border border-slate-200">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">What We Do</span>
+            <h2 className="text-3xl font-bold text-slate-900">
+              Complete Digital Solutions Built for Growth
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base mt-2">
+              We manage your entire digital presence so you can focus on running your operations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <ServiceCard img={socialMedia} title="Social Media" desc="Build local authority and engage your audience." />
+            <ServiceCard img={reelEditing} title="Reels Editing" desc="Engaging short video content that drives attention." />
+            <ServiceCard img={canvaDesign} title="Design Work" desc="High-quality, conversion-focused visual creatives." />
+            <ServiceCard img={contentStrategy} title="Strategy & Funnels" desc="Tailored marketing funnels that convert visitors to leads." />
+          </div>
+        </div>
+
+        {/* SECTION 4: WHAT MAKES US BETTER (OUR ADVANTAGE) */}
+        <div>
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">Our Advantage</span>
+            <h2 className="text-3xl font-bold text-slate-900">
+              What Makes Us Different From Agencies?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 rounded-[20px] bg-white border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold mb-4">1</div>
+              <h3 className="font-bold text-lg text-slate-900 mb-2">Leads Over Likes</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Agencies focus on viral views. We focus on getting actual customers to call your business or send a WhatsApp enquiry.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-[20px] bg-white border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold mb-4">2</div>
+              <h3 className="font-bold text-lg text-slate-900 mb-2">No Complex Jargon</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                We speak plain language. You always know what is being built, how it works, and what results to expect.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-[20px] bg-white border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold mb-4">3</div>
+              <h3 className="font-bold text-lg text-slate-900 mb-2">Speed & Reliability</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Most agencies take months. We deliver high-quality, fully functioning web systems and designs in just 5 to 7 days.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* SECTION 5: STATISTICS */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="p-6 sm:p-8 rounded-[24px] bg-slate-50 border border-slate-100 text-center">
             <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">50+</span>
             <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mt-2">Projects Delivered</p>
@@ -70,25 +134,8 @@ const About = () => {
           </div>
         </div>
 
-        {/* SECTION 4: SERVICES */}
-        <div className="mb-16">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">Capabilities</span>
-            <h2 className="text-3xl font-bold text-slate-900">
-              Services That Help You Get Customers
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ServiceCard img={socialMedia} title="Social Media" desc="Build strong presence & local authority." />
-            <ServiceCard img={reelEditing} title="Reels Editing" desc="Engaging short video content that gets noticed." />
-            <ServiceCard img={canvaDesign} title="Design Work" desc="High-quality, professional marketing creatives." />
-            <ServiceCard img={contentStrategy} title="Strategy" desc="Custom customer growth plans tailored to you." />
-          </div>
-        </div>
-
-        {/* SECTION 5: WHY TRUST */}
-        <div className="bg-slate-50 p-8 sm:p-12 rounded-[24px] border border-slate-100 mb-16">
+        {/* SECTION 6: WHY CHOOSE US */}
+        <div className="bg-slate-50 p-8 sm:p-12 rounded-[24px] border border-slate-100">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">Why Us</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
@@ -104,12 +151,12 @@ const About = () => {
           </div>
         </div>
 
-        {/* SECTION 6: FINAL CTA */}
+        {/* SECTION 7: FINAL CTA */}
         <div className="bg-slate-900 text-white rounded-[24px] p-8 sm:p-12 text-center border border-slate-800 shadow-xl relative overflow-hidden">
           <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-blue-600/20 rounded-full blur-2xl pointer-events-none" />
 
           <h2 className="text-3xl font-bold mb-3 text-white">
-            Want More Customers for Your Business?
+            Ready to Sync Your Business Growth?
           </h2>
 
           <p className="text-slate-400 mb-8 max-w-xl mx-auto text-sm sm:text-base">
@@ -131,7 +178,7 @@ const About = () => {
   );
 };
 
-/* COMPONENTS */
+/* REUSABLE COMPONENTS */
 const ServiceCard = ({ img, title, desc }) => (
   <div className="bg-white p-6 rounded-[20px] border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-slate-300 hover:-translate-y-1 transition-all duration-300 text-center">
     <img src={img} alt={title} className="w-16 h-16 mx-auto mb-4 object-contain" />

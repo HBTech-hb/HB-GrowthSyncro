@@ -6,11 +6,19 @@ import {
   FiArrowRight,
   FiMessageSquare,
   FiZap,
+  FiChevronDown,
 } from "react-icons/fi";
 
 const Pricing = () => {
   // WhatsApp Contact Number
   const whatsappNumber = "918080224138";
+
+  // FAQ Accordion State
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
 
   // Core Pricing Plans Data
   const plans = [
@@ -72,7 +80,7 @@ const Pricing = () => {
         "Hi HB GrowthSyncro, I want to explore becoming a Growth Partner.",
       features: [
         "Everything in Business Growth",
-        "Smart AI Business Automation",
+        "Automated Customer Chat Workflows",
         "Omnichannel Digital Marketing",
         "Continuous Technical Maintenance",
         "Monthly Strategic Advisory Calls",
@@ -90,7 +98,7 @@ const Pricing = () => {
         { name: "Responsive Business Website", launch: true, growth: true, partner: true },
         { name: "WhatsApp Direct Lead Funnel", launch: true, growth: true, partner: true },
         { name: "Conversion Landing Pages", launch: false, growth: true, partner: true },
-        { name: "AI Automated Customer Chat", launch: false, growth: false, partner: true },
+        { name: "Automated Customer Chatbot", launch: false, growth: false, partner: true },
       ],
     },
     {
@@ -110,6 +118,30 @@ const Pricing = () => {
         { name: "Monthly Strategy Calls", launch: false, growth: false, partner: true },
         { name: "Priority Support Window", launch: "Standard", growth: "Fast", partner: "24/7 Priority" },
       ],
+    },
+  ];
+
+  // Frequently Asked Questions
+  const faqs = [
+    {
+      question: "How long does it take to deliver the website?",
+      answer:
+        "Our standard delivery time is 5 to 7 days for the Business Launch plan once content and requirements are finalized.",
+    },
+    {
+      question: "Do I need to pay for domain and hosting separately?",
+      answer:
+        "Hosting setup and SSL integration are included. We can assist you in acquiring your custom domain name directly.",
+    },
+    {
+      question: "Will my website work well on mobile phones?",
+      answer:
+        "Yes, every website we engineer is 100% mobile-responsive, lightning-fast, and tested across all smartphone sizes.",
+    },
+    {
+      question: "Can I upgrade my growth plan later?",
+      answer:
+        "Absolutely. You can start with the Business Launch plan and upgrade to Business Growth or Growth Partner anytime as your revenue expands.",
     },
   ];
 
@@ -341,6 +373,44 @@ const Pricing = () => {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+
+        {/* FREQUENTLY ASKED QUESTIONS SECTION */}
+        <div className="mb-24 max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">
+              Got Questions?
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+              Frequently Asked Questions
+            </h3>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all duration-200"
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full p-6 text-left flex items-center justify-between font-bold text-slate-900 hover:text-blue-600 transition-colors"
+                >
+                  <span>{faq.question}</span>
+                  <FiChevronDown
+                    className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${
+                      openFaq === index ? "rotate-180 text-blue-600" : ""
+                    }`}
+                  />
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60 pt-4">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
 

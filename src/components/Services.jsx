@@ -7,45 +7,59 @@ import {
   FiCpu, 
   FiGlobe, 
   FiArrowRight, 
-  FiMessageSquare 
+  FiMessageSquare,
+  FiSearch
 } from "react-icons/fi";
 
 const services = [
   {
     title: "Website Development",
     description:
-      "Modern, lightning-fast, and responsive web platforms built to capture leads and establish online credibility.",
+      "Modern, lightning-fast, and responsive web platforms built with React to capture leads and establish online credibility.",
     icon: FiGlobe,
+    whatsappMsg: "Hi! I am interested in Website Development for my business."
   },
   {
-    title: "AI Growth Systems",
+    title: "SEO & Google Ranking",
     description:
-      "Using cutting-edge AI tools to optimize content creation, automate response workflows, and enhance customer engagement.",
+      "Optimize your search visibility to rank in Google Maps Top 3 and dominate local search queries for high-intent buyers.",
+    icon: FiSearch,
+    whatsappMsg: "Hi! I want to improve my SEO and rank on Google Maps."
+  },
+  {
+    title: "AI ML & AI Growth Systems",
+    description:
+      "Leverage cutting-edge AI tools and AIME automation to optimize content creation, response workflows, and customer engagement.",
     icon: FiCpu,
+    whatsappMsg: "Hi! Tell me more about AI Growth Systems and automation."
   },
   {
-    title: "Content Strategy",
+    title: "Content Strategy & Funnels",
     description:
-      "Data-driven content planning and marketing strategies that turn casual viewers into active business inquiries.",
+      "Data-driven content planning and lead funnels that turn casual social media viewers into active business inquiries.",
     icon: FiTrendingUp,
+    whatsappMsg: "Hi! I need help with Content Strategy and lead funnels."
   },
   {
-    title: "Graphic Design",
+    title: "Graphic Design & Branding",
     description:
-      "Eye-catching social media posts, banners, stories, and promotional creatives that build immediate consumer trust.",
+      "Eye-catching social media posts, banners, and promotional creatives engineered to build immediate consumer trust.",
     icon: FiLayout,
+    whatsappMsg: "Hi! I need professional Graphic Design and branding work."
   },
   {
-    title: "Reel Editing",
+    title: "Reel Editing & Video",
     description:
-      "Professional short-form videos with captions, dynamic transitions, and engaging edits built for high audience retention.",
+      "Professional short-form videos with dynamic transitions, captions, and edits built for high audience retention.",
     icon: FiVideo,
+    whatsappMsg: "Hi! I am looking for Reel Editing and video creation."
   },
   {
     title: "Social Media Management",
     description:
-      "Content planning, scheduling, audience engagement, and account growth strategies designed to build brand authority.",
+      "Content scheduling, audience engagement, and channel growth strategies designed to establish market authority.",
     icon: FiShare2,
+    whatsappMsg: "Hi! I want end-to-end Social Media Management."
   },
 ];
 
@@ -76,6 +90,8 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
+            const waUrl = `https://wa.me/918080224138?text=${encodeURIComponent(service.whatsappMsg)}`;
+
             return (
               <div
                 key={index}
@@ -98,11 +114,16 @@ const Services = () => {
                   </p>
                 </div>
 
-                {/* ACTION FOOTER */}
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors">
-                  <span>Explore Capabilities</span>
+                {/* ACTION FOOTER LINK */}
+                <a
+                  href={waUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors cursor-pointer"
+                >
+                  <span>Enquire on WhatsApp</span>
                   <FiArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-200" />
-                </div>
+                </a>
               </div>
             );
           })}
