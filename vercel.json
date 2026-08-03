@@ -2,6 +2,14 @@
   "headers": [
     {
       "source": "/(.*)\\.(jpg|jpeg|png|webp|svg|css|js)",
+
+      "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+
       "headers": [
         {
           "key": "Cache-Control",

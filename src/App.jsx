@@ -23,7 +23,7 @@ import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import TestimonialsSlider from "./components/TestimonialsSlider";
 
-// Automatically scrolls to top on route change
+// Resets scroll position to the top when navigating between pages
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -36,12 +36,10 @@ const ScrollToTop = () => {
 
 const MainContent = () => {
   const location = useLocation();
-  // Extracts current route name for Navbar active highlight
   const currentPath = location.pathname.replace("/", "") || "home";
 
   return (
     <div className="font-poppins flex flex-col min-h-screen">
-      {/* Scroll to top when changing pages */}
       <ScrollToTop />
 
       {/* Header Navigation */}
@@ -66,7 +64,7 @@ const MainContent = () => {
             }
           />
 
-          {/* Sub-Pages */}
+          {/* Individual Pages */}
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
@@ -75,7 +73,7 @@ const MainContent = () => {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* Fallback Catch-all Route */}
+          {/* Catch-all Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

@@ -1,169 +1,133 @@
 import React from "react";
-import logo from "../assets/logo/WEBSITE-LOGO.png"; // 👈 Your original logo path
+import { Link } from "react-router-dom"; // <--- Added missing Link import
+import logo from "../assets/logo/WEBSITE-LOGO.png";
 import {
-  FaFacebookF,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaGlobe,
   FaInstagram,
-  FaXTwitter,
-  FaYoutube,
   FaLinkedinIn,
-} from "react-icons/fa6";
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    /* Added pb-28 for mobile screens so the floating navbar doesn't cover the copyright text */
-    <footer className="bg-slate-50 text-slate-700 font-poppins border-t border-slate-200 pb-28 md:pb-0">
-      
-      {/* MAIN FOOTER CONTENT */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center lg:text-left">
-          
-          {/* COLUMN 1: LOGO & ABOUT */}
-          <div className="flex flex-col items-center lg:items-start space-y-3">
-            {/* Brand Logo */}
-            <div className="flex items-center gap-2 mb-2">
-              <img
-                src={logo}
-                alt="HB GrowthSyncro"
-                className="h-10 w-auto object-contain"
-              />
-            </div>
-
-            <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
-              HB GrowthSyncro is the best Digital Growth Partner in Maharashtra, India. We offer complete IT & Marketing solutions under one floor!
-            </p>
-
-            {/* Contact Details */}
-            <div className="pt-2 space-y-1 text-sm font-medium">
-              <p className="text-slate-800 font-bold">
-                <a href="tel:+918080224138" className="hover:text-blue-600 transition">
-                  +91 8080224138
-                </a>
-              </p>
-              <p>
-                <a
-                  href="https://hb-growth-syncro.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 font-semibold hover:underline"
-                >
-                  www.hb-growth-syncro.vercel.app
-                </a>
-              </p>
-              <p className="text-slate-600">
-                <a href="mailto:hbgrowthsyncro@gmail.com" className="hover:text-blue-600 transition">
-                  hbgrowthsyncro@gmail.com
-                </a>
-              </p>
-            </div>
-          </div>
-
-          {/* COLUMN 2: QUICK LINKS */}
-          <div className="flex flex-col items-center lg:items-start">
-            <h3 className="text-lg font-bold text-blue-900 mb-6">Quick Links</h3>
-            <ul className="space-y-2.5 text-sm font-medium text-slate-600">
-              <li>
-                <a href="#home" className="hover:text-blue-600 transition">Home</a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-blue-600 transition">About</a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-blue-600 transition">Development</a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-blue-600 transition">E-Commerce</a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-blue-600 transition">Marketing</a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-blue-600 transition">Contact</a>
-              </li>
-              <li>
-                <a href="#portfolio" className="hover:text-blue-600 transition">Our Work</a>
-              </li>
-            </ul>
-          </div>
-
-          {/* COLUMN 3: WORKING HOURS */}
-          <div className="flex flex-col items-center lg:items-start">
-            <h3 className="text-lg font-bold text-blue-900 mb-6">Working Hours</h3>
-            <ul className="space-y-2 text-sm font-medium text-slate-600 list-disc list-inside text-left">
-              <li>Mon : 10:00 am - 7.00 pm</li>
-              <li>Tues : 10:00 am - 7.00 pm</li>
-              <li>Wed : 10:00 am - 7.00 pm</li>
-              <li>Thur : 10:00 am - 7.00 pm</li>
-              <li>Fri : 10:00 am - 7.00 pm</li>
-              <li>Sat : 10:00 am - 7.00 pm</li>
-              <li>Sunday : Closed</li>
-            </ul>
-          </div>
-
-          {/* COLUMN 4: SOCIAL MEDIA */}
-          <div className="flex flex-col items-center lg:items-start">
-            <h3 className="text-lg font-bold text-blue-900 mb-6">Social Media</h3>
-            <div className="flex items-center gap-4 text-xl text-slate-800">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-600 transition transform hover:scale-110"
-                aria-label="Facebook"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-600 transition transform hover:scale-110"
-                aria-label="Instagram"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href="https://x.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-600 transition transform hover:scale-110"
-                aria-label="Twitter / X"
-              >
-                <FaXTwitter />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-600 transition transform hover:scale-110"
-                aria-label="YouTube"
-              >
-                <FaYoutube />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/harshadbansode/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-600 transition transform hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedinIn />
-              </a>
-            </div>
-          </div>
-
+    <footer className="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        
+        {/* BRAND INFO */}
+        <div className="space-y-4">
+          <Link to="/">
+            <img
+              src={logo}
+              alt="HB GrowthSyncro"
+              className="h-10 w-auto object-contain brightness-200"
+            />
+          </Link>
+          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            HB GrowthSyncro is a leading Digital Growth Partner in Maharashtra, India. We build high-converting websites, custom software, and automated lead funnels for business growth.
+          </p>
         </div>
+
+        {/* QUICK LINKS */}
+        <div className="space-y-3">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-white">
+            Quick Links
+          </h3>
+          <ul className="space-y-2 text-xs sm:text-sm">
+            <li>
+              <Link to="/" className="hover:text-blue-400 transition-colors">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-blue-400 transition-colors">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:text-blue-400 transition-colors">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/portfolio" className="hover:text-blue-400 transition-colors">
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link to="/pricing" className="hover:text-blue-400 transition-colors">
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link to="/blog" className="hover:text-blue-400 transition-colors">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq" className="hover:text-blue-400 transition-colors">
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-blue-400 transition-colors">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* WORKING HOURS */}
+        <div className="space-y-3">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-white">
+            Working Hours
+          </h3>
+          <ul className="space-y-1.5 text-xs sm:text-sm text-slate-400">
+            <li>Mon - Sat: 10:00 AM - 7:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+
+        {/* CONTACT INFO */}
+        <div className="space-y-3">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-white">
+            Contact Us
+          </h3>
+          <ul className="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <li className="flex items-center gap-2">
+              <FaPhoneAlt className="text-blue-500 text-xs shrink-0" />
+              <a href="tel:+918080224138" className="hover:text-white transition">
+                +91 8080224138
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <FaEnvelope className="text-blue-500 text-xs shrink-0" />
+              <a href="mailto:hbgrowthsyncro@gmail.com" className="hover:text-white transition">
+                hbgrowthsyncro@gmail.com
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <FaGlobe className="text-blue-500 text-xs shrink-0" />
+              <a
+                href="https://hbgrowthsyncro.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition"
+              >
+                https://hbgrowthsyncro.in
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
-      {/* BOTTOM COPYRIGHT STRIP */}
-      <div className="border-t border-slate-200/80 py-6 text-center text-xs font-semibold text-slate-700 bg-slate-100/60">
-        <p className="text-sm font-bold text-slate-800 mb-1">
-          Copyright © {new Date().getFullYear()} HB GrowthSyncro, India
-        </p>
-        <p className="text-slate-500 font-normal">
-          Web Design, Development & Digital Marketing Company - HB GrowthSyncro, India
-        </p>
+      {/* COPYRIGHT BOTTOM BAR */}
+      <div className="mt-12 pt-6 border-t border-slate-800 text-center text-xs text-slate-500 max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>Copyright © 2026 HB GrowthSyncro, India. All Rights Reserved.</p>
+        <p className="text-[11px]">Web Design, Development & Digital Marketing Agency</p>
       </div>
-
     </footer>
   );
 };
