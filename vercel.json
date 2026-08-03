@@ -1,15 +1,13 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)\\.(jpg|jpeg|png|webp|svg|css|js)",
-
-      "rewrites": [
+  "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
-
+  "headers": [
+    {
+      "source": "/(.*)\\.(jpg|jpeg|png|webp|svg|css|js)",
       "headers": [
         {
           "key": "Cache-Control",
