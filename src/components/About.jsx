@@ -31,49 +31,60 @@ const About = () => {
 
         {/* SECTION 2: BRAND STORY WITH SUBTLE CARD BACKGROUND */}
         <div className="max-w-4xl mx-auto bg-slate-50/80 p-8 sm:p-12 rounded-[28px] border border-slate-200/80 shadow-sm space-y-6 sm:space-y-8 font-sans relative overflow-hidden">
-          
+
           {/* Subtle Accent Glow */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
 
           {/* Blue Main Heading */}
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1a56db] tracking-tight relative z-10">
-            About us
+            About Us
           </h2>
 
           {/* Paragraph 1 */}
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
-            The purpose of HB GrowthSyncro is to provide greater technological solutions to growing list of clients such as startups, corporates, industrial businesses, and local service providers.
+            HB GrowthSyncro was built with a simple goal: to give growing local businesses, startups, and service providers high-performing digital systems that actually generate revenue—not just pretty designs.
           </p>
 
           {/* Paragraph 2 */}
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
-            HB GrowthSyncro has become a trusted name in Maharashtra, India, but there’s a brilliant meaning beyond the word “HB GrowthSyncro”. It is derived from three words,
+            We have become a trusted growth partner for businesses across Maharashtra, India. People often ask us what the name means, and the story behind it is straightforward:
           </p>
 
           {/* Name Equation Line */}
-          <div className="py-2.5 px-4 bg-white/90 rounded-xl border border-slate-200/60 inline-block shadow-xs relative z-10">
+          <div className="py-3 px-5 bg-white/90 rounded-xl border border-slate-200/80 inline-block shadow-xs relative z-10">
             <p className="text-base sm:text-lg font-bold text-slate-900 tracking-wide">
-              HB GrowthSyncro = HB + GROWTH + SYNCRO
+              <span className="text-[#1a56db]">HB</span> GrowthSyncro = <span className="text-[#1a56db]">HB</span> + GROWTH + SYNCRO
             </p>
           </div>
 
-          {/* Paragraph 3 */}
-          <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
-            The initials “HB” stand for human-centric business identity, while the second word ‘Growth’ means ‘The continuous expansion of customer acquisition, revenue, and market presence.’ and third word is ‘Syncro’ that means short for synchronize, used for operating in perfect harmony with business goals. In short HB GrowthSyncro means to Sync everything about digital growth solution.
-          </p>
+          {/* Paragraph 3: Broken Down Line-by-Line with Line Breaks */}
+          <div className="space-y-4 relative z-10">
+
+            <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+              <strong className="font-bold text-slate-900 text-[#1a56db]">“HB”</strong> — Represents personal accountability. You deal directly with the hands-on engineering behind your project, not middle management.
+            </p>
+
+            <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+              <strong className="font-bold text-slate-900 text-[#1a56db]">“Growth”</strong> — Focuses on the only metric that matters: bringing in real customer inquiries, calls, and sales.
+            </p>
+
+            <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+              <strong className="font-bold text-slate-900 text-[#1a56db]">“Syncro”</strong> — Short for synchronize. Aligning your website, local Google search, and WhatsApp funnels so they work together seamlessly.
+            </p>
+
+          </div>
 
           {/* Paragraph 4 */}
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
-            Our team selected the name “HB GrowthSyncro” because the meaning was deep and different. This implies our determination and dream towards solving real-world problems of the present and future with the power and knowledge of latest Technology.
+            We chose this name because it defines how we work. Instead of overcomplicating things with tech jargon or delivering slow, outdated sites, we build fast React systems designed to convert visitors into paying clients.
           </p>
 
           {/* Paragraph 5 */}
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
-            We as a software organization exist to solve our client’s problem in an efficient, transparent, and result-oriented manner.
+            At the end of the day, we exist to give local business owners honest advice, fast delivery, and marketing systems that show a clear return on investment.
           </p>
 
         </div>
-
         {/* SECTION 3: MISSION & VISION */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Mission Card */}
