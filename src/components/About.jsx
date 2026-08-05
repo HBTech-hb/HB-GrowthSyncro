@@ -1,3 +1,4 @@
+import React from "react";
 import socialMedia from "../assets/services/social-media.webp";
 import reelEditing from "../assets/services/reel-editing.webp";
 import canvaDesign from "../assets/services/canva-design.webp";
@@ -10,7 +11,7 @@ import clientSupport from "../assets/services/client-support.webp";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 lg:py-28 px-6 sm:px-10 bg-white text-slate-900">
+    <section id="about" className="py-16 sm:py-24 px-6 sm:px-10 bg-white text-slate-900 font-poppins">
       <div className="max-w-7xl mx-auto space-y-20">
 
         {/* SECTION 1: HERO & HEADING */}
@@ -28,7 +29,52 @@ const About = () => {
           </p>
         </div>
 
-        {/* SECTION 2: MISSION & VISION */}
+        {/* SECTION 2: BRAND STORY WITH SUBTLE CARD BACKGROUND */}
+        <div className="max-w-4xl mx-auto bg-slate-50/80 p-8 sm:p-12 rounded-[28px] border border-slate-200/80 shadow-sm space-y-6 sm:space-y-8 font-sans relative overflow-hidden">
+          
+          {/* Subtle Accent Glow */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+
+          {/* Blue Main Heading */}
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1a56db] tracking-tight relative z-10">
+            About us
+          </h2>
+
+          {/* Paragraph 1 */}
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
+            The purpose of HB GrowthSyncro is to provide greater technological solutions to growing list of clients such as startups, corporates, industrial businesses, and local service providers.
+          </p>
+
+          {/* Paragraph 2 */}
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
+            HB GrowthSyncro has become a trusted name in Maharashtra, India, but there’s a brilliant meaning beyond the word “HB GrowthSyncro”. It is derived from three words,
+          </p>
+
+          {/* Name Equation Line */}
+          <div className="py-2.5 px-4 bg-white/90 rounded-xl border border-slate-200/60 inline-block shadow-xs relative z-10">
+            <p className="text-base sm:text-lg font-bold text-slate-900 tracking-wide">
+              HB GrowthSyncro = HB + GROWTH + SYNCRO
+            </p>
+          </div>
+
+          {/* Paragraph 3 */}
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
+            The initials “HB” stand for human-centric business identity, while the second word ‘Growth’ means ‘The continuous expansion of customer acquisition, revenue, and market presence.’ and third word is ‘Syncro’ that means short for synchronize, used for operating in perfect harmony with business goals. In short HB GrowthSyncro means to Sync everything about digital growth solution.
+          </p>
+
+          {/* Paragraph 4 */}
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
+            Our team selected the name “HB GrowthSyncro” because the meaning was deep and different. This implies our determination and dream towards solving real-world problems of the present and future with the power and knowledge of latest Technology.
+          </p>
+
+          {/* Paragraph 5 */}
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
+            We as a software organization exist to solve our client’s problem in an efficient, transparent, and result-oriented manner.
+          </p>
+
+        </div>
+
+        {/* SECTION 3: MISSION & VISION */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Mission Card */}
           <div className="p-8 sm:p-10 rounded-[24px] bg-slate-900 text-white shadow-xl border border-slate-800 relative overflow-hidden flex flex-col justify-between">
@@ -58,7 +104,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* SECTION 3: WHAT WE DO */}
+        {/* SECTION 4: WHAT WE DO */}
         <div className="bg-slate-50 p-8 md:p-12 rounded-[24px] border border-slate-200">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">What We Do</span>
@@ -78,7 +124,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* SECTION 4: WHAT MAKES US BETTER (OUR ADVANTAGE) */}
+        {/* SECTION 5: WHAT MAKES US BETTER */}
         <div>
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">Our Advantage</span>
@@ -114,7 +160,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* SECTION 5: STATISTICS */}
+        {/* SECTION 6: STATISTICS */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="p-6 sm:p-8 rounded-[24px] bg-slate-50 border border-slate-100 text-center">
             <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">50+</span>
@@ -134,7 +180,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* SECTION 6: WHY CHOOSE US */}
+        {/* SECTION 7: WHY CHOOSE US */}
         <div className="bg-slate-50 p-8 sm:p-12 rounded-[24px] border border-slate-100">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">Why Us</span>
@@ -151,7 +197,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* SECTION 7: FINAL CTA */}
+        {/* SECTION 8: FINAL CTA */}
         <div className="bg-slate-900 text-white rounded-[24px] p-8 sm:p-12 text-center border border-slate-800 shadow-xl relative overflow-hidden">
           <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-blue-600/20 rounded-full blur-2xl pointer-events-none" />
 

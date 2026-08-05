@@ -217,7 +217,7 @@ const TestimonialSection = () => {
 
           <div className="relative z-10 max-w-2xl">
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
-              Ready to Become Our Next Success Story?
+              Ready to Start Your Next Success Story?
             </h3>
             <p className="text-slate-400 text-base sm:text-lg mt-4 font-normal leading-relaxed">
               Let's build a website and digital presence that helps your business attract more customers and create lasting trust.

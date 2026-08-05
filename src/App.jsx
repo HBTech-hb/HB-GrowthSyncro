@@ -40,6 +40,7 @@ const MainContent = () => {
 
   return (
     <div className="font-poppins flex flex-col min-h-screen">
+      {/* Scroll to top when changing routes */}
       <ScrollToTop />
 
       {/* Header Navigation */}
@@ -48,23 +49,18 @@ const MainContent = () => {
       {/* Main Routes */}
       <main className="flex-grow">
         <Routes>
-          {/* Main Landing Route */}
+          {/* Focused Home Landing Route */}
           <Route
             path="/"
             element={
               <>
                 <Home />
-                <About />
-                <Services />
-                <Portfolio />
-                <Pricing />
                 <TestimonialsSlider />
-                <Contact />
               </>
             }
           />
 
-          {/* Individual Pages */}
+          {/* Dedicated Sub-Pages */}
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
@@ -80,7 +76,7 @@ const MainContent = () => {
 
       <Footer />
 
-      {/* Floating Action Button */}
+      {/* Floating WhatsApp Action Button */}
       <FloatingWhatsApp />
     </div>
   );
