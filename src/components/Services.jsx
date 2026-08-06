@@ -29,7 +29,7 @@ const services = [
   {
     title: "AI ML & AI Growth Systems",
     description:
-      "Leverage cutting-edge AI tools and AIME automation to optimize content creation, response workflows, and customer engagement.",
+      "Leverage cutting-edge AI tools and   automation to optimize content creation, response workflows, and customer engagement.",
     icon: FiCpu,
     whatsappMsg: "Hi! Tell me more about AI Growth Systems and automation."
   },
