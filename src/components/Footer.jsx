@@ -40,7 +40,7 @@ const Footer = () => {
               <FaWhatsapp className="text-sm" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/hbgrowthsyncro/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-lg bg-white text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 border border-slate-200 shadow-sm"
@@ -49,7 +49,7 @@ const Footer = () => {
               <FaInstagram className="text-sm" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/hbgrowthsyncro/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-lg bg-white text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 border border-slate-200 shadow-sm"
