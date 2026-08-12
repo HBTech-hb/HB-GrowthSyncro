@@ -12,12 +12,12 @@ import {
 const WHATSAPP_NUMBER = "918080224138";
 
 // =========================================================
-// REFRESH-SAFE ADSENSE COMPONENT
+// CLEAN, MOBILE-SAFE ADSENSE COMPONENT
 // =========================================================
 const AdSense = ({
   slot = "3135331154",
-  style = { display: "block", textAlign: "center" },
-  format = "vertical",
+  style = { display: "block", textAlign: "center", width: "100%" },
+  format = "auto",
   layout = "",
   responsive = "true",
 }) => {
@@ -44,7 +44,7 @@ const AdSense = ({
   }, [slot]);
 
   return (
-    <div className="w-full overflow-hidden text-center my-6 min-h-[120px] flex items-center justify-center">
+    <div className="w-full overflow-hidden text-center my-6 min-h-[150px] flex items-center justify-center bg-white rounded-2xl border border-slate-200 p-2 shadow-sm">
       <ins
         className="adsbygoogle"
         style={style}
@@ -1159,10 +1159,10 @@ const Blog = () => {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {activeArticle ? (
           /* =========================================================
-             SINGLE ARTICLE VIEW (FOOTER-SAFE 3-COLUMN GRID)
+             SINGLE ARTICLE VIEW (RESPONSIVE GRID)
              ========================================================= */
           <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr_240px] gap-8 items-start">
-            {/* 1. LEFT STICKY AD (General Vertical Display Unit) */}
+            {/* LEFT STICKY AD (Hidden on Mobile) */}
             <aside className="hidden lg:block sticky top-8 self-start w-full">
               <AdSense
                 key={`left-${activeArticle.id}`}
@@ -1250,7 +1250,7 @@ const Blog = () => {
                 </p>
               </div>
 
-              {/* 2. IN-ARTICLE CONTENT AD (Fluid Layout Unit) */}
+              {/* IN-ARTICLE AD UNIT */}
               <AdSense
                 slot="4436678220"
                 format="fluid"
@@ -1264,7 +1264,7 @@ const Blog = () => {
                 }}
               />
 
-              {/* 2. SECOND IN-ARTICLE AD (Bottom of Article Text) */}
+              {/* SECOND IN-ARTICLE AD UNIT */}
               <AdSense
                 slot="4436678220"
                 format="fluid"
@@ -1373,7 +1373,7 @@ const Blog = () => {
               </div>
             </article>
 
-            {/* 3. RIGHT STICKY AD (Laptop Performance Guide Unit: 3810182216) */}
+            {/* RIGHT STICKY AD (Hidden on Mobile) */}
             <aside className="hidden lg:block sticky top-8 self-start w-full">
               <AdSense
                 key={`right-${activeArticle.id}`}
@@ -1384,10 +1384,10 @@ const Blog = () => {
           </div>
         ) : (
           /* =========================================================
-             BLOG LISTING PAGE (FOOTER-SAFE 3-COLUMN GRID)
+             BLOG LISTING PAGE (RESPONSIVE GRID)
              ========================================================= */
           <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr_240px] gap-8 items-start">
-            {/* LEFT STICKY AD */}
+            {/* LEFT STICKY AD CONTAINER */}
             <aside className="hidden lg:block sticky top-8 self-start w-full">
               <AdSense
                 key="listing-left"
