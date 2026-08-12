@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect, useRef } from "react";
 import {
   FiSearch,
   FiClock,
@@ -12,7 +12,7 @@ import {
 const WHATSAPP_NUMBER = "918080224138";
 
 // =========================================================
-// CLEAN, MOBILE-SAFE ADSENSE COMPONENT
+// CLEAN, MOBILE-SAFE & AUTO-HIDING ADSENSE COMPONENT
 // =========================================================
 const AdSense = ({
   slot = "3135331154",
@@ -21,6 +21,9 @@ const AdSense = ({
   layout = "",
   responsive = "true",
 }) => {
+  const [isFilled, setIsFilled] = useState(false);
+  const containerRef = useRef(null);
+
   useEffect(() => {
     let timeoutId;
 
@@ -38,13 +41,45 @@ const AdSense = ({
 
     pushAd();
 
+    // Dynamically check if AdSense delivers a filled ad
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "data-ad-status"
+        ) {
+          const status = mutation.target.getAttribute("data-ad-status");
+          if (status === "filled") {
+            setIsFilled(true);
+          } else if (status === "unfilled") {
+            setIsFilled(false);
+          }
+        }
+      });
+    });
+
+    if (containerRef.current) {
+      const insElement = containerRef.current.querySelector("ins.adsbygoogle");
+      if (insElement) {
+        observer.observe(insElement, { attributes: true });
+      }
+    }
+
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
+      observer.disconnect();
     };
   }, [slot]);
 
   return (
-    <div className="w-full overflow-hidden text-center my-6 min-h-[150px] flex items-center justify-center bg-white rounded-2xl border border-slate-200 p-2 shadow-sm">
+    <div
+      ref={containerRef}
+      className={`w-full overflow-hidden text-center transition-all duration-300 ${
+        isFilled
+          ? "my-6 min-h-[150px] p-3 bg-white rounded-2xl border border-slate-200 shadow-sm block"
+          : "hidden"
+      }`}
+    >
       <ins
         className="adsbygoogle"
         style={style}
