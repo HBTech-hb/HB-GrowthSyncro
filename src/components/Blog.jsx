@@ -1306,6 +1306,12 @@ const Blog = () => {
                 layout="in-article"
               />
 
+              {/* NEW MULTIPLEX / MATCHED CONTENT AD UNIT (Slot 8781407489) */}
+              <AdSense
+                slot="8781407489"
+                format="autorelaxed"
+              />
+
               <div className="mt-12 p-8 sm:p-10 rounded-3xl bg-blue-600 text-white shadow-xl shadow-blue-600/20">
                 <span className="inline-block text-xs font-bold uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full mb-4">
                   HB GrowthSyncro
