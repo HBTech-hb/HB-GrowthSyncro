@@ -26,7 +26,7 @@ const testimonialsData = [
   {
     id: 2,
     name: "Priya Nair",
-    business: "Aura Luxury Salon",
+    business: "STYLE MANTRA",
     industry: "Beauty & Lifestyle",
     rating: 5,
     avatar:

@@ -25,7 +25,7 @@ export const projectsData = [
   {
     id: "aura-salon",
     featured: false,
-    businessName: "Aura Luxury Salon",
+    businessName: "STYLE MANTRA",
     industry: "Beauty & Lifestyle",
     title: "End-to-End Digital Transformation for Premium Beauty Studio",
     description: "Positioned a high-end salon as the leading beauty destination in the city through polished visual branding and an automated appointment workflow.",
@@ -39,7 +39,7 @@ export const projectsData = [
       "Google Business"
     ],
     timeline: "2 Weeks",
-    website: "https://example.com/aura-salon",
+    website: "https://hair-salon-demo-chi.vercel.app/",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800"
   },
   {

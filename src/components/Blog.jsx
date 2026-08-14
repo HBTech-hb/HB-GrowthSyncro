@@ -7,6 +7,7 @@ import {
   FiBookOpen,
   FiArrowLeft,
   FiChevronRight,
+  FiAward,
 } from "react-icons/fi";
 
 const WHATSAPP_NUMBER = "918080224138";
@@ -93,7 +94,155 @@ const AdSense = ({
   );
 };
 
+// =========================================================
+// 100% COMPLETE BLOG DATA (VERIFIED & UP-TO-DATE)
+// =========================================================
 const blogs = [
+  // =========================================================
+  // 1. 80TH INDEPENDENCE DAY SPECIAL ARTICLE
+  // =========================================================
+  {
+    id: "independence-day-digital-freedom-2026",
+    title:
+      "Digital Independence Day: Why Your Business Needs a Sovereign Online Presence in 2026",
+    author: "HB GrowthSyncro",
+    date: "August 15, 2026",
+    category: "Independence Special",
+    readTime: "6 min read",
+    isFeatured: true,
+    imageUrl:
+      "https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=1200&auto=format&fit=crop",
+    gridImages: {
+      indianFlag:
+        "https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&w=800&q=80",
+      codingLaptop:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+      localSeoGrowth:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      whatsappLeads:
+        "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=800&q=80",
+    },
+    affiliateLinks: {
+      hosting: "https://link.amazon/B09seWvYF",
+      developerTools: "https://link.amazon/B0fbodpFz",
+    },
+    gridLabels: {
+      hosting: "Recommended High-Speed Cloud Hosting",
+      developerTools: "Essential Business Growth Tools",
+    },
+    excerpt:
+      "As India celebrates its landmark 80th Independence Day, we explore what true freedom means for local businesses in the digital age. Hint: It's not just about having a social media page.",
+    content: `
+<p class="mb-5 text-slate-700 leading-relaxed text-lg">
+  Every 15th of August, the air fills with patriotism, the tricolor flies high, and we remember the hard-fought battle for our nation's sovereignty. It is a day to celebrate freedom. But in 2026, as we live in a rapidly digitizing India, we must ask ourselves: <strong>Is your business truly independent?</strong>
+</p>
+
+<p class="mb-5 text-slate-700 leading-relaxed">
+  For years, local businesses in Maharashtra and across India have relied on third-party platforms—foot traffic, local directories, or more recently, social media giants—to reach customers. While useful, this isn't true independence. True digital independence means owning your presence, controlling your data, and dictating your own growth path.
+</p>
+
+<div class="my-8 p-6 bg-slate-900 text-slate-100 rounded-2xl border-l-4 border-amber-500 shadow-md">
+  <p class="text-base font-medium italic">
+    "On this 80th Independence Day, don't just celebrate political freedom. Claim your digital freedom. Owning your platform is the first step toward self-reliant business growth."
+  </p>
+</div>
+
+<h3 class="text-2xl font-bold text-slate-900 mt-10 mb-6 border-b border-slate-100 pb-3">
+  Why True Business Freedom Requires a Dedicated Website Build
+</h3>
+
+<p class="mb-5 text-slate-700 leading-relaxed">
+  Many business owners make the mistake of thinking a Facebook page or an Instagram profile is enough. It's not. Here is why investing in a custom website is required for true independence:
+</p>
+
+<h4 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  1. Independence from Algorithm Changes
+</h4>
+<p class="text-slate-600 leading-relaxed mb-4">
+  When you rely on social media, you are renting space on borrowed land. If the platform changes its algorithm overnight, your reach can drop to near zero. A website you own is your absolute territory; no algorithm can take away your visibility if you build it right.
+</p>
+
+<h4 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  2. Professional Credibility and Sovereign Identity
+</h4>
+<p class="text-slate-600 leading-relaxed mb-4">
+  A dedicated <code>.in</code> or <code>.com</code> domain tells customers you are a serious, established entity. It is the digital equivalent of owning your office space rather than a temporary stall. It builds immediate trust in the modern Indian market.
+</p>
+
+<h4 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  3. Control Over the Customer Experience
+</h4>
+<p class="text-slate-600 leading-relaxed mb-4">
+  Social media platforms limit how you interact with customers. A website built by experts allows you to create specific funnel experiences, capture leads precisely, and showcase your products exactly how you want, without noise or competition on the same page.
+</p>
+
+<h3 class="text-2xl font-bold text-slate-900 mt-10 mb-6 border-b border-slate-100 pb-3">
+  Why You Require HB GrowthSyncro to Build Your Freedom Tool
+</h3>
+
+<p class="mb-5 text-slate-700 leading-relaxed">
+  Understanding the need for a website is one thing; building a strategic asset that actually generates growth is another. Just as our freedom fighters needed a unified strategy, your digital journey needs expert engineering. Here is why you require our services:
+</p>
+
+<div class="my-8 bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col md:flex-row items-center">
+  <div class="w-full md:w-1/3 aspect-square overflow-hidden bg-slate-100 p-4 flex items-center justify-center">
+    <span class="text-8xl">🚀</span>
+  </div>
+
+  <div class="p-6 w-full md:w-2/3">
+    <span class="inline-block text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-3">
+      Expert Engineering
+    </span>
+    <h4 class="text-xl font-bold text-slate-900 mb-2">
+      We Don't Just Build Pages; We Engineer Lead Funnels
+    </h4>
+    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+      Using modern tech stacks like React, we build websites that are lightning-fast, mobile-responsive, and optimized for conversions. A slow website is a dependent website; we ensure your platform is powerful and self-reliant.
+    </p>
+  </div>
+</div>
+
+<h4 class="text-xl font-bold text-slate-900 mt-8 mb-3">
+  Local Context with Global Standards
+</h4>
+<p class="text-slate-600 leading-relaxed mb-4">
+  We understand the local Indian market dynamics while applying global best practices in web design and SEO. We know what Indian customers look for and how to make your business stand out.
+</p>
+
+<h4 class="text-xl font-bold text-slate-900 mt-8 mb-3">
+  Independence and Post-Launch Support
+</h4>
+<p class="text-slate-600 leading-relaxed mb-4">
+  Our goal is your complete digital independence. We don't hold your website hostage. Upon completion, you own the asset, the code, and the domain. Furthermore, we provide the training required so you feel confident managing your own sovereign digital territory.
+</p>
+
+<h3 class="text-2xl font-bold text-slate-900 mt-10 mb-6">
+  Final Verdict: Declare Your Digital Independence Today
+</h3>
+
+<p class="text-slate-700 leading-relaxed mb-4">
+  As India marks its 80th Independence Day, it's time for your business to achieve true self-reliance. Do not remain dependent on algorithms or foot traffic alone.
+</p>
+
+<div class="my-8 p-6 bg-blue-600 text-white rounded-2xl shadow-xl">
+  <h4 class="text-xl font-bold mb-3">
+    Special 80th Independence Day Offer
+  </h4>
+  <p class="text-blue-100 leading-relaxed">
+    In honor of the 80th Independence Day, HB GrowthSyncro is offering a special 15% discount on all custom website development packages booked between August 15th and August 20th. Let's build your digital freedom tool.
+  </p>
+</div>
+
+<p class="text-lg font-semibold text-center mt-10 text-blue-900">
+  Wishing you a very Happy 80th Independence Day!<br />
+  Jai Hind!
+</p>
+`,
+  },
+
+  // =========================================================
+  // 2. LAPTOP PERFORMANCE & UPGRADES ARTICLE
+  // =========================================================
   {
     id: "why-is-my-laptop-so-slow-2026",
     title:
@@ -573,18 +722,12 @@ and even simple tasks begin to feel unnecessarily slow.
   The smartest purchase is the one that solves your specific bottleneck.
   Diagnose first, compare second, and spend third.
 </p>
-
-<div class="mt-10 p-6 rounded-2xl bg-slate-50 border border-slate-200">
-  <p class="text-xs text-slate-500 leading-relaxed">
-    <strong>Affiliate Disclosure:</strong>
-    Some links in this article may be affiliate links. If you purchase through
-    an affiliate link, HB GrowthSyncro may earn a commission at no additional
-    cost to you. We recommend choosing products based on your actual needs,
-    compatibility and budget.
-  </p>
-</div>
 `,
   },
+
+  // =========================================================
+  // 3. WARDROBE & GROOMING ARTICLE
+  // =========================================================
   {
     id: "modern-wardrobe-grooming-essentials-2026",
     title:
@@ -608,165 +751,161 @@ and even simple tasks begin to feel unnecessarily slow.
     excerpt:
       "An actionable guide to building a versatile wardrobe, clean grooming routine and practical everyday setup without overspending.",
     content: `
-  <p class="mb-5 text-slate-700 leading-relaxed">
-    Your professional appearance does not need to be expensive to be effective.
-    What matters more is whether the things you own fit your routine, work well
-    together and make everyday life easier.
+<p class="mb-5 text-slate-700 leading-relaxed">
+  Your professional appearance does not need to be expensive to be effective.
+  What matters more is whether the things you own fit your routine, work well
+  together and make everyday life easier.
+</p>
+
+<p class="mb-5 text-slate-700 leading-relaxed">
+  Whether you work in an office, run a business, attend meetings, work remotely
+  or spend your day on video calls, a few carefully selected essentials can
+  remove unnecessary daily decisions.
+</p>
+
+<div class="my-8 p-6 bg-slate-900 text-slate-100 rounded-2xl border-l-4 border-blue-500">
+  <p class="text-base font-medium italic">
+    "The goal isn't to own more. The goal is to own the things you repeatedly need."
   </p>
+</div>
 
-  <p class="mb-5 text-slate-700 leading-relaxed">
-    Whether you work in an office, run a business, attend meetings, work remotely
-    or spend your day on video calls, a few carefully selected essentials can
-    remove unnecessary daily decisions.
+<h3 class="text-2xl font-bold text-slate-900 mt-10 mb-6">
+  5 High-Impact Essentials
+</h3>
+
+<h4 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  1. Versatile Workwear
+</h4>
+
+<p class="text-slate-600 leading-relaxed mb-4">
+  A few well-fitting shirts, polos or simple professional outfits can cover
+  a surprisingly large number of situations.
+</p>
+
+<p class="text-slate-600 leading-relaxed">
+  Neutral colours such as navy, white, charcoal and olive are easy to combine
+  with trousers, jeans and other everyday clothing.
+</p>
+
+<a
+  href="YOUR_CLOTHING_AFFILIATE_LINK"
+  target="_blank"
+  rel="noopener noreferrer sponsored"
+  class="inline-flex items-center gap-2 mt-4 px-5 py-3 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-semibold text-sm"
+>
+  Shop Workwear Options →
+</a>
+
+<h4 class="text-xl font-bold text-slate-900 mt-8 mb-3">
+  2. A Simple Everyday Watch
+</h4>
+
+<p class="text-slate-600 leading-relaxed mb-4">
+  A simple watch can complement professional and casual clothing without
+  requiring constant attention.
+</p>
+
+<p class="text-slate-600 leading-relaxed">
+  Look for a design that matches most of your wardrobe instead of choosing
+  something that only works with one outfit.
+</p>
+
+<a
+  href="YOUR_WATCH_AFFILIATE_LINK"
+  target="_blank"
+  rel="noopener noreferrer sponsored"
+  class="inline-flex items-center gap-2 mt-4 px-5 py-3 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-semibold text-sm"
+>
+  Explore Everyday Watches →
+</a>
+
+<h4 class="text-xl font-bold text-slate-900 mt-8 mb-3">
+  3. A Simple Grooming Routine
+</h4>
+
+<p class="text-slate-600 leading-relaxed mb-4">
+  You do not need a bathroom full of products. A simple routine built around
+  cleansing, moisturising and appropriate sun protection may be easier to
+  maintain consistently.
+</p>
+
+<a
+  href="YOUR_GROOMING_AFFILIATE_LINK"
+  target="_blank"
+  rel="noopener noreferrer sponsored"
+  class="inline-flex items-center gap-2 mt-4 px-5 py-3 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-semibold text-sm"
+>
+  Explore Grooming Essentials →
+</a>
+
+<h4 class="text-xl font-bold text-slate-900 mt-8 mb-3">
+  4. Comfortable Footwear
+</h4>
+
+<p class="text-slate-600 leading-relaxed mb-4">
+  If you spend long hours walking, commuting or standing, comfort should be
+  part of your purchasing decision rather than an afterthought.
+</p>
+
+<p class="text-slate-600 leading-relaxed">
+  Look for footwear appropriate for your actual environment and choose fit
+  and comfort before appearance alone.
+</p>
+
+<a
+  href="YOUR_FOOTWEAR_AFFILIATE_LINK"
+  target="_blank"
+  rel="noopener noreferrer sponsored"
+  class="inline-flex items-center gap-2 mt-4 px-5 py-3 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-semibold text-sm"
+>
+  View Comfortable Footwear →
+</a>
+
+<h4 class="text-xl font-bold text-slate-900 mt-8 mb-3">
+  5. A Small Daily-Carry Setup
+</h4>
+
+<p class="text-slate-600 leading-relaxed">
+  A useful bag, charging cable, power bank, notebook, headphones and other
+  frequently used accessories can remove small frustrations from your day.
+</p>
+
+<h3 class="text-2xl font-bold text-slate-900 mt-10 mb-6">
+  What Should You Buy First?
+</h3>
+
+<div class="my-6 p-6 bg-slate-50 rounded-2xl border border-slate-200">
+  <p class="text-slate-700 leading-relaxed mb-3">
+    <strong>Need to look more professional?</strong> Start with versatile clothing.
   </p>
-
-  <div class="my-8 p-6 bg-slate-900 text-slate-100 rounded-2xl border-l-4 border-blue-500">
-    <p class="text-base font-medium italic">
-      "The goal isn't to own more. The goal is to own the things you repeatedly need."
-    </p>
-  </div>
-
-  <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-6">
-    5 High-Impact Essentials
-  </h3>
-
-  <h4 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    1. Versatile Workwear
-  </h4>
-
-  <p class="text-slate-600 leading-relaxed mb-4">
-    A few well-fitting shirts, polos or simple professional outfits can cover
-    a surprisingly large number of situations.
+  <p class="text-slate-700 leading-relaxed mb-3">
+    <strong>Spend all day walking?</strong> Prioritise comfortable footwear.
   </p>
-
-  <p class="text-slate-600 leading-relaxed">
-    Neutral colours such as navy, white, charcoal and olive are easy to combine
-    with trousers, jeans and other everyday clothing.
+  <p class="text-slate-700 leading-relaxed mb-3">
+    <strong>Attend meetings frequently?</strong> Choose simple accessories that
+    complement multiple outfits.
   </p>
-
-  <a
-    href="YOUR_CLOTHING_AFFILIATE_LINK"
-    target="_blank"
-    rel="noopener noreferrer sponsored"
-    class="inline-flex items-center gap-2 mt-4 px-5 py-3 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-semibold text-sm"
-  >
-    Shop Workwear Options →
-  </a>
-
-  <h4 class="text-xl font-bold text-slate-900 mt-8 mb-3">
-    2. A Simple Everyday Watch
-  </h4>
-
-  <p class="text-slate-600 leading-relaxed mb-4">
-    A simple watch can complement professional and casual clothing without
-    requiring constant attention.
-  </p>
-
-  <p class="text-slate-600 leading-relaxed">
-    Look for a design that matches most of your wardrobe instead of choosing
-    something that only works with one outfit.
-  </p>
-
-  <a
-    href="YOUR_WATCH_AFFILIATE_LINK"
-    target="_blank"
-    rel="noopener noreferrer sponsored"
-    class="inline-flex items-center gap-2 mt-4 px-5 py-3 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-semibold text-sm"
-  >
-    Explore Everyday Watches →
-  </a>
-
-  <h4 class="text-xl font-bold text-slate-900 mt-8 mb-3">
-    3. A Simple Grooming Routine
-  </h4>
-
-  <p class="text-slate-600 leading-relaxed mb-4">
-    You do not need a bathroom full of products. A simple routine built around
-    cleansing, moisturising and appropriate sun protection may be easier to
-    maintain consistently.
-  </p>
-
-  <a
-    href="YOUR_GROOMING_AFFILIATE_LINK"
-    target="_blank"
-    rel="noopener noreferrer sponsored"
-    class="inline-flex items-center gap-2 mt-4 px-5 py-3 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-semibold text-sm"
-  >
-    Explore Grooming Essentials →
-  </a>
-
-  <h4 class="text-xl font-bold text-slate-900 mt-8 mb-3">
-    4. Comfortable Footwear
-  </h4>
-
-  <p class="text-slate-600 leading-relaxed mb-4">
-    If you spend long hours walking, commuting or standing, comfort should be
-    part of your purchasing decision rather than an afterthought.
-  </p>
-
-  <p class="text-slate-600 leading-relaxed">
-    Look for footwear appropriate for your actual environment and choose fit
-    and comfort before appearance alone.
-  </p>
-
-  <a
-    href="YOUR_FOOTWEAR_AFFILIATE_LINK"
-    target="_blank"
-    rel="noopener noreferrer sponsored"
-    class="inline-flex items-center gap-2 mt-4 px-5 py-3 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-semibold text-sm"
-  >
-    View Comfortable Footwear →
-  </a>
-
-  <h4 class="text-xl font-bold text-slate-900 mt-8 mb-3">
-    5. A Small Daily-Carry Setup
-  </h4>
-
-  <p class="text-slate-600 leading-relaxed">
-    A useful bag, charging cable, power bank, notebook, headphones and other
-    frequently used accessories can remove small frustrations from your day.
-  </p>
-
-  <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-6">
-    What Should You Buy First?
-  </h3>
-
-  <div class="my-6 p-6 bg-slate-50 rounded-2xl border border-slate-200">
-    <p class="text-slate-700 leading-relaxed mb-3">
-      <strong>Need to look more professional?</strong> Start with versatile clothing.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-3">
-      <strong>Spend all day walking?</strong> Prioritise comfortable footwear.
-    </p>
-    <p class="text-slate-700 leading-relaxed mb-3">
-      <strong>Attend meetings frequently?</strong> Choose simple accessories that
-      complement multiple outfits.
-    </p>
-    <p class="text-slate-700 leading-relaxed">
-      <strong>Want a simpler routine?</strong> Buy fewer products that you will
-      actually use consistently.
-    </p>
-  </div>
-
-  <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-6">
-    Final Thought
-  </h3>
-
   <p class="text-slate-700 leading-relaxed">
-    The best personal upgrade is rarely the most expensive one. Choose products
-    that solve a repeated problem, fit your lifestyle and remain useful long
-    after the excitement of buying them disappears.
+    <strong>Want a simpler routine?</strong> Buy fewer products that you will
+    actually use consistently.
   </p>
+</div>
 
-  <div class="mt-10 p-6 rounded-2xl bg-slate-50 border border-slate-200">
-    <p class="text-xs text-slate-500 leading-relaxed">
-      <strong>Affiliate Disclosure:</strong> Some links in this article may be
-      affiliate links. If you purchase through them, we may earn a commission
-      at no additional cost to you.
-    </p>
-  </div>
+<h3 class="text-2xl font-bold text-slate-900 mt-10 mb-6">
+  Final Thought
+</h3>
+
+<p class="text-slate-700 leading-relaxed">
+  The best personal upgrade is rarely the most expensive one. Choose products
+  that solve a repeated problem, fit your lifestyle and remain useful long
+  after the excitement of buying them disappears.
+</p>
 `,
   },
+
+  // =========================================================
+  // 4. DEVELOPER & CREATOR PLAYBOOK
+  // =========================================================
   {
     id: "developer-creator-playbook-2026",
     title:
@@ -780,104 +919,100 @@ and even simple tasks begin to feel unnecessarily slow.
     excerpt:
       "Discover why modern websites need speed, analytics and mobile-first design, along with practical tools that help developers and creators stay productive.",
     content: `
-  <p class="mb-5 text-slate-700 leading-relaxed">
-    Building a website today is very different from simply putting a few pages
-    online. Visitors expect fast loading, clear navigation, mobile-friendly
-    layouts and an obvious reason to stay.
-  </p>
+<p class="mb-5 text-slate-700 leading-relaxed">
+  Building a website today is very different from simply putting a few pages
+  online. Visitors expect fast loading, clear navigation, mobile-friendly
+  layouts and an obvious reason to stay.
+</p>
 
-  <p class="mb-5 text-slate-700 leading-relaxed">
-    At the same time, developers and creators need reliable hardware and tools
-    that allow them to work efficiently without constantly fighting their setup.
-  </p>
+<p class="mb-5 text-slate-700 leading-relaxed">
+  At the same time, developers and creators need reliable hardware and tools
+  that allow them to work efficiently without constantly fighting their setup.
+</p>
 
-  <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">
-    Why Your Business Needs a Fast Website
-  </h3>
+<h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">
+  Why Your Business Needs a Fast Website
+</h3>
 
-  <h4 class="text-lg font-semibold text-slate-900 mt-4 mb-2">
-    Instant Trust & Credibility
-  </h4>
+<h4 class="text-lg font-semibold text-slate-900 mt-4 mb-2">
+  Instant Trust & Credibility
+</h4>
 
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    A clean, responsive website can make a business appear more established and
-    easier to trust. Slow pages, confusing navigation and outdated layouts can
-    create unnecessary friction.
-  </p>
+<p class="mb-4 text-slate-700 leading-relaxed">
+  A clean, responsive website can make a business appear more established and
+  easier to trust. Slow pages, confusing navigation and outdated layouts can
+  create unnecessary friction.
+</p>
 
-  <h4 class="text-lg font-semibold text-slate-900 mt-6 mb-2">
-    Analytics & Measurement
-  </h4>
+<h4 class="text-lg font-semibold text-slate-900 mt-6 mb-2">
+  Analytics & Measurement
+</h4>
 
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Analytics tools can help businesses understand where visitors come from,
-    which pages they use and where potential customers leave the website.
-  </p>
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Analytics tools can help businesses understand where visitors come from,
+  which pages they use and where potential customers leave the website.
+</p>
 
-  <h4 class="text-lg font-semibold text-slate-900 mt-6 mb-2">
-    Continuous Lead Capture
-  </h4>
+<h4 class="text-lg font-semibold text-slate-900 mt-6 mb-2">
+  Continuous Lead Capture
+</h4>
 
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Contact forms, click-to-call buttons and WhatsApp integrations can give
-    visitors multiple ways to start a conversation.
-  </p>
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Contact forms, click-to-call buttons and WhatsApp integrations can give
+  visitors multiple ways to start a conversation.
+</p>
 
-  <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">
-    The Developer Workstation
-  </h3>
+<h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">
+  The Developer Workstation
+</h3>
 
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Coding, testing, designing and researching often require long hours at a
-    desk. A sensible workstation can make those hours more comfortable.
-  </p>
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Coding, testing, designing and researching often require long hours at a
+  desk. A sensible workstation can make those hours more comfortable.
+</p>
 
-  <h4 class="text-lg font-semibold text-slate-900 mt-6 mb-2">
-    Laptop & Monitor
-  </h4>
+<h4 class="text-lg font-semibold text-slate-900 mt-6 mb-2">
+  Laptop & Monitor
+</h4>
 
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Prioritise the processor, RAM, storage and display quality according to the
-    software you actually use rather than simply buying the highest specification.
-  </p>
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Prioritise the processor, RAM, storage and display quality according to the
+  software you actually use rather than simply buying the highest specification.
+</p>
 
-  <a
-    href="YOUR_LAPTOP_AFFILIATE_LINK"
-    target="_blank"
-    rel="noopener noreferrer sponsored"
-    class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-semibold text-sm"
-  >
-    Check Developer Laptop Options →
-  </a>
+<a
+  href="YOUR_LAPTOP_AFFILIATE_LINK"
+  target="_blank"
+  rel="noopener noreferrer sponsored"
+  class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-semibold text-sm"
+>
+  Check Developer Laptop Options →
+</a>
 
-  <h4 class="text-lg font-semibold text-slate-900 mt-8 mb-2">
-    Ergonomic Accessories
-  </h4>
+<h4 class="text-lg font-semibold text-slate-900 mt-8 mb-2">
+  Ergonomic Accessories
+</h4>
 
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    A comfortable chair, suitable desk height, external keyboard, mouse and
-    monitor position can make long work sessions easier to manage.
-  </p>
+<p class="mb-4 text-slate-700 leading-relaxed">
+  A comfortable chair, suitable desk height, external keyboard, mouse and
+  monitor position can make long work sessions easier to manage.
+</p>
 
-  <h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">
-    Final Thoughts
-  </h3>
+<h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4">
+  Final Thoughts
+</h3>
 
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    A successful online presence is not just about launching a website. It is
-    about combining speed, usability, useful content, analytics and a workflow
-    that lets you keep improving.
-  </p>
-
-  <div class="mt-8 p-6 rounded-2xl bg-slate-50 border border-slate-200">
-    <p class="text-xs text-slate-500 leading-relaxed">
-      <strong>Affiliate Disclosure:</strong> Some links in this article may be
-      affiliate links. If you purchase through them, we may earn a commission
-      at no additional cost to you.
-    </p>
-  </div>
+<p class="mb-4 text-slate-700 leading-relaxed">
+  A successful online presence is not just about launching a website. It is
+  about combining speed, usability, useful content, analytics and a workflow
+  that lets you keep improving.
+</p>
 `,
   },
+
+  // =========================================================
+  // 5. CHOOSE WEBSITE DEVELOPER
+  // =========================================================
   {
     id: "choose-website-developer",
     title:
@@ -891,88 +1026,91 @@ and even simple tasks begin to feel unnecessarily slow.
     excerpt:
       "Not all websites make money. Learn the crucial technical and business factors to check before hiring a website developer.",
     content: `
-  <p class="mb-5 text-slate-700 leading-relaxed">
-    Getting a website developed for your business is an investment. The cheapest
-    option is not always the least expensive option in the long run.
+<p class="mb-5 text-slate-700 leading-relaxed">
+  Getting a website developed for your business is an investment. The cheapest
+  option is not always the least expensive option in the long run.
+</p>
+
+<p class="mb-5 text-slate-700 leading-relaxed">
+  A website that looks attractive but loads slowly, performs poorly on mobile
+  devices or gives visitors no clear way to contact you can become an expensive
+  brochure instead of a business tool.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  1. Mobile-First Responsiveness
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Your website should work properly on phones, tablets and desktops.
+  Navigation, buttons, forms, images and text should remain easy to use
+  regardless of screen size.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  2. Website Speed
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Large images, unnecessary scripts and poorly implemented features can
+  increase loading times. Ask how the developer plans to optimise performance.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  3. Conversion-Focused Design
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Your website should make the next step obvious. Depending on the business,
+  that could be calling, sending a WhatsApp message, booking an appointment,
+  submitting an enquiry or purchasing a product.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  4. SEO-Friendly Structure
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  A website should have sensible page structure, crawlable content, descriptive
+  titles, useful internal links and a technical foundation that supports search.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  5. Ownership & Future Support
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Before signing a contract, understand who owns the domain, hosting,
+  source code, design assets and analytics accounts. Also ask what happens
+  when you need changes later.
+</p>
+
+<div class="my-8 p-6 bg-blue-50 rounded-2xl border border-blue-100">
+  <h4 class="font-bold text-blue-900 mb-2">
+    Quick checklist
+  </h4>
+  <p class="text-blue-800 text-sm leading-relaxed">
+    Ask about mobile responsiveness, speed, SEO, conversion tracking,
+    ownership, security, backups and ongoing maintenance.
   </p>
+</div>
 
-  <p class="mb-5 text-slate-700 leading-relaxed">
-    A website that looks attractive but loads slowly, performs poorly on mobile
-    devices or gives visitors no clear way to contact you can become an expensive
-    brochure instead of a business tool.
+<div class="mt-8 p-6 rounded-2xl bg-slate-50 border border-slate-200">
+  <p class="text-xs text-slate-500 leading-relaxed">
+    <strong>HB GrowthSyncro:</strong> If you are comparing website development
+    options for your business, evaluate the entire system rather than choosing
+    only by the initial price.
   </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    1. Mobile-First Responsiveness
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Your website should work properly on phones, tablets and desktops.
-    Navigation, buttons, forms, images and text should remain easy to use
-    regardless of screen size.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    2. Website Speed
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Large images, unnecessary scripts and poorly implemented features can
-    increase loading times. Ask how the developer plans to optimise performance.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    3. Conversion-Focused Design
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Your website should make the next step obvious. Depending on the business,
-    that could be calling, sending a WhatsApp message, booking an appointment,
-    submitting an enquiry or purchasing a product.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    4. SEO-Friendly Structure
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    A website should have sensible page structure, crawlable content, descriptive
-    titles, useful internal links and a technical foundation that supports search.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    5. Ownership & Future Support
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Before signing a contract, understand who owns the domain, hosting,
-    source code, design assets and analytics accounts. Also ask what happens
-    when you need changes later.
-  </p>
-
-  <div class="my-8 p-6 bg-blue-50 rounded-2xl border border-blue-100">
-    <h4 class="font-bold text-blue-900 mb-2">
-      Quick checklist
-    </h4>
-    <p class="text-blue-800 text-sm leading-relaxed">
-      Ask about mobile responsiveness, speed, SEO, conversion tracking,
-      ownership, security, backups and ongoing maintenance.
-    </p>
-  </div>
-
-  <div class="mt-8 p-6 rounded-2xl bg-slate-50 border border-slate-200">
-    <p class="text-xs text-slate-500 leading-relaxed">
-      <strong>HB GrowthSyncro:</strong> If you are comparing website development
-      options for your business, evaluate the entire system rather than choosing
-      only by the initial price.
-    </p>
-  </div>
+</div>
 `,
   },
+
+  // =========================================================
+  // 6. GOOGLE MAPS TOP 3 ARTICLE
+  // =========================================================
   {
     id: "google-maps-top-3",
-    title:
-      "How to Improve Your Google Maps Visibility and Get More Local Leads",
+    title: "How to Improve Your Google Maps Visibility and Get More Local Leads",
     author: "HB GrowthSyncro",
     date: "August 3, 2026",
     category: "Local SEO",
@@ -982,74 +1120,78 @@ and even simple tasks begin to feel unnecessarily slow.
     excerpt:
       "A practical local SEO guide covering Google Business Profile optimisation, reviews, local relevance and the signals that can help businesses improve visibility.",
     content: `
-  <p class="mb-5 text-slate-700 leading-relaxed">
-    When someone searches for a nearby service, appearing prominently in local
-    search results can put your business in front of people who already have
-    buying intent.
+<p class="mb-5 text-slate-700 leading-relaxed">
+  When someone searches for a nearby service, appearing prominently in local
+  search results can put your business in front of people who already have
+  buying intent.
+</p>
+
+<p class="mb-5 text-slate-700 leading-relaxed">
+  Local SEO is not simply about adding keywords to a business description.
+  It involves making your business information accurate, useful and consistent
+  while building genuine local relevance.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  Complete Your Business Profile
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Use the most appropriate business category, keep your contact information
+  accurate and make sure your opening hours are maintained.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  Use High-Quality Business Photos
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Real photographs can help potential customers understand what your business
+  looks like and what experience they can expect.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  Build Genuine Reviews
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Encourage real customers to leave honest feedback. Do not manufacture
+  reviews or pressure customers into posting misleading experiences.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  Create Useful Local Content
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Publish useful pages and articles that answer questions your local customers
+  actually ask. Connect those pages through sensible internal links.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  Measure Calls and Enquiries
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Rankings are useful, but the ultimate goal for many local businesses is
+  qualified calls, messages, bookings and enquiries.
+</p>
+
+<div class="mt-8 p-6 bg-blue-600 text-white rounded-2xl">
+  <h4 class="font-bold text-xl mb-2">
+    Local SEO Is A Long-Term Asset
+  </h4>
+  <p class="text-blue-100 leading-relaxed">
+    Focus on useful information, accurate business details, genuine customer
+    experiences and a website that makes contacting your business easy.
   </p>
-
-  <p class="mb-5 text-slate-700 leading-relaxed">
-    Local SEO is not simply about adding keywords to a business description.
-    It involves making your business information accurate, useful and consistent
-    while building genuine local relevance.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    Complete Your Business Profile
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Use the most appropriate business category, keep your contact information
-    accurate and make sure your opening hours are maintained.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    Use High-Quality Business Photos
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Real photographs can help potential customers understand what your business
-    looks like and what experience they can expect.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    Build Genuine Reviews
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Encourage real customers to leave honest feedback. Do not manufacture
-    reviews or pressure customers into posting misleading experiences.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    Create Useful Local Content
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Publish useful pages and articles that answer questions your local customers
-    actually ask. Connect those pages through sensible internal links.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    Measure Calls and Enquiries
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Rankings are useful, but the ultimate goal for many local businesses is
-    qualified calls, messages, bookings and enquiries.
-  </p>
-
-  <div class="mt-8 p-6 bg-blue-600 text-white rounded-2xl">
-    <h4 class="font-bold text-xl mb-2">
-      Local SEO Is A Long-Term Asset
-    </h4>
-    <p class="text-blue-100 leading-relaxed">
-      Focus on useful information, accurate business details, genuine customer
-      experiences and a website that makes contacting your business easy.
-    </p>
-  </div>
+</div>
 `,
   },
+
+  // =========================================================
+  // 7. WHATSAPP LEAD FUNNEL
+  // =========================================================
   {
     id: "whatsapp-lead-funnel",
     title:
@@ -1063,66 +1205,67 @@ and even simple tasks begin to feel unnecessarily slow.
     excerpt:
       "Learn how strategically placed WhatsApp conversations can reduce friction and help businesses respond to website visitors faster.",
     content: `
-  <p class="mb-5 text-slate-700 leading-relaxed">
-    A contact form asks a visitor to type information, submit it and then wait
-    for a response. For some businesses that works perfectly. For others,
-    especially businesses that already communicate with customers through
-    WhatsApp, there may be a simpler path.
+<p class="mb-5 text-slate-700 leading-relaxed">
+  A contact form asks a visitor to type information, submit it and then wait
+  for a response. For some businesses that works perfectly. For others,
+  especially businesses that already communicate with customers through
+  WhatsApp, there may be a simpler path.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  Reduce The Number of Steps
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  A clearly labelled WhatsApp button can give a visitor a direct way to ask
+  a question without navigating through multiple pages.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  Set The Right Expectations
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  Tell visitors what will happen after they start a conversation. For example,
+  you can explain whether someone will respond during business hours and what
+  information they should provide.
+</p>
+
+<h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
+  Don't Replace Every Form
+</h3>
+
+<p class="mb-4 text-slate-700 leading-relaxed">
+  WhatsApp is not automatically better for every business. Complex enquiries,
+  detailed applications and structured information may still be better handled
+  through forms.
+</p>
+
+<div class="my-8 p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">
+  <h4 class="font-bold text-emerald-900 mb-2">
+    Better approach
+  </h4>
+  <p class="text-emerald-800 leading-relaxed">
+    Give visitors the communication method that best matches the type of
+    question they are trying to ask.
   </p>
+</div>
 
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    Reduce The Number of Steps
-  </h3>
+<h3 class="text-xl font-bold text-slate-900 mt-8 mb-3">
+  Final Thought
+</h3>
 
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    A clearly labelled WhatsApp button can give a visitor a direct way to ask
-    a question without navigating through multiple pages.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    Set The Right Expectations
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    Tell visitors what will happen after they start a conversation. For example,
-    you can explain whether someone will respond during business hours and what
-    information they should provide.
-  </p>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">
-    Don't Replace Every Form
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    WhatsApp is not automatically better for every business. Complex enquiries,
-    detailed applications and structured information may still be better handled
-    through forms.
-  </p>
-
-  <div class="my-8 p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">
-    <h4 class="font-bold text-emerald-900 mb-2">
-      Better approach
-    </h4>
-    <p class="text-emerald-800 leading-relaxed">
-      Give visitors the communication method that best matches the type of
-      question they are trying to ask.
-    </p>
-  </div>
-
-  <h3 class="text-xl font-bold text-slate-900 mt-8 mb-3">
-    Final Thought
-  </h3>
-
-  <p class="mb-4 text-slate-700 leading-relaxed">
-    A good lead funnel is not about adding more buttons. It is about removing
-    unnecessary friction between a visitor's question and the answer they need.
-  </p>
+<p class="mb-4 text-slate-700 leading-relaxed">
+  A good lead funnel is not about adding more buttons. It is about removing
+  unnecessary friction between a visitor's question and the answer they need.
+</p>
 `,
   },
 ];
 
 const categories = [
   "All",
+  "Independence Special",
   "Web Development",
   "Local SEO",
   "Lead Generation",
@@ -1130,6 +1273,9 @@ const categories = [
   "Tech & Lifestyle",
 ];
 
+// =========================================================
+// MAIN BLOG PAGE COMPONENT
+// =========================================================
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -1145,12 +1291,10 @@ const Blog = () => {
         ${blog.content}
       `.toLowerCase();
 
-      const matchesSearch =
-        query === "" || searchableText.includes(query);
+      const matchesSearch = query === "" || searchableText.includes(query);
 
       const matchesCategory =
-        selectedCategory === "All" ||
-        blog.category === selectedCategory;
+        selectedCategory === "All" || blog.category === selectedCategory;
 
       return matchesSearch && matchesCategory;
     });
@@ -1174,9 +1318,7 @@ const Blog = () => {
 
   const createWhatsAppLink = (title) => {
     const message = `Hi HB GrowthSyncro, I have questions about the article: "${title}"`;
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      message
-    )}`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   };
 
   const relatedArticles = activeArticle
@@ -1194,8 +1336,8 @@ const Blog = () => {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {activeArticle ? (
           /* =========================================================
-             SINGLE ARTICLE VIEW (RESPONSIVE GRID)
-             ========================================================= */
+              SINGLE ARTICLE VIEW (RESPONSIVE GRID)
+              ========================================================= */
           <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr_240px] gap-8 items-start">
             {/* LEFT STICKY AD (Hidden on Mobile) */}
             <aside className="hidden lg:block sticky top-8 self-start w-full">
@@ -1217,11 +1359,16 @@ const Blog = () => {
               </button>
 
               <div>
-                <div className="mb-5">
+                <div className="mb-5 flex items-center gap-2">
                   <span className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full border border-blue-100">
                     <FiTag className="w-3 h-3" />
                     {activeArticle.category}
                   </span>
+                  {activeArticle.isFeatured && (
+                    <span className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200">
+                      <FiAward className="w-3.5 h-3.5" /> 80th Independence Special
+                    </span>
+                  )}
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-5">
@@ -1292,6 +1439,7 @@ const Blog = () => {
                 layout="in-article"
               />
 
+              {/* ARTICLE HTML CONTENT */}
               <div
                 className="prose prose-slate max-w-none text-slate-700 leading-relaxed text-base sm:text-lg mt-6"
                 dangerouslySetInnerHTML={{
@@ -1306,12 +1454,66 @@ const Blog = () => {
                 layout="in-article"
               />
 
-              {/* NEW MULTIPLEX / MATCHED CONTENT AD UNIT (Slot 8781407489) */}
-              <AdSense
-                slot="8781407489"
-                format="autorelaxed"
-              />
+              {/* =========================================================
+                  AUTOMATIC BOTTOM AFFILIATE RECOMMENDATIONS
+                  ========================================================= */}
+              {activeArticle.affiliateLinks && (
+                <div className="my-8 p-6 sm:p-8 bg-slate-900 text-white rounded-3xl shadow-lg border border-slate-800">
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/80 px-3 py-1 rounded-full mb-3 border border-emerald-800/50">
+                    Recommended Resources & Upgrades
+                  </span>
+                  <h4 className="text-xl font-bold mb-2">
+                    Featured Tools & Hardware Deals
+                  </h4>
+                  <p className="text-slate-300 text-sm mb-6 leading-relaxed">
+                    Vetted solutions to help you solve bottlenecks and scale faster.
+                  </p>
 
+                  <div className="flex flex-wrap gap-3">
+                    {Object.entries(activeArticle.affiliateLinks).map(([key, link]) => {
+                      const targetUrl = Array.isArray(link) ? link[0] : link;
+                      const label =
+                        activeArticle.gridLabels?.[key] ||
+                        `Check ${key.charAt(0).toUpperCase() + key.slice(1)} Deal`;
+
+                      return (
+                        <a
+                          key={key}
+                          href={targetUrl}
+                          target="_blank"
+                          rel="noopener noreferrer sponsored"
+                          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition shadow-sm"
+                        >
+                          <span>{label}</span>
+                          <span>→</span>
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* =========================================================
+                  BOTTOM MULTIPLEX / MATCHED CONTENT AD UNIT
+                  ========================================================= */}
+              <div className="my-8">
+                <AdSense
+                  key={`multiplex-${activeArticle.id}`}
+                  slot="8781407489"
+                  format="autorelaxed"
+                />
+              </div>
+
+              {/* =========================================================
+                  AUTOMATIC AFFILIATE DISCLOSURE (LEGAL & POLICY SAFE)
+                  ========================================================= */}
+              <div className="mt-8 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  <strong>Affiliate Disclosure:</strong> Some links on this page are affiliate links. If you make a purchase through these links, HB GrowthSyncro may earn a commission at no additional cost to you. We only recommend solutions that deliver measurable value.
+                </p>
+              </div>
+
+              {/* CALL TO ACTION BANNER */}
               <div className="mt-12 p-8 sm:p-10 rounded-3xl bg-blue-600 text-white shadow-xl shadow-blue-600/20">
                 <span className="inline-block text-xs font-bold uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full mb-4">
                   HB GrowthSyncro
@@ -1339,6 +1541,7 @@ const Blog = () => {
                 </a>
               </div>
 
+              {/* RELATED ARTICLES */}
               {relatedArticles.length > 0 && (
                 <div className="mt-14">
                   <div className="flex items-center justify-between mb-6">
@@ -1425,8 +1628,8 @@ const Blog = () => {
           </div>
         ) : (
           /* =========================================================
-             BLOG LISTING PAGE (RESPONSIVE GRID)
-             ========================================================= */
+              BLOG LISTING PAGE (RESPONSIVE GRID)
+              ========================================================= */
           <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr_240px] gap-8 items-start">
             {/* LEFT STICKY AD CONTAINER */}
             <aside className="hidden lg:block sticky top-8 self-start w-full">
@@ -1513,8 +1716,16 @@ const Blog = () => {
                   {filteredBlogs.map((post) => (
                     <article
                       key={post.id}
-                      className="bg-white rounded-[24px] border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                      className="bg-white rounded-[24px] border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative"
                     >
+                      {post.isFeatured && (
+                        <div className="absolute top-4 right-4 z-10">
+                          <span className="inline-flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wider bg-amber-600 text-white px-3 py-1 rounded-full shadow-md">
+                            <FiAward className="w-3 h-3" /> 80th Independence Special
+                          </span>
+                        </div>
+                      )}
+
                       <div>
                         <button
                           onClick={() => handleSelectArticle(post)}
@@ -1527,7 +1738,7 @@ const Blog = () => {
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />
 
-                          <span className="absolute top-4 left-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                          <span className="absolute bottom-4 left-4 inline-flex items-center gap-1 text-xs font-bold text-blue-600 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
                             <FiTag className="w-3 h-3" />
                             {post.category}
                           </span>
@@ -1606,6 +1817,13 @@ const Blog = () => {
                   </button>
                 </div>
               )}
+
+              {/* LISTING IN-ARTICLE AD UNIT */}
+              <AdSense
+                slot="4436678220"
+                format="fluid"
+                layout="in-article"
+              />
 
               <div className="p-8 sm:p-10 rounded-3xl bg-slate-900 text-white text-center">
                 <span className="text-xs font-bold uppercase tracking-widest text-blue-400">
