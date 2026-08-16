@@ -23,6 +23,8 @@ import AffiliateStore from "./components/AffiliateStore";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import TestimonialsSlider from "./components/TestimonialsSlider";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsAndConditions from "./components/TermsAndConditions";
 
 // Resets scroll position to the top when navigating between pages
 const ScrollToTop = () => {
@@ -67,12 +69,14 @@ const MainContent = () => {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/blog" element={<Blog />} />
-          
+      
           {/* FIXED ROUTE: Changed from /affiliate-store to /toolkit */}
           <Route path="/toolkit" element={<AffiliateStore />} />
           
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
           {/* Catch-all Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />
