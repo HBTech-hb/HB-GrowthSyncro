@@ -20,72 +20,70 @@ const Pricing = () => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  // Core Pricing Plans Data
+  // Needs-Based Pricing Plans Data
   const plans = [
     {
-      id: "launch",
-      name: "Business Launch",
-      badge: "Essential Entry",
-      price: "₹14,999",
-      priceSub: "One-time investment",
+      id: "basic",
+      name: "Basic Website",
+      badge: "Start Here",
+      price: "₹9,999",
+      priceSub: "One-time development fee",
       description:
-        "Ideal for startups and local businesses looking to establish a high-trust digital foundation.",
+        "Ideal for independent professionals, consultants, and local service providers seeking a clean, fast-loading digital business card and service portfolio.",
       featured: false,
-      ctaText: "Book Consultation",
+      ctaText: "Get Started",
       whatsappMsg:
-        "Hi HB GrowthSyncro, I want to discuss the Business Launch plan (₹14,999).",
+        "Hi HB GrowthSyncro, I want to discuss the Basic Website plan.",
       features: [
-        "High-Performance React Website",
-        "Fully Mobile Responsive UI",
-        "Direct WhatsApp Booking Integration",
-        "Google Business Profile Setup",
-        "Basic On-Page Technical SEO",
-        "SSL Security & Fast Hosting Setup",
-        "14 Days Post-Launch Support",
+        "1-3 Responsive Web Pages",
+        "Mobile & Tablet Optimized UI",
+        "Direct WhatsApp Instant Inquiry Button",
+        "Cloud Hosting Setup & SSL Encryption",
+        "Contact Form & Location Integration",
+        "7 Days Dedicated Post-Launch Support",
       ],
     },
     {
-      id: "growth",
-      name: "Business Growth",
-      badge: "Most Popular",
-      price: "Starting ₹29,999",
-      priceSub: "Tailored to scale",
+      id: "business",
+      name: "Business Lead Gen",
+      badge: "Most Needed",
+      price: "₹19,999",
+      priceSub: "One-time development fee",
       description:
-        "For growing brands needing high local Google search visibility and consistent customer acquisition.",
+        "Engineered for established local businesses aiming to generate continuous customer inquiries, rank in local search, and automate lead intake.",
       featured: true,
-      ctaText: "Request Proposal",
+      ctaText: "Build My Business",
       whatsappMsg:
-        "Hi HB GrowthSyncro, I want to request a proposal for the Business Growth plan.",
+        "Hi HB GrowthSyncro, I need the Business Lead Gen website.",
       features: [
-        "Everything in Business Launch",
-        "Advanced Local SEO Strategy",
-        "Complete Brand Identity & Logo System",
-        "High-Velocity Campaign Landing Pages",
-        "Monthly Content & Web Updates",
-        "Conversion Performance Tracking",
-        "Google Maps Top 3 Optimization",
+        "Everything in Basic Website",
+        "Up to 10 Custom Structured Pages",
+        "Google Business Profile Setup & Optimization",
+        "High-Conversion Lead Capture Funnels",
+        "Technical On-Page SEO & Schema Markup",
+        "Google Analytics 4 & Search Console Setup",
+        "30 Days Dedicated Post-Launch Support",
       ],
     },
     {
-      id: "partner",
-      name: "Growth Partner",
-      badge: "Enterprise Scale",
-      price: "Let's Talk",
-      priceSub: "Full retainer partner",
+      id: "custom",
+      name: "Custom / E-commerce",
+      badge: "Tailored Needs",
+      price: "Custom Quote",
+      priceSub: "Based on technical scope",
       description:
-        "A full-service digital partnership for businesses ready to dominate their local market.",
+        "Tailored for online retail stores, booking platforms, and custom software web apps requiring database logic, secure authentication, and payment gateways.",
       featured: false,
-      ctaText: "Become a Growth Partner",
+      ctaText: "Discuss Custom Needs",
       whatsappMsg:
-        "Hi HB GrowthSyncro, I want to explore becoming a Growth Partner.",
+        "Hi HB GrowthSyncro, I have a custom website or e-commerce requirement.",
       features: [
-        "Everything in Business Growth",
-        "Automated Customer Chat Workflows",
-        "Omnichannel Digital Marketing",
-        "Continuous Technical Maintenance",
-        "Monthly Strategic Advisory Calls",
-        "24/7 Priority Dedicated Support",
-        "Quarterly ROI & Expansion Audits",
+        "Complete E-commerce & Razorpay/Stripe Setup",
+        "Custom Dynamic Web Application Architecture",
+        "Administrative Dashboard & Inventory Management",
+        "Advanced Conversion Tracking & Event Analytics",
+        "Automated Customer Notification Workflows",
+        "Ongoing Service-Level Agreement (SLA) Options",
       ],
     },
   ];
@@ -93,30 +91,29 @@ const Pricing = () => {
   // Service Feature Matrix Table
   const comparisonMatrix = [
     {
-      category: "Core Digital Platform",
+      category: "Website Capabilities",
       features: [
-        { name: "Responsive Business Website", launch: true, growth: true, partner: true },
-        { name: "WhatsApp Direct Lead Funnel", launch: true, growth: true, partner: true },
-        { name: "Conversion Landing Pages", launch: false, growth: true, partner: true },
-        { name: "Automated Customer Chatbot", launch: false, growth: false, partner: true },
+        { name: "Responsive Layout (Mobile/Tablet/Desktop)", basic: true, business: true, custom: true },
+        { name: "Direct WhatsApp Click-to-Chat", basic: true, business: true, custom: true },
+        { name: "Number of Included Pages", basic: "Up to 3", business: "Up to 10", custom: "Unlimited" },
+        { name: "Payment Gateway / Product Catalog", basic: false, business: false, custom: true },
       ],
     },
     {
-      category: "Search & Visibility",
+      category: "Marketing & Search Visibility",
       features: [
-        { name: "Google Business Profile Setup", launch: true, growth: true, partner: true },
-        { name: "Local SEO Keyword Optimization", launch: "Basic", growth: "Advanced", partner: "Dominance" },
-        { name: "Google Maps Pack Ranking", launch: false, growth: true, partner: true },
-        { name: "Competitor Search Audits", launch: false, growth: false, partner: true },
+        { name: "Google Business Profile Map Setup", basic: false, business: true, custom: true },
+        { name: "Structured Lead Capture Forms", basic: false, business: true, custom: true },
+        { name: "Search Engine Optimization", basic: "Standard Meta", business: "Local SEO & Schema", custom: "Advanced Full-Stack" },
+        { name: "Web Traffic & Event Analytics", basic: false, business: true, custom: true },
       ],
     },
     {
-      category: "Strategy & Support",
+      category: "Support & Infrastructure",
       features: [
-        { name: "Brand Identity Design", launch: false, growth: true, partner: true },
-        { name: "Monthly Content & Website Care", launch: false, growth: true, partner: true },
-        { name: "Monthly Strategy Calls", launch: false, growth: false, partner: true },
-        { name: "Priority Support Window", launch: "Standard", growth: "Fast", partner: "24/7 Priority" },
+        { name: "Cloud Server Deployment & SSL", basic: true, business: true, custom: true },
+        { name: "Included Post-Launch Warranty", basic: "7 Days", business: "30 Days", custom: "Priority SLA" },
+        { name: "Custom Dynamic Admin Dashboard", basic: false, business: false, custom: true },
       ],
     },
   ];
@@ -124,24 +121,29 @@ const Pricing = () => {
   // Frequently Asked Questions
   const faqs = [
     {
-      question: "How long does it take to deliver the website?",
+      question: "Which package is best suited for an independent professional or small service provider?",
       answer:
-        "Our standard delivery time is 5 to 7 days for the Business Launch plan once content and requirements are finalized.",
+        "The Basic Website plan is designed specifically for professionals who need a fast, credible digital identity to showcase services, credentials, and contact details without ongoing platform overhead.",
     },
     {
-      question: "Do I need to pay for domain and hosting separately?",
+      question: "Can we start with a Basic or Business website and upgrade to e-commerce later?",
       answer:
-        "Hosting setup and SSL integration are included. We can assist you in acquiring your custom domain name directly.",
+        "Yes. We construct every website with modular, scalable code architecture. When your business is ready to process digital payments, add user accounts, or manage product inventories, we expand your existing infrastructure smoothly.",
     },
     {
-      question: "Will my website work well on mobile phones?",
+      question: "Are there recurring monthly maintenance or subscription fees?",
       answer:
-        "Yes, every website we engineer is 100% mobile-responsive, lightning-fast, and tested across all smartphone sizes.",
+        "Our development fees are strictly one-time investments. Standard third-party infrastructure costs (such as your domain name registration and hosting server) renew on an annual basis at cost price.",
     },
     {
-      question: "Can I upgrade my growth plan later?",
+      question: "What is the standard turnaround time from kickoff to public launch?",
       answer:
-        "Absolutely. You can start with the Business Launch plan and upgrade to Business Growth or Growth Partner anytime as your revenue expands.",
+        "Basic website projects typically deploy within 3 to 5 business days. Business Lead Gen platforms generally launch within 7 to 10 business days, contingent upon timely delivery of your project content and verification credentials.",
+    },
+    {
+      question: "Who retains legal ownership of the source code and digital domain?",
+      answer:
+        "You retain 100% legal ownership of your domain name, cloud hosting environment, database records, and source code. We do not enforce proprietary vendor lock-in.",
     },
   ];
 
@@ -152,15 +154,15 @@ const Pricing = () => {
         {/* HERO SECTION */}
         <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-20">
           <span className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-4 border border-blue-100">
-            Tailored Investments
+            Simple, Transparent Pricing
           </span>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-            Choose the Right <span className="text-blue-600">Growth Plan.</span>
+            Pay only for what <span className="text-blue-600">you need.</span>
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg lg:text-xl mt-6 font-normal max-w-3xl mx-auto leading-relaxed">
-            Predictable digital solutions built around business outcomes, customer acquisition, and verified ROI—not arbitrary deliverables.
+            Transparent development packages designed to help your business establish a high-performing digital footprint, rank in local search, and turn visitors into paying customers.
           </p>
         </div>
 
@@ -194,7 +196,7 @@ const Pricing = () => {
                     }`}
                   >
                     {!plan.featured && plan.badge}
-                    {plan.featured && plan.name}
+                    {plan.featured && "Recommended"}
                   </span>
                 </div>
 
@@ -203,8 +205,7 @@ const Pricing = () => {
                     plan.featured ? "text-white" : "text-slate-900"
                   }`}
                 >
-                  {!plan.featured && plan.name}
-                  {plan.featured && "Scale Your Revenue"}
+                  {plan.name}
                 </h3>
 
                 <p
@@ -242,7 +243,7 @@ const Pricing = () => {
                       plan.featured ? "text-slate-400" : "text-slate-500"
                     }`}
                   >
-                    Included Deliverables
+                    What's Included
                   </span>
                   {plan.features.map((feat, idx) => (
                     <div key={idx} className="flex items-start gap-3">
@@ -273,6 +274,7 @@ const Pricing = () => {
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(plan.whatsappMsg)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Inquire about ${plan.name} plan on WhatsApp`}
                   className={`w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-sm font-semibold transition-all duration-200 shadow-md group ${
                     plan.featured
                       ? "bg-blue-600 hover:bg-blue-500 text-white shadow-blue-600/30"
@@ -291,14 +293,11 @@ const Pricing = () => {
         <div className="mb-24 bg-slate-50/70 rounded-[28px] p-8 sm:p-12 border border-slate-200/80">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">
-              Full Transparency
+              Compare Features
             </span>
             <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
-              Detailed Solution Matrix
+              Detailed Deliverables Breakdown
             </h3>
-            <p className="text-slate-600 text-sm mt-2">
-              Compare exact capabilities across all three growth frameworks.
-            </p>
           </div>
 
           <div className="overflow-x-auto">
@@ -306,9 +305,9 @@ const Pricing = () => {
               <thead>
                 <tr className="border-b border-slate-200 text-slate-900">
                   <th className="py-4 px-4 text-sm font-bold w-2/5">Capabilities</th>
-                  <th className="py-4 px-4 text-sm font-bold text-center w-1/5">Launch</th>
-                  <th className="py-4 px-4 text-sm font-bold text-center w-1/5 text-blue-600">Growth</th>
-                  <th className="py-4 px-4 text-sm font-bold text-center w-1/5">Partner</th>
+                  <th className="py-4 px-4 text-sm font-bold text-center w-1/5">Basic</th>
+                  <th className="py-4 px-4 text-sm font-bold text-center w-1/5 text-blue-600">Business</th>
+                  <th className="py-4 px-4 text-sm font-bold text-center w-1/5">Custom</th>
                 </tr>
               </thead>
               <tbody>
@@ -329,42 +328,42 @@ const Pricing = () => {
                           {feat.name}
                         </td>
                         
-                        {/* Launch Column */}
+                        {/* Basic Column */}
                         <td className="py-4 px-4 text-center">
-                          {typeof feat.launch === "boolean" ? (
-                            feat.launch ? (
+                          {typeof feat.basic === "boolean" ? (
+                            feat.basic ? (
                               <FiCheck className="w-5 h-5 text-blue-600 mx-auto" />
                             ) : (
                               <FiX className="w-4 h-4 text-slate-300 mx-auto" />
                             )
                           ) : (
-                            <span className="text-xs font-semibold text-slate-600">{feat.launch}</span>
+                            <span className="text-xs font-semibold text-slate-600">{feat.basic}</span>
                           )}
                         </td>
 
-                        {/* Growth Column */}
+                        {/* Business Column */}
                         <td className="py-4 px-4 text-center bg-blue-50/30">
-                          {typeof feat.growth === "boolean" ? (
-                            feat.growth ? (
+                          {typeof feat.business === "boolean" ? (
+                            feat.business ? (
                               <FiCheck className="w-5 h-5 text-blue-600 mx-auto" />
                             ) : (
                               <FiX className="w-4 h-4 text-slate-300 mx-auto" />
                             )
                           ) : (
-                            <span className="text-xs font-bold text-blue-600">{feat.growth}</span>
+                            <span className="text-xs font-bold text-blue-600">{feat.business}</span>
                           )}
                         </td>
 
-                        {/* Partner Column */}
+                        {/* Custom Column */}
                         <td className="py-4 px-4 text-center">
-                          {typeof feat.partner === "boolean" ? (
-                            feat.partner ? (
+                          {typeof feat.custom === "boolean" ? (
+                            feat.custom ? (
                               <FiCheck className="w-5 h-5 text-blue-600 mx-auto" />
                             ) : (
                               <FiX className="w-4 h-4 text-slate-300 mx-auto" />
                             )
                           ) : (
-                            <span className="text-xs font-semibold text-slate-600">{feat.partner}</span>
+                            <span className="text-xs font-semibold text-slate-600">{feat.custom}</span>
                           )}
                         </td>
                       </tr>
@@ -394,8 +393,10 @@ const Pricing = () => {
                 className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all duration-200"
               >
                 <button
+                  type="button"
                   onClick={() => toggleFaq(index)}
-                  className="w-full p-6 text-left flex items-center justify-between font-bold text-slate-900 hover:text-blue-600 transition-colors"
+                  aria-expanded={openFaq === index}
+                  className="w-full p-6 text-left flex items-center justify-between font-bold text-slate-900 hover:text-blue-600 transition-colors cursor-pointer"
                 >
                   <span>{faq.question}</span>
                   <FiChevronDown
@@ -420,31 +421,22 @@ const Pricing = () => {
 
           <div className="relative z-10 max-w-2xl">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800/50 mb-4">
-              <FiZap className="w-3.5 h-3.5" /> Tailored Architecture
+              <FiZap className="w-3.5 h-3.5" /> Direct Consultation
             </span>
             <h3 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
-              Need a Custom Solution?
+              Have a tailored technical requirement?
             </h3>
             <p className="text-slate-400 text-base sm:text-lg mt-3 font-normal leading-relaxed">
-              Every business model is different. Let's discuss your specific market targets and build a custom strategy tailored to your exact budget and goals.
+              If your enterprise requires custom API integrations, automated workflows, or specialized web application logic, connect directly for an architectural breakdown and quote.
             </p>
           </div>
 
           <div className="relative z-10 shrink-0 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <a
-              href={`https://wa.me/${whatsappNumber}?text=Hi%20HB%20GrowthSyncro,%20I'd%20like%20to%20discuss%20a%20custom%20digital%20solution`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base transition-colors shadow-lg shadow-blue-600/25 group"
-            >
-              <span>Book Free Consultation</span>
-              <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
-
-            <a
               href={`https://wa.me/${whatsappNumber}?text=Hi%20HB%20GrowthSyncro,%20I'd%20like%20to%20chat%20about%20my%20business%20website`}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Chat with HB GrowthSyncro on WhatsApp regarding custom website requirements"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white font-semibold text-base transition-colors shadow-lg shadow-green-600/20"
             >
               <FiMessageSquare className="w-5 h-5" />

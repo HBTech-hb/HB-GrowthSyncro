@@ -15,49 +15,49 @@ const services = [
   {
     title: "Website Development",
     description:
-      "Modern, lightning-fast, and responsive web platforms built with React to capture leads and establish online credibility.",
+      "Production-grade, modular web applications engineered with React. Optimized for sub-second page loads, mobile responsiveness, and seamless integration with lead capture forms and conversion funnels.",
     icon: FiGlobe,
     whatsappMsg: "Hi! I am interested in Website Development for my business."
   },
   {
     title: "SEO & Google Ranking",
     description:
-      "Optimize your search visibility to rank in Google Maps Top 3 and dominate local search queries for high-intent buyers.",
+      "Comprehensive search visibility strategies, including Google Business Profile (GBP) optimization, Name-Address-Phone (NAP) consistency, localized schema markup, and Google Maps local 3-pack targeting.",
     icon: FiSearch,
     whatsappMsg: "Hi! I want to improve my SEO and rank on Google Maps."
   },
   {
-    title: "AI ML & AI Growth Systems",
+    title: "AI Growth & Response Automation",
     description:
-      "Leverage cutting-edge AI tools and   automation to optimize content creation, response workflows, and customer engagement.",
+      "Implementation of automated inquiry sorting, conversational messaging workflows, and CRM lead routing to ensure inbound customer inquiries receive immediate follow-ups 24/7.",
     icon: FiCpu,
     whatsappMsg: "Hi! Tell me more about AI Growth Systems and automation."
   },
   {
     title: "Content Strategy & Funnels",
     description:
-      "Data-driven content planning and lead funnels that turn casual social media viewers into active business inquiries.",
+      "Strategic content mapping designed to educate high-intent prospects and guide traffic systematically into frictionless WhatsApp consultation channels and direct call funnels.",
     icon: FiTrendingUp,
     whatsappMsg: "Hi! I need help with Content Strategy and lead funnels."
   },
   {
     title: "Graphic Design & Branding",
     description:
-      "Eye-catching social media posts, banners, and promotional creatives engineered to build immediate consumer trust.",
+      "Cohesive brand identity design, conversion-focused promotional banners, and structured digital marketing assets tailored for corporate trust and consistent brand positioning.",
     icon: FiLayout,
     whatsappMsg: "Hi! I need professional Graphic Design and branding work."
   },
   {
-    title: "Reel Editing & Video",
+    title: "Video Production & Editing",
     description:
-      "Professional short-form videos with dynamic transitions, captions, and edits built for high audience retention.",
+      "High-retention short-form video editing, kinetic typography, and structured educational reels built to capture consumer attention and communicate service value across digital channels.",
     icon: FiVideo,
     whatsappMsg: "Hi! I am looking for Reel Editing and video creation."
   },
   {
     title: "Social Media Management",
     description:
-      "Content scheduling, audience engagement, and channel growth strategies designed to establish market authority.",
+      "Full-cycle social channel administration, publishing schedules, brand reputation management, and local audience engagement structured to build regional authority.",
     icon: FiShare2,
     whatsappMsg: "Hi! I want end-to-end Social Media Management."
   },
@@ -119,6 +119,7 @@ const Services = () => {
                   href={waUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Enquire on WhatsApp about ${service.title}`}
                   className="pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors cursor-pointer"
                 >
                   <span>Enquire on WhatsApp</span>
@@ -138,7 +139,7 @@ const Services = () => {
               Want These Results for Your Business?
             </h3>
             <p className="text-slate-400 text-base sm:text-lg mt-3 font-normal leading-relaxed">
-              Let’s build a simple system that brings you real customers through your website and social channels.
+              Let’s build a high-performance web and search ecosystem that consistently converts prospective visitors into qualified customer inquiries.
             </p>
           </div>
 
@@ -147,6 +148,7 @@ const Services = () => {
               href="https://wa.me/918080224138?text=Hi%20I%20want%20help%20to%20get%20more%20customers"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Connect on WhatsApp for a free business consultation"
               className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white font-semibold text-base transition-all duration-200 shadow-lg shadow-green-600/20"
             >
               <FiMessageSquare className="w-5 h-5" />

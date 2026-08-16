@@ -14,7 +14,7 @@ const FeaturedProject = React.memo(({ project, onViewModal }) => {
         <div className="lg:col-span-7 relative min-h-[340px] sm:min-h-[420px] lg:min-h-[560px] bg-slate-900 overflow-hidden group">
           <img
             src={project.image}
-            alt={`${project.businessName} Showcase`}
+            alt={`${project.businessName} Case Study Showcase`}
             loading="lazy"
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100"
           />
@@ -97,7 +97,7 @@ const FeaturedProject = React.memo(({ project, onViewModal }) => {
                 Services Delivered
               </p>
               <div className="flex flex-wrap gap-1.5">
-                {project.services.map((service, idx) => (
+                {project.services?.map((service, idx) => (
                   <ServiceBadge key={idx} label={service} />
                 ))}
               </div>
@@ -108,7 +108,7 @@ const FeaturedProject = React.memo(({ project, onViewModal }) => {
           <div className="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-3">
             <button
               onClick={() => onViewModal(project)}
-              className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold bg-slate-900 text-white hover:bg-blue-600 transition-colors duration-200 shadow-md group"
+              className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold bg-slate-900 text-white hover:bg-blue-600 transition-colors duration-200 shadow-md group cursor-pointer"
             >
               Read Full Case Study
               <FiArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -119,6 +119,7 @@ const FeaturedProject = React.memo(({ project, onViewModal }) => {
                 href={project.website}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Visit live website for ${project.businessName}`}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors duration-200"
               >
                 <FiExternalLink className="w-4 h-4" />

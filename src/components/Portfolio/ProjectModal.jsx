@@ -41,9 +41,10 @@ const ProjectModal = ({ project, onClose }) => {
         {/* Close Button Header */}
         <div className="sticky top-0 right-0 z-20 flex justify-end p-4 bg-gradient-to-b from-white via-white/90 to-transparent pointer-events-none">
           <button
+            type="button"
             onClick={onClose}
             aria-label="Close Case Study Modal"
-            className="pointer-events-auto p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+            className="pointer-events-auto p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 cursor-pointer"
           >
             <FiX className="w-5 h-5" />
           </button>
@@ -74,7 +75,7 @@ const ProjectModal = ({ project, onClose }) => {
           <div className="mt-6 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/80 max-h-[400px]">
             <img
               src={project.image}
-              alt={project.businessName}
+              alt={`${project.businessName} Case Study Overview`}
               className="w-full h-full object-cover"
             />
           </div>
@@ -115,7 +116,7 @@ const ProjectModal = ({ project, onClose }) => {
             <FiCheckCircle className="w-6 h-6 text-blue-400 shrink-0 mt-0.5" />
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-1">
-                Verified Outcome & ROI
+                Verified Outcome &amp; ROI
               </p>
               <p className="text-base font-medium text-slate-100 leading-relaxed">
                 {project.result}
@@ -129,7 +130,7 @@ const ProjectModal = ({ project, onClose }) => {
               Services Delivered
             </h3>
             <div className="flex flex-wrap gap-2">
-              {project.services.map((service, idx) => (
+              {project.services?.map((service, idx) => (
                 <ServiceBadge key={idx} label={service} />
               ))}
             </div>
@@ -142,6 +143,7 @@ const ProjectModal = ({ project, onClose }) => {
                 href={project.website}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Visit live website for ${project.businessName}`}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-md"
               >
                 <FiExternalLink className="w-4 h-4" />
@@ -152,8 +154,9 @@ const ProjectModal = ({ project, onClose }) => {
             )}
 
             <button
+              type="button"
               onClick={onClose}
-              className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-slate-200 text-slate-700 font-semibold text-sm hover:bg-slate-50 transition-colors"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-slate-200 text-slate-700 font-semibold text-sm hover:bg-slate-50 transition-colors cursor-pointer"
             >
               Close Case Study
             </button>

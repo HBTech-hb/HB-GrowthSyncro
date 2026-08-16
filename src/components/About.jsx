@@ -42,12 +42,12 @@ const About = () => {
 
           {/* Paragraph 1 */}
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
-            HB GrowthSyncro was built with a simple goal: to give growing local businesses, startups, and service providers high-performing digital systems that actually generate revenue—not just pretty designs.
+            HB GrowthSyncro was built with a single operational objective: to equip regional business owners, healthcare practices, and independent service enterprises with fast, reliable web infrastructure that translates into tangible client revenue.
           </p>
 
           {/* Paragraph 2 */}
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
-            We have become a trusted growth partner for businesses across Maharashtra, India. People often ask us what the name means, and the story behind it is straightforward:
+            We have developed into a dedicated technical growth collaborator for commercial enterprises across Maharashtra, India. Our identity and methodology are built around three core principles:
           </p>
 
           {/* Name Equation Line */}
@@ -61,30 +61,31 @@ const About = () => {
           <div className="space-y-4 relative z-10">
 
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-              <strong className="font-bold text-slate-900 text-[#1a56db]">“HB”</strong> — Represents personal accountability. You deal directly with the hands-on engineering behind your project, not middle management.
+              <strong className="font-bold text-slate-900 text-[#1a56db]">“HB”</strong> — Represents personal accountability and direct engineering. You collaborate directly with the technical specialists building your platform, eliminating agency middlemen and bureaucratic delays.
             </p>
 
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-              <strong className="font-bold text-slate-900 text-[#1a56db]">“Growth”</strong> — Focuses on the only metric that matters: bringing in real customer inquiries, calls, and sales.
+              <strong className="font-bold text-slate-900 text-[#1a56db]">“Growth”</strong> — Prioritizes commercial outcomes over vanity metrics: qualified phone consultations, direct WhatsApp bookings, and sustained local customer acquisition.
             </p>
 
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-              <strong className="font-bold text-slate-900 text-[#1a56db]">“Syncro”</strong> — Short for synchronize. Aligning your website, local Google search, and WhatsApp funnels so they work together seamlessly.
+              <strong className="font-bold text-slate-900 text-[#1a56db]">“Syncro”</strong> — Short for synchronize. Seamlessly uniting your custom web application, Google Business search presence, and messaging lead funnels into a cohesive, high-converting ecosystem.
             </p>
 
           </div>
 
           {/* Paragraph 4 */}
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
-            We chose this name because it defines how we work. Instead of overcomplicating things with tech jargon or delivering slow, outdated sites, we build fast React systems designed to convert visitors into paying clients.
+            We operate without template bloat or confusing technical jargon. Utilizing modern component architectures like React and tailored local search strategies, we engineer digital assets that load instantaneously and convert prospective visitors into long-term clients.
           </p>
 
           {/* Paragraph 5 */}
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
-            At the end of the day, we exist to give local business owners honest advice, fast delivery, and marketing systems that show a clear return on investment.
+            Our commitment is anchored in transparent communication, transparent pricing, and providing regional businesses with permanent ownership of their digital presence.
           </p>
 
         </div>
+
         {/* SECTION 3: MISSION & VISION */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Mission Card */}
@@ -128,10 +129,10 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ServiceCard img={socialMedia} title="Social Media" desc="Build local authority and engage your audience." />
-            <ServiceCard img={reelEditing} title="Reels Editing" desc="Engaging short video content that drives attention." />
-            <ServiceCard img={canvaDesign} title="Design Work" desc="High-quality, conversion-focused visual creatives." />
-            <ServiceCard img={contentStrategy} title="Strategy & Funnels" desc="Tailored marketing funnels that convert visitors to leads." />
+            <ServiceCard img={socialMedia} title="Social Media" desc="Build local authority, maintain visual brand consistency, and engage your audience." />
+            <ServiceCard img={reelEditing} title="Reels Editing" desc="Engaging, high-retention video content engineered to capture consumer attention." />
+            <ServiceCard img={canvaDesign} title="Design Work" desc="High-quality, conversion-focused visual creatives and marketing assets." />
+            <ServiceCard img={contentStrategy} title="Strategy & Funnels" desc="Tailored inquiry funnels that convert incoming website visitors into direct customer inquiries." />
           </div>
         </div>
 
@@ -149,7 +150,7 @@ const About = () => {
               <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold mb-4">1</div>
               <h3 className="font-bold text-lg text-slate-900 mb-2">Leads Over Likes</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Agencies focus on viral views. We focus on getting actual customers to call your business or send a WhatsApp enquiry.
+                Agencies focus on viral views and vanity metrics. We focus on getting actual customers to call your business or send a direct WhatsApp enquiry.
               </p>
             </div>
 
@@ -157,7 +158,7 @@ const About = () => {
               <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold mb-4">2</div>
               <h3 className="font-bold text-lg text-slate-900 mb-2">No Complex Jargon</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                We speak plain language. You always know what is being built, how it works, and what results to expect.
+                We speak plain language. You always understand what is being built, how the architecture functions, and what performance benchmarks to expect.
               </p>
             </div>
 
@@ -165,7 +166,7 @@ const About = () => {
               <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold mb-4">3</div>
               <h3 className="font-bold text-lg text-slate-900 mb-2">Speed & Reliability</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Most agencies take months. We deliver high-quality, fully functioning web systems and designs in just 5 to 7 days.
+                Most agencies take months to iterate. We engineer high-quality, fully functioning web systems and designs in just 5 to 7 business days.
               </p>
             </div>
           </div>
@@ -217,13 +218,14 @@ const About = () => {
           </h2>
 
           <p className="text-slate-400 mb-8 max-w-xl mx-auto text-sm sm:text-base">
-            Let’s build a simple digital system that brings you real enquiries through WhatsApp and your website.
+            Let’s build a high-performance digital presence that brings you real customer enquiries through WhatsApp and your website.
           </p>
 
           <a
             href="https://wa.me/918080224138?text=Hi%20I%20want%20a%20website%20for%20my%20business"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Connect with HB GrowthSyncro on WhatsApp"
             className="inline-block px-8 py-4 bg-green-600 text-white font-semibold rounded-full hover:bg-green-500 transition-colors shadow-lg shadow-green-600/20"
           >
             Contact on WhatsApp
@@ -238,7 +240,7 @@ const About = () => {
 /* REUSABLE COMPONENTS */
 const ServiceCard = ({ img, title, desc }) => (
   <div className="bg-white p-6 rounded-[20px] border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-slate-300 hover:-translate-y-1 transition-all duration-300 text-center">
-    <img src={img} alt={title} className="w-16 h-16 mx-auto mb-4 object-contain" />
+    <img src={img} alt={`${title} Service Icon`} className="w-16 h-16 mx-auto mb-4 object-contain" />
     <h3 className="font-bold text-lg text-slate-900">{title}</h3>
     <p className="text-slate-600 text-sm mt-2 leading-relaxed">{desc}</p>
   </div>
@@ -246,7 +248,7 @@ const ServiceCard = ({ img, title, desc }) => (
 
 const Feature = ({ img, text }) => (
   <div className="p-4 flex flex-col items-center">
-    <img src={img} alt={text} className="w-14 h-14 mx-auto mb-3 object-contain" />
+    <img src={img} alt={`${text} Feature Icon`} className="w-14 h-14 mx-auto mb-3 object-contain" />
     <p className="font-semibold text-slate-800 text-sm">{text}</p>
   </div>
 );

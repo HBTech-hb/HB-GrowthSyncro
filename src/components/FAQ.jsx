@@ -7,15 +7,19 @@ const faqData = [
     questions: [
       {
         q: "How fast can you build and deliver my website?",
-        a: "Our standard delivery turnaround is 5 to 7 days for the Business Launch package once content, logo, and core business information are submitted.",
+        a: "Our standard delivery turnaround for the Business Launch package is 5 to 7 business days once brand assets, logos, and service descriptions are submitted. Custom enterprise builds or platforms requiring multi-tier databases and third-party API integrations typically deploy within 10 to 14 business days.",
       },
       {
-        q: "Will my website work on all mobile smartphones?",
-        a: "Yes. Every website we build uses a modern mobile-first React structure. It is 100% responsive, fast-loading, and tested across iOS and Android devices.",
+        q: "Will my website work on all mobile smartphones and modern browsers?",
+        a: "Yes. Every website is engineered mobile-first using modern component-driven React and clean CSS architectures. We test each build across Safari, Chrome, Edge, iOS, and Android to ensure optimal touch navigation, zero layout shift, and sub-2.5 second Core Web Vitals loading speeds.",
       },
       {
-        q: "Do I need technical knowledge to manage my website?",
-        a: "Not at all. We set up simple workflows and provide post-launch maintenance packages so you never have to worry about technical updates or code.",
+        q: "Do I need technical knowledge to manage my website after launch?",
+        a: "Not at all. We deliver clean, self-sufficient web applications and provide step-by-step handover documentation. If your team requires periodic content updates, structural additions, or server maintenance, we offer flexible post-launch support retainers.",
+      },
+      {
+        q: "Who retains legal ownership of the source code and domain?",
+        a: "You retain 100% legal ownership of your domain name registration, hosting servers, production source code repositories, and user analytics from the moment final delivery is fulfilled.",
       },
     ],
   },
@@ -24,24 +28,24 @@ const faqData = [
     questions: [
       {
         q: "How does Google Maps Top 3 Optimization work?",
-        a: "We optimize your Google Business Profile (GBP), perform local keyword placement, improve local citations, and set up review workflows to push your business into top local map search results.",
+        a: "We perform complete Google Business Profile (GBP) optimization, correct Name-Address-Phone (NAP) consistency across verified business directories, structure local schema markup on your web pages, and set up customer review workflows to improve local relevance, distance, and prominence signals.",
       },
       {
-        q: "When will I start seeing search ranking results?",
-        a: "Technical website indexing usually happens within 7–14 days. Local SEO rankings and Google Maps visibility typically build momentum over 30 to 60 days.",
+        q: "When will I start seeing search ranking results and customer inquiries?",
+        a: "Search engine crawlers typically index new, semantic sitemaps within 7 to 14 days of launch. Organic search visibility and Google Maps local 3-pack rankings build steady compounding traction over 30 to 60 days as citation authority and user engagement grow.",
       },
     ],
   },
   {
-    category: "Pricing & Payments",
+    category: "Pricing & Infrastructure",
     questions: [
       {
-        q: "Are there any hidden costs after the project starts?",
-        a: "No hidden fees. Our pricing is completely transparent. Hosting setup and SSL certificates are included in our launch plans.",
+        q: "Are there any hidden costs after the project begins?",
+        a: "No. Our pricing is completely transparent. Development estimates cover end-to-end architecture, mobile responsiveness, SSL security encryption, and deployment configuration without hidden setup charges.",
       },
       {
-        q: "Do you offer post-launch support and edits?",
-        a: "Yes! Every project includes a 14-day dedicated post-launch support window. We also offer monthly care retainers for ongoing updates.",
+        q: "Do you offer post-launch support and warranty?",
+        a: "Yes. Every project launch includes a dedicated post-launch support window (7 days for Basic, 30 days for Business) to address any technical adjustments. Ongoing maintenance agreements are also available for growing businesses.",
       },
     ],
   },
@@ -91,7 +95,9 @@ const FAQ = () => {
                       className="bg-slate-50 border border-slate-200/80 rounded-2xl overflow-hidden transition-all duration-200"
                     >
                       <button
+                        type="button"
                         onClick={() => toggleAccordion(catIdx, qIdx)}
+                        aria-expanded={isOpen}
                         className="w-full p-6 text-left flex items-center justify-between font-bold text-slate-900 hover:text-blue-600 transition-colors cursor-pointer"
                       >
                         <span className="pr-4 text-base sm:text-lg">{faq.q}</span>
@@ -129,6 +135,7 @@ const FAQ = () => {
                 href="https://wa.me/918080224138?text=Hi%20HB%20GrowthSyncro,%20I%20have%20a%20question%20about%20your%20services"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ask questions on WhatsApp"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-green-600 hover:bg-green-500 text-white font-semibold text-sm transition-colors shadow-lg"
               >
                 <FiMessageSquare className="w-4 h-4" />
@@ -137,6 +144,7 @@ const FAQ = () => {
 
               <a
                 href="tel:+918080224138"
+                aria-label="Call HB GrowthSyncro directly"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white text-slate-900 hover:bg-slate-100 font-semibold text-sm transition-colors"
               >
                 <FiPhone className="w-4 h-4" />

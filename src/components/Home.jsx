@@ -20,19 +20,19 @@ const Home = () => {
   const serviceHighlights = {
     web: {
       title: "High-Performance React Systems",
-      desc: "Custom web applications built with React for lightning-fast speeds, sub-second load times, and seamless mobile responsive layouts.",
+      desc: "Custom web applications built with React for lightning-fast speeds, sub-second load times, and seamless mobile responsive layouts that pass Google Core Web Vitals.",
       metric: "99/100 Google PageSpeed Score",
       link: "/services",
     },
     seo: {
       title: "Local SEO & Google Maps Top 3",
-      desc: "Optimized search engine strategies and Google Business Profile management that put your business in front of nearby high-intent callers.",
+      desc: "Optimized search engine strategies, structured schema markup, and Google Business Profile management that put your business in front of nearby high-intent callers.",
       metric: "Top 3 Local Map Pack Visibility",
       link: "/services",
     },
     funnels: {
       title: "Automated WhatsApp Lead Workflows",
-      desc: "Instant customer capture systems that direct website visitors straight into your WhatsApp inbox for immediate conversation and conversion.",
+      desc: "Instant customer capture systems that direct website visitors straight into your WhatsApp inbox for immediate conversation, qualification, and sales conversion.",
       metric: "3x Higher Inquiry Conversions",
       link: "/services",
     },
@@ -200,7 +200,7 @@ const Home = () => {
                 <div className="relative rounded-b-xl overflow-hidden bg-slate-900 h-[360px] sm:h-[400px] flex flex-col justify-between p-6 text-white">
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
-                    alt="HB GrowthSyncro Systems"
+                    alt="HB GrowthSyncro Production Architecture Showcase"
                     className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay"
                   />
                   
@@ -273,7 +273,7 @@ const Home = () => {
               Technical Pillars
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
-              Built for Performance & Sales
+              Built for Performance &amp; Sales
             </h2>
             <p className="text-slate-600 text-sm sm:text-base">
               We combine web engineering, local SEO, and automated communication into a single, streamlined growth engine.
@@ -283,6 +283,7 @@ const Home = () => {
           {/* Tab Buttons */}
           <div className="flex justify-center gap-2 sm:gap-4 border-b border-slate-200 pb-4">
             <button
+              type="button"
               onClick={() => setActiveTab("web")}
               className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 activeTab === "web"
@@ -293,6 +294,7 @@ const Home = () => {
               Web Architecture
             </button>
             <button
+              type="button"
               onClick={() => setActiveTab("seo")}
               className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 activeTab === "seo"
@@ -303,6 +305,7 @@ const Home = () => {
               Local Search SEO
             </button>
             <button
+              type="button"
               onClick={() => setActiveTab("funnels")}
               className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 activeTab === "funnels"
@@ -360,7 +363,7 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
               <span className="text-4xl font-extrabold text-blue-200">01</span>
-              <h3 className="text-lg font-bold text-slate-900">Discovery & Audit</h3>
+              <h3 className="text-lg font-bold text-slate-900">Discovery &amp; Audit</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 We review your business targets, target audience, and current search positioning.
               </p>
@@ -376,7 +379,7 @@ const Home = () => {
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
               <span className="text-4xl font-extrabold text-blue-200">03</span>
-              <h3 className="text-lg font-bold text-slate-900">Local SEO & Funnels</h3>
+              <h3 className="text-lg font-bold text-slate-900">Local SEO &amp; Funnels</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Integrate Google Map ranking optimizations and direct WhatsApp enquiry triggers.
               </p>
@@ -384,7 +387,7 @@ const Home = () => {
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
               <span className="text-4xl font-extrabold text-blue-200">04</span>
-              <h3 className="text-lg font-bold text-slate-900">Launch & Scale</h3>
+              <h3 className="text-lg font-bold text-slate-900">Launch &amp; Scale</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Deploy with SSL security, Google indexing, and ongoing post-launch support.
               </p>

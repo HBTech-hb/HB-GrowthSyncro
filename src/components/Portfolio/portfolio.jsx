@@ -41,11 +41,11 @@ const Portfolio = () => {
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
             Real Projects. Real Businesses. <br className="hidden sm:inline" />
-            <span className="text-blue-600">Real Measurable Results.</span>
+            <span className="text-blue-600">Measurable Digital Results.</span>
           </h1>
 
           <p className="text-slate-600 text-base sm:text-lg lg:text-xl mt-6 font-normal max-w-3xl mx-auto leading-relaxed">
-            HB GrowthSyncro helps local businesses, clinics, and consumer brands engineer a dominant online presence through high-performance web systems, conversion-focused SEO, and automated lead funnels.
+            HB GrowthSyncro helps regional enterprises, healthcare facilities, and commercial retailers establish an authoritative digital presence with high-performance web architecture, technical search optimization, and direct inquiry funnels.
           </p>
         </div>
 
@@ -64,24 +64,34 @@ const Portfolio = () => {
               Selected Client Case Studies
             </h2>
             <p className="text-slate-500 text-sm mt-1">
-              Explore how we solved digital positioning for regional leaders across industries.
+              Explore how we solved technical scalability, local search rankings, and lead capture for regional businesses.
             </p>
           </div>
           <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-            {gridProjects.length} Projects
+            {gridProjects.length} Projects Documented
           </span>
         </div>
 
         {/* Remaining Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {gridProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onViewModal={handleOpenModal}
-            />
-          ))}
-        </div>
+        {gridProjects.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {gridProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                onViewModal={handleOpenModal}
+              />
+            ))}
+          </div>
+        ) : (
+          !featuredProject && (
+            <div className="text-center py-16 px-6 bg-slate-50 rounded-3xl border border-slate-200">
+              <p className="text-slate-600 text-base font-medium">
+                Case studies and portfolio items are currently updating.
+              </p>
+            </div>
+          )
+        )}
 
       </div>
 

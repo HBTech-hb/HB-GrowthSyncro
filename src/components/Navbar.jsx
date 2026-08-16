@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo/WEBSITE-LOGO.png";
+
+// 1. FontAwesome Icons (Fa)
 import {
   FaHome,
   FaUser,
@@ -8,8 +10,13 @@ import {
   FaImage,
   FaPhone,
   FaArrowRight,
-  FaBlog,
+  FaBlog
 } from "react-icons/fa";
+
+// 2. Feather Icons (Fi) 
+import {
+  FiTool,
+} from "react-icons/fi";
 
 const Navbar = ({ activeSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,6 +35,7 @@ const Navbar = ({ activeSection }) => {
     { id: "portfolio", label: "Portfolio", path: "/portfolio" },
     { id: "pricing", label: "Pricing", path: "/pricing" },
     { id: "blog", label: "Blog", path: "/blog" },
+    { id: "toolkit", label: "Toolkit", path: "/toolkit" },
     { id: "faq", label: "FAQ", path: "/faq" },
   ];
 
@@ -42,14 +50,14 @@ const Navbar = ({ activeSection }) => {
               : "bg-white/70 border-white/50"
           }`}
         >
-          {/* Centered Logo -> Forces full reload to Home */}
-          <a href="/" className="flex items-center justify-center">
+          {/* Centered Logo */}
+          <Link to="/" aria-label="HB GrowthSyncro Home" className="flex items-center justify-center">
             <img
               src={logo}
-              alt="HB GrowthSyncro"
+              alt="HB GrowthSyncro Logo"
               className="h-10 w-auto object-contain transition-transform active:scale-95"
             />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -64,47 +72,31 @@ const Navbar = ({ activeSection }) => {
         >
           <div className="flex items-center justify-between max-w-4xl mx-auto px-6 py-4">
             {/* Logo */}
-            <a href="/">
+            <Link to="/" aria-label="HB GrowthSyncro Home">
               <img
                 src={logo}
-                alt="HB GrowthSyncro"
+                alt="HB GrowthSyncro Logo"
                 className="h-12 w-auto object-contain transition duration-300"
               />
-            </a>
+            </Link>
 
             {/* Desktop Links */}
             <ul className="flex items-center gap-6">
               {navItems.map((item) => (
                 <li key={item.id}>
-                  {item.id === "home" ? (
-                    <a
-                      href="/"
-                      className={`relative font-medium transition-all duration-300 ${
-                        activeSection === "home"
-                          ? "text-blue-600 font-semibold"
-                          : "text-gray-700 hover:text-blue-600"
-                      }`}
-                    >
-                      {item.label}
-                      {activeSection === "home" && (
-                        <span className="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-blue-600"></span>
-                      )}
-                    </a>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className={`relative font-medium transition-all duration-300 ${
-                        activeSection === item.id
-                          ? "text-blue-600 font-semibold"
-                          : "text-gray-700 hover:text-blue-600"
-                      }`}
-                    >
-                      {item.label}
-                      {activeSection === item.id && (
-                        <span className="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-blue-600"></span>
-                      )}
-                    </Link>
-                  )}
+                  <Link
+                    to={item.path}
+                    className={`relative font-medium transition-all duration-300 ${
+                      activeSection === item.id
+                        ? "text-blue-600 font-semibold"
+                        : "text-gray-700 hover:text-blue-600"
+                    }`}
+                  >
+                    {item.label}
+                    {activeSection === item.id && (
+                      <span className="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-blue-600"></span>
+                    )}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -113,6 +105,7 @@ const Navbar = ({ activeSection }) => {
             <div className="flex items-center gap-5">
               <Link
                 to="/contact"
+                aria-label="Navigate to Contact Page for Growth Plan"
                 className="group flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-xs font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl"
               >
                 Get Growth Plan
@@ -126,8 +119,8 @@ const Navbar = ({ activeSection }) => {
       {/* ================= Mobile Bottom Floating Nav ================= */}
       <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-[99990] w-auto max-w-[92vw]">
         <nav className="flex items-center justify-around gap-2 sm:gap-4 rounded-full border border-gray-200/80 bg-white/95 px-4 py-2.5 shadow-2xl backdrop-blur-xl">
-          <a
-            href="/"
+          <Link
+            to="/"
             className={`flex flex-col items-center text-[9px] font-semibold transition-colors ${
               activeSection === "home"
                 ? "text-blue-600"
@@ -136,7 +129,7 @@ const Navbar = ({ activeSection }) => {
           >
             <FaHome className="text-sm mb-0.5" />
             Home
-          </a>
+          </Link>
 
           <Link
             to="/about"
@@ -184,6 +177,18 @@ const Navbar = ({ activeSection }) => {
           >
             <FaBlog className="text-sm mb-0.5" />
             Blog
+          </Link>
+          
+          <Link
+            to="/toolkit"
+            className={`flex flex-col items-center text-[9px] font-semibold transition-colors ${
+              activeSection === "toolkit"
+                ? "text-blue-600"
+                : "text-gray-500 hover:text-gray-900"
+            }`}
+          >
+            <FiTool className="text-sm mb-0.5" />
+            Toolkit
           </Link>
 
           <Link

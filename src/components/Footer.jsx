@@ -19,7 +19,7 @@ const Footer = () => {
           <Link to="/" className="inline-block">
             <img
               src={logo}
-              alt="HB GrowthSyncro"
+              alt="HB GrowthSyncro Logo"
               className="h-12 w-auto object-contain"
             />
           </Link>
@@ -133,6 +133,16 @@ const Footer = () => {
 
             <li>
               <Link
+                to="/toolkit"
+                className="hover:text-blue-600 transition-colors flex items-center gap-1.5"
+              >
+                <span className="text-blue-600 text-xs">›</span>
+                Toolkit &amp; Gear
+              </Link>
+            </li>
+
+            <li>
+              <Link
                 to="/faq"
                 className="hover:text-blue-600 transition-colors flex items-center gap-1.5"
               >
@@ -153,10 +163,10 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* WORKING HOURS */}
+        {/* WORKING HOURS & LEGAL */}
         <div className="space-y-3">
           <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-1.5 inline-block">
-            Working Hours
+            Working Hours &amp; Trust
           </h3>
 
           <ul className="space-y-2 text-xs sm:text-sm text-slate-600 pt-1">
@@ -167,9 +177,29 @@ const Footer = () => {
               </span>
             </li>
 
-            <li className="flex justify-between gap-4">
+            <li className="flex justify-between border-b border-slate-200 pb-1.5 gap-4">
               <span>Sunday:</span>
               <span className="text-rose-600 font-semibold">Closed</span>
+            </li>
+
+            <li className="pt-2">
+              <Link
+                to="/privacy-policy"
+                className="hover:text-blue-600 transition-colors flex items-center gap-1.5"
+              >
+                <span className="text-blue-600 text-xs">›</span>
+                Privacy Policy
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/terms-and-conditions"
+                className="hover:text-blue-600 transition-colors flex items-center gap-1.5"
+              >
+                <span className="text-blue-600 text-xs">›</span>
+                Terms &amp; Conditions
+              </Link>
             </li>
           </ul>
         </div>
@@ -236,8 +266,18 @@ const Footer = () => {
           India. All Rights Reserved.
         </p>
 
+        <div className="flex items-center gap-4 text-xs">
+          <Link to="/privacy-policy" className="hover:text-blue-600 transition-colors">
+            Privacy Policy
+          </Link>
+          <span>•</span>
+          <Link to="/terms-and-conditions" className="hover:text-blue-600 transition-colors">
+            Terms &amp; Conditions
+          </Link>
+        </div>
+
         <p className="text-[11px] text-blue-600 font-medium">
-          Web Design, Development & Digital Marketing Agency
+          Web Design, Development &amp; Digital Marketing
         </p>
       </div>
     </footer>

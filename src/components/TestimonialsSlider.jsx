@@ -1,12 +1,9 @@
 import React, { memo } from "react";
+import { Link } from "react-router-dom";
 import {
   FiStar,
   FiCheckCircle,
   FiArrowRight,
-  FiMessageSquare,
-  FiTrendingUp,
-  FiUsers,
-  FiAward,
 } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
 
@@ -65,7 +62,7 @@ const testimonialsData = [
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
     review:
-      "They built high-converting property landing pages with automated lead qualification. We closed site visits much faster and filtered out unqualified inquiries effortlesly.",
+      "They built high-converting property landing pages with automated lead qualification. We closed site visits much faster and filtered out unqualified inquiries effortlessly.",
   },
   {
     id: 6,
@@ -113,8 +110,10 @@ const TestimonialCard = memo(({ item }) => (
     <div className="pt-6 border-t border-slate-100 flex items-center gap-4">
       <img
         src={item.avatar}
-        alt={item.name}
+        alt={`${item.name} testimonial review for HB GrowthSyncro`}
         loading="lazy"
+        width="48"
+        height="48"
         className="w-12 h-12 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
       />
       <div>
@@ -138,7 +137,7 @@ const TestimonialSection = () => {
         {/* HERO SECTION */}
         <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-20">
           <span className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-4 border border-blue-100">
-            Client Success & Proof
+            Client Success &amp; Proof
           </span>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
@@ -168,7 +167,7 @@ const TestimonialSection = () => {
                 Google Verified Business Partner
               </h3>
               <p className="text-slate-400 text-sm mt-1">
-                Based on 20+ verified five-star client reviews across local business domains.
+                Based on verified five-star client feedback across local business verticals.
               </p>
             </div>
           </div>
@@ -176,7 +175,7 @@ const TestimonialSection = () => {
           <div className="relative z-10 shrink-0 flex items-center gap-3 bg-white/5 px-6 py-3.5 rounded-2xl border border-white/10">
             <FiCheckCircle className="w-5 h-5 text-emerald-400 shrink-0" />
             <span className="text-xs sm:text-sm font-semibold text-slate-200">
-              100% Authentic Feedback
+              100% Authentic Client Feedback
             </span>
           </div>
         </div>
@@ -229,18 +228,19 @@ const TestimonialSection = () => {
               href="https://wa.me/918080224138?text=Hi%20HB%20Digital,%20I'd%20like%20to%20book%20a%20free%20growth%20consultation"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base transition-colors shadow-lg shadow-blue-600/25 group"
+              aria-label="Book a free consultation on WhatsApp"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base transition-colors shadow-lg shadow-blue-600/25 group cursor-pointer"
             >
               <span>Book Free Consultation</span>
               <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </a>
 
-            <a
-              href="#portfolio"
+            <Link
+              to="/portfolio"
               className="inline-flex items-center justify-center px-8 py-4 rounded-full border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-semibold text-base transition-colors"
             >
               View Portfolio
-            </a>
+            </Link>
           </div>
         </div>
 

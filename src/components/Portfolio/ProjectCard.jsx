@@ -4,6 +4,8 @@ import { FiArrowRight, FiExternalLink } from "react-icons/fi";
 import ServiceBadge from "./ServiceBadge";
 
 const ProjectCard = React.memo(({ project, onViewModal }) => {
+  if (!project) return null;
+
   return (
     <div className="group bg-white rounded-[24px] border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-slate-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden">
       <div>
@@ -11,7 +13,7 @@ const ProjectCard = React.memo(({ project, onViewModal }) => {
         <div className="relative h-56 sm:h-64 bg-slate-100 overflow-hidden">
           <img
             src={project.image}
-            alt={project.businessName}
+            alt={`${project.businessName} Case Study`}
             loading="lazy"
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
           />
@@ -34,7 +36,7 @@ const ProjectCard = React.memo(({ project, onViewModal }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Visit live website for ${project.businessName}`}
-                className="p-2 text-slate-400 hover:text-blue-600 transition-colors"
+                className="p-2 text-slate-400 hover:text-blue-600 transition-colors cursor-pointer"
                 onClick={(e) => e.stopPropagation()}
               >
                 <FiExternalLink className="w-4 h-4" />
@@ -48,7 +50,7 @@ const ProjectCard = React.memo(({ project, onViewModal }) => {
 
           {/* Service Badges */}
           <div className="flex flex-wrap gap-1.5 mb-2">
-            {project.services.map((service, idx) => (
+            {project.services?.map((service, idx) => (
               <ServiceBadge key={idx} label={service} />
             ))}
           </div>
@@ -58,8 +60,10 @@ const ProjectCard = React.memo(({ project, onViewModal }) => {
       {/* Card Action */}
       <div className="px-6 pb-6 pt-2">
         <button
+          type="button"
           onClick={() => onViewModal(project)}
-          className="w-full inline-flex items-center justify-between px-5 py-3 rounded-2xl bg-slate-50 group-hover:bg-blue-600 text-slate-800 group-hover:text-white text-sm font-semibold transition-all duration-300"
+          aria-label={`Read case study for ${project.businessName}`}
+          className="w-full inline-flex items-center justify-between px-5 py-3 rounded-2xl bg-slate-50 group-hover:bg-blue-600 text-slate-800 group-hover:text-white text-sm font-semibold transition-all duration-300 cursor-pointer"
         >
           <span>View Case Study</span>
           <FiArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
