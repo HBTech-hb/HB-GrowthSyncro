@@ -1,5 +1,3 @@
-// src/data/projectsData.js
-
 export const projectsData = [
   {
     id: "royal-fitness",

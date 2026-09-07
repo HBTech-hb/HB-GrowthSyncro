@@ -130,7 +130,7 @@ const Home = () => {
               </div>
 
               {/* Statistics Counter Bar */}
-              <div className="mt-12 pt-8 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-6 w-full">
+<div className="mt-12 pt-8 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-6 w-full pb-20 md:pb-0">
                 <div>
                   <div className="flex items-center gap-1.5 text-2xl sm:text-3xl font-extrabold text-slate-900">
                     <FiZap className="w-5 h-5 text-blue-600" />

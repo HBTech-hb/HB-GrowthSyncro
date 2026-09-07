@@ -1,34 +1,58 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo/WEBSITE-LOGO.png";
 
-// 1. FontAwesome Icons (Fa)
+// Icons
 import {
   FaHome,
-  FaUser,
   FaServicestack,
   FaImage,
   FaPhone,
-  FaArrowRight,
-  FaBlog
+  FaBars,
+  FaTimes,
+  FaUser,
+  FaBlog,
+  FaQuestionCircle,
+  FaTags,
 } from "react-icons/fa";
-
-// 2. Feather Icons (Fi) 
-import {
-  FiTool,
-} from "react-icons/fi";
+import { FiTool } from "react-icons/fi";
 
 const Navbar = ({ activeSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    const handleScroll = () => {
+      // Scale down trigger
+      setIsScrolled(window.scrollY > 10);
+    };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
+  // Close mobile drawer on route change
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
+
+  const primaryMobileNav = [
+    { id: "home", label: "Home", path: "/", icon: <FaHome /> },
+    { id: "services", label: "Services", path: "/services", icon: <FaServicestack /> },
+    { id: "portfolio", label: "Portfolio", path: "/portfolio", icon: <FaImage /> },
+    { id: "contact", label: "Contact", path: "/contact", icon: <FaPhone /> },
+  ];
+
+  const drawerNavItems = [
+    { id: "about", label: "About Us", path: "/about", icon: <FaUser /> },
+    { id: "pricing", label: "Pricing", path: "/pricing", icon: <FaTags /> },
+    { id: "blog", label: "Blog", path: "/blog", icon: <FaBlog /> },
+    { id: "toolkit", label: "Toolkit", path: "/toolkit", icon: <FiTool /> },
+    { id: "faq", label: "FAQ", path: "/faq", icon: <FaQuestionCircle /> },
+  ];
+
+  const desktopNavItems = [
     { id: "home", label: "Home", path: "/" },
     { id: "about", label: "About", path: "/about" },
     { id: "services", label: "Services", path: "/services" },
@@ -41,169 +65,151 @@ const Navbar = ({ activeSection }) => {
 
   return (
     <>
-      {/* ================= Mobile Top Header (Centered Logo Only) ================= */}
-      <div className="md:hidden sticky top-0 z-[9999] px-4 py-2.5">
+      {/* ================= Mobile Centered Sticky Header ================= */}
+      <div className="md:hidden sticky top-0 z-[9999] px-7 pt-4">
         <div
-          className={`mx-auto max-w-7xl rounded-2xl transition-all duration-300 backdrop-blur-xl border flex items-center justify-center px-4 py-2 ${
+          className={`mx-auto max-w-7xl rounded-2xl transition-all duration-500 ease-in-out backdrop-blur-xl border flex items-center justify-center px-4 ${
             isScrolled
-              ? "bg-white/90 shadow-lg border-gray-200"
-              : "bg-white/70 border-white/50"
+              ? "bg-white/95 shadow-lg border-slate-200/80 py-2"
+              : "bg-white/70 border-white/50 py-4"
           }`}
         >
-          {/* Centered Logo */}
+          {/* Centered Dynamic Logo: Big initially (h-16), scales down nicely on scroll (h-10) */}
           <Link to="/" aria-label="HB GrowthSyncro Home" className="flex items-center justify-center">
             <img
               src={logo}
               alt="HB GrowthSyncro Logo"
-              className="h-10 w-auto object-contain transition-transform active:scale-95"
+              className={`w-auto object-contain transition-all duration-1000 ease-in-out origin-center ${
+                isScrolled ? "h-15 scale-100" : "h-26 scale-150 drop-shadow-sm"
+              }`}
             />
           </Link>
         </div>
       </div>
 
       {/* ================= Desktop Header ================= */}
-      <div className="hidden md:block sticky top-3 z-[9999] px-6 m-5">
+      <div className="hidden md:block sticky top-3 z-[9999] px-6 my-3">
         <nav
           className={`mx-auto max-w-5xl rounded-2xl transition-all duration-300 backdrop-blur-xl border ${
             isScrolled
-              ? "bg-white/90 shadow-lg border-gray-200"
-              : "bg-white/70 border-white/50"
+              ? "bg-white/90 shadow-lg border-gray-200 py-3"
+              : "bg-white/70 border-white/50 py-4"
           }`}
         >
-          <div className="flex items-center justify-between max-w-4xl mx-auto px-6 py-4">
-            {/* Logo */}
+          <div className="flex items-center justify-between max-w-4xl mx-auto px-6">
             <Link to="/" aria-label="HB GrowthSyncro Home">
               <img
                 src={logo}
                 alt="HB GrowthSyncro Logo"
-                className="h-12 w-auto object-contain transition duration-300"
+                className={`w-auto object-contain transition-all duration-300 ${
+                  isScrolled ? "h-9" : "h-11"
+                }`}
               />
             </Link>
 
-            {/* Desktop Links */}
-            <ul className="flex items-center gap-6">
-              {navItems.map((item) => (
+            <ul className="flex items-center gap-5">
+              {desktopNavItems.map((item) => (
                 <li key={item.id}>
                   <Link
                     to={item.path}
-                    className={`relative font-medium transition-all duration-300 ${
+                    className={`relative text-xs sm:text-sm font-medium transition-all duration-300 ${
                       activeSection === item.id
                         ? "text-blue-600 font-semibold"
-                        : "text-gray-700 hover:text-blue-600"
+                        : "text-slate-700 hover:text-blue-600"
                     }`}
                   >
                     {item.label}
                     {activeSection === item.id && (
-                      <span className="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-blue-600"></span>
+                      <span className="absolute -bottom-1.5 left-0 h-[2px] w-full rounded-full bg-blue-600"></span>
                     )}
                   </Link>
                 </li>
               ))}
             </ul>
 
-            {/* Desktop CTA */}
-            <div className="flex items-center gap-5">
-              <Link
-                to="/contact"
-                aria-label="Navigate to Contact Page for Growth Plan"
-                className="group flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-xs font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl"
-              >
-                Get Growth Plan
-                <FaArrowRight className="transition group-hover:translate-x-1" />
-              </Link>
-            </div>
+            <Link
+              to="/contact"
+              aria-label="Navigate to Contact Page"
+              className="rounded-full bg-blue-600 px-4 py-2 text-xs font-semibold text-white transition-all duration-300 hover:bg-blue-700 hover:shadow-lg"
+            >
+              Get Growth Plan
+            </Link>
           </div>
         </nav>
       </div>
 
-      {/* ================= Mobile Bottom Floating Nav ================= */}
-      <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-[99990] w-auto max-w-[92vw]">
-        <nav className="flex items-center justify-around gap-2 sm:gap-4 rounded-full border border-gray-200/80 bg-white/95 px-4 py-2.5 shadow-2xl backdrop-blur-xl">
-          <Link
-            to="/"
-            className={`flex flex-col items-center text-[9px] font-semibold transition-colors ${
-              activeSection === "home"
-                ? "text-blue-600"
-                : "text-gray-500 hover:text-gray-900"
-            }`}
-          >
-            <FaHome className="text-sm mb-0.5" />
-            Home
-          </Link>
+      {/* ================= Mobile Bottom Floating Nav Bar ================= */}
+      <div className="md:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-[99990] w-[90%] max-w-md">
+        <nav className="flex items-center justify-around rounded-full border border-slate-200/90 bg-white/95 px-3 py-2 shadow-xl backdrop-blur-xl">
+          {primaryMobileNav.map((item) => (
+            <Link
+              key={item.id}
+              to={item.path}
+              className={`flex flex-col items-center justify-center text-[10px] font-semibold transition-all py-1 px-2 rounded-xl ${
+                activeSection === item.id
+                  ? "text-blue-600 scale-105"
+                  : "text-slate-500 hover:text-slate-900"
+              }`}
+            >
+              <span className="text-base mb-0.5">{item.icon}</span>
+              <span>{item.label}</span>
+            </Link>
+          ))}
 
-          <Link
-            to="/about"
-            className={`flex flex-col items-center text-[9px] font-semibold transition-colors ${
-              activeSection === "about"
-                ? "text-blue-600"
-                : "text-gray-500 hover:text-gray-900"
+          {/* More Items Drawer Trigger */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            type="button"
+            className={`flex flex-col items-center justify-center text-[10px] font-semibold transition-all py-1 px-2 rounded-xl ${
+              isMenuOpen ? "text-blue-600" : "text-slate-500"
             }`}
           >
-            <FaUser className="text-sm mb-0.5" />
-            About
-          </Link>
-
-          <Link
-            to="/services"
-            className={`flex flex-col items-center text-[9px] font-semibold transition-colors ${
-              activeSection === "services"
-                ? "text-blue-600"
-                : "text-gray-500 hover:text-gray-900"
-            }`}
-          >
-            <FaServicestack className="text-sm mb-0.5" />
-            Services
-          </Link>
-
-          <Link
-            to="/portfolio"
-            className={`flex flex-col items-center text-[9px] font-semibold transition-colors ${
-              activeSection === "portfolio"
-                ? "text-blue-600"
-                : "text-gray-500 hover:text-gray-900"
-            }`}
-          >
-            <FaImage className="text-sm mb-0.5" />
-            Portfolio
-          </Link>
-
-          <Link
-            to="/blog"
-            className={`flex flex-col items-center text-[9px] font-semibold transition-colors ${
-              activeSection === "blog"
-                ? "text-blue-600"
-                : "text-gray-500 hover:text-gray-900"
-            }`}
-          >
-            <FaBlog className="text-sm mb-0.5" />
-            Blog
-          </Link>
-          
-          <Link
-            to="/toolkit"
-            className={`flex flex-col items-center text-[9px] font-semibold transition-colors ${
-              activeSection === "toolkit"
-                ? "text-blue-600"
-                : "text-gray-500 hover:text-gray-900"
-            }`}
-          >
-            <FiTool className="text-sm mb-0.5" />
-            Toolkit
-          </Link>
-
-          <Link
-            to="/contact"
-            className={`flex flex-col items-center text-[9px] font-semibold transition-colors ${
-              activeSection === "contact"
-                ? "text-blue-600"
-                : "text-gray-500 hover:text-gray-900"
-            }`}
-          >
-            <FaPhone className="text-sm mb-0.5" />
-            Contact
-          </Link>
+            {isMenuOpen ? (
+              <FaTimes className="text-base mb-0.5" />
+            ) : (
+              <FaBars className="text-base mb-0.5" />
+            )}
+            <span>More</span>
+          </button>
         </nav>
       </div>
+
+      {/* ================= Slide-Up Drawer for Additional Pages ================= */}
+      {isMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-[99989] bg-slate-900/50 backdrop-blur-sm flex justify-center items-end pb-20 px-4">
+          <div className="w-full max-w-md bg-white rounded-3xl p-5 shadow-2xl border border-slate-100 space-y-3 animate-in slide-in-from-bottom duration-200">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                Explore Pages
+              </span>
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="text-slate-400 p-1 hover:text-slate-600"
+              >
+                <FaTimes />
+              </button>
+            </div>
+
+            <div className="grid grid-cols-2 gap-2">
+              {drawerNavItems.map((item) => (
+                <Link
+                  key={item.id}
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`flex items-center gap-3 p-3 rounded-2xl text-xs font-medium border transition-all ${
+                    activeSection === item.id
+                      ? "bg-blue-50 border-blue-200 text-blue-600 font-bold"
+                      : "bg-slate-50/80 border-slate-100 text-slate-700 hover:bg-slate-100"
+                  }`}
+                >
+                  <span className="text-blue-600 text-sm">{item.icon}</span>
+                  <span>{item.label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

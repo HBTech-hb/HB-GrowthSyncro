@@ -1,25 +1,56 @@
 // src/components/Portfolio/portfolio.jsx
-import React, { useState, useMemo, useCallback } from "react";
-// Fixed path: goes up two folders to reach src/data/projectsData.js
-import { projectsData } from "../../data/projectsData"; 
+import React, { useState, useEffect, useMemo, useCallback } from "react";
+import { supabase } from "../../lib/supabase"; 
+import { projectsData as staticProjects } from "../../data/projectsData"; 
 import FeaturedProject from "./FeaturedProject";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 
 const Portfolio = () => {
+  const [projectsData, setProjectsData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [selectedProject, setSelectedProject] = useState(null);
+
+  // Fetch live projects from Supabase and merge with static data
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        setLoading(true);
+        const { data, error } = await supabase
+          .from("projects")
+          .select("*")
+          .order("created_at", { ascending: false });
+
+        if (error) throw error;
+
+        // Combines live Supabase projects with static fallback projects
+        const liveProjects = data || [];
+        const combined = [...liveProjects, ...staticProjects];
+        
+        setProjectsData(combined);
+      } catch (err) {
+        console.error("Error fetching portfolio projects:", err.message);
+        // Fallback to static data if Supabase connection fails
+        setProjectsData(staticProjects);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   // Extract featured project and remaining grid items safely
   const featuredProject = useMemo(() => {
     if (!Array.isArray(projectsData) || projectsData.length === 0) return null;
     return projectsData.find((p) => p.featured) || projectsData[0];
-  }, []);
+  }, [projectsData]);
 
   const gridProjects = useMemo(() => {
     if (!Array.isArray(projectsData)) return [];
     if (!featuredProject) return projectsData;
     return projectsData.filter((p) => p.id !== featuredProject.id);
-  }, [featuredProject]);
+  }, [projectsData, featuredProject]);
 
   const handleOpenModal = useCallback((project) => {
     setSelectedProject(project);
@@ -28,6 +59,15 @@ const Portfolio = () => {
   const handleCloseModal = useCallback(() => {
     setSelectedProject(null);
   }, []);
+
+  if (loading) {
+    return (
+      <section className="py-32 px-6 text-center bg-white">
+        <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-4"></div>
+        <p className="text-slate-500 text-sm font-medium">Loading portfolio projects...</p>
+      </section>
+    );
+  }
 
   return (
     <section id="portfolio" className="py-20 lg:py-32 px-6 sm:px-10 bg-white text-slate-900">
@@ -106,4 +146,5 @@ const Portfolio = () => {
   );
 };
 
+// Export as Default
 export default Portfolio;
