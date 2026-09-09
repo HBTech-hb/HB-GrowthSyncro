@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo/WEBSITE-LOGO.png";
+// import logo from "../assets/logo/WEBSITE-LOGO.png";
 
 // Icons
 import {
@@ -68,20 +68,20 @@ const Navbar = ({ activeSection }) => {
       {/* ================= Mobile Centered Sticky Header ================= */}
       <div className="md:hidden sticky top-0 z-[9999] px-7 pt-4">
         <div
-          className={`mx-auto max-w-7xl rounded-2xl transition-all duration-500 ease-in-out backdrop-blur-xl border flex items-center justify-center px-4 ${
-            isScrolled
-              ? "bg-white/95 shadow-lg border-slate-200/80 py-2"
-              : "bg-white/70 border-white/50 py-4"
-          }`}
+          className={`mx-auto max-w-7xl rounded-2xl transition-all duration-500 ease-in-out backdrop-blur-xl border flex items-center justify-center px-4 ${isScrolled
+            ? "bg-white/95 shadow-lg border-slate-200/80 py-2"
+            : "bg-white/70 border-white/50 py-4"
+            }`}
         >
           {/* Centered Dynamic Logo: Big initially (h-16), scales down nicely on scroll (h-10) */}
           <Link to="/" aria-label="HB GrowthSyncro Home" className="flex items-center justify-center">
             <img
-              src={logo}
+              src="https://cdn.statically.io/gh/HBTech-hb/portfolio-assets-image-hbgrowthsyncro@main/WEBSITE-LOGO.png?f=auto"
               alt="HB GrowthSyncro Logo"
-              className={`w-auto object-contain transition-all duration-1000 ease-in-out origin-center ${
-                isScrolled ? "h-15 scale-100" : "h-26 scale-150 drop-shadow-sm"
-              }`}
+              fetchpriority="high"
+              loading="eager"
+              className={`w-auto object-contain transition-all duration-500 ease-in-out origin-center ${isScrolled ? "h-14" : "h-24"
+                }`}
             />
           </Link>
         </div>
@@ -90,20 +90,20 @@ const Navbar = ({ activeSection }) => {
       {/* ================= Desktop Header ================= */}
       <div className="hidden md:block sticky top-3 z-[9999] px-6 my-3">
         <nav
-          className={`mx-auto max-w-5xl rounded-2xl transition-all duration-300 backdrop-blur-xl border ${
-            isScrolled
-              ? "bg-white/90 shadow-lg border-gray-200 py-3"
-              : "bg-white/70 border-white/50 py-4"
-          }`}
+          className={`mx-auto max-w-5xl rounded-2xl transition-all duration-300 backdrop-blur-xl border ${isScrolled
+            ? "bg-white/90 shadow-lg border-gray-200 py-3"
+            : "bg-white/70 border-white/50 py-4"
+            }`}
         >
           <div className="flex items-center justify-between max-w-4xl mx-auto px-6">
             <Link to="/" aria-label="HB GrowthSyncro Home">
               <img
-                src={logo}
+                src="https://cdn.statically.io/gh/HBTech-hb/portfolio-assets-image-hbgrowthsyncro@main/WEBSITE-LOGO.png?f=auto"
                 alt="HB GrowthSyncro Logo"
-                className={`w-auto object-contain transition-all duration-300 ${
-                  isScrolled ? "h-9" : "h-11"
-                }`}
+                fetchpriority="high"
+                loading="eager"
+                className={`w-auto object-contain transition-all duration-500 ease-in-out origin-center ${isScrolled ? "h-9" : "h-11"
+                  }`}
               />
             </Link>
 
@@ -112,11 +112,10 @@ const Navbar = ({ activeSection }) => {
                 <li key={item.id}>
                   <Link
                     to={item.path}
-                    className={`relative text-xs sm:text-sm font-medium transition-all duration-300 ${
-                      activeSection === item.id
-                        ? "text-blue-600 font-semibold"
-                        : "text-slate-700 hover:text-blue-600"
-                    }`}
+                    className={`relative text-xs sm:text-sm font-medium transition-all duration-300 ${activeSection === item.id
+                      ? "text-blue-600 font-semibold"
+                      : "text-slate-700 hover:text-blue-600"
+                      }`}
                   >
                     {item.label}
                     {activeSection === item.id && (
@@ -145,11 +144,10 @@ const Navbar = ({ activeSection }) => {
             <Link
               key={item.id}
               to={item.path}
-              className={`flex flex-col items-center justify-center text-[10px] font-semibold transition-all py-1 px-2 rounded-xl ${
-                activeSection === item.id
-                  ? "text-blue-600 scale-105"
-                  : "text-slate-500 hover:text-slate-900"
-              }`}
+              className={`flex flex-col items-center justify-center text-[10px] font-semibold transition-all py-1 px-2 rounded-xl ${activeSection === item.id
+                ? "text-blue-600 scale-105"
+                : "text-slate-500 hover:text-slate-900"
+                }`}
             >
               <span className="text-base mb-0.5">{item.icon}</span>
               <span>{item.label}</span>
@@ -160,9 +158,8 @@ const Navbar = ({ activeSection }) => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             type="button"
-            className={`flex flex-col items-center justify-center text-[10px] font-semibold transition-all py-1 px-2 rounded-xl ${
-              isMenuOpen ? "text-blue-600" : "text-slate-500"
-            }`}
+            className={`flex flex-col items-center justify-center text-[10px] font-semibold transition-all py-1 px-2 rounded-xl ${isMenuOpen ? "text-blue-600" : "text-slate-500"
+              }`}
           >
             {isMenuOpen ? (
               <FaTimes className="text-base mb-0.5" />
@@ -196,11 +193,10 @@ const Navbar = ({ activeSection }) => {
                   key={item.id}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`flex items-center gap-3 p-3 rounded-2xl text-xs font-medium border transition-all ${
-                    activeSection === item.id
-                      ? "bg-blue-50 border-blue-200 text-blue-600 font-bold"
-                      : "bg-slate-50/80 border-slate-100 text-slate-700 hover:bg-slate-100"
-                  }`}
+                  className={`flex items-center gap-3 p-3 rounded-2xl text-xs font-medium border transition-all ${activeSection === item.id
+                    ? "bg-blue-50 border-blue-200 text-blue-600 font-bold"
+                    : "bg-slate-50/80 border-slate-100 text-slate-700 hover:bg-slate-100"
+                    }`}
                 >
                   <span className="text-blue-600 text-sm">{item.icon}</span>
                   <span>{item.label}</span>
