@@ -7,15 +7,15 @@ import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 
 const Portfolio = () => {
-  const [projectsData, setProjectsData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // 1. Instantly display static projects so the UI loads in 0ms
+  const [projectsData, setProjectsData] = useState(staticProjects);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // Fetch live projects from Supabase and merge with static data
   useEffect(() => {
+    let isMounted = true;
+
     const fetchProjects = async () => {
       try {
-        setLoading(true);
         const { data, error } = await supabase
           .from("projects")
           .select("*")
@@ -23,24 +23,28 @@ const Portfolio = () => {
 
         if (error) throw error;
 
-        // Combines live Supabase projects with static fallback projects
-        const liveProjects = data || [];
-        const combined = [...liveProjects, ...staticProjects];
-        
-        setProjectsData(combined);
+        // Merge live Supabase data with static projects in the background
+        if (data && data.length > 0 && isMounted) {
+          const liveProjects = data;
+          // Avoid duplicate items if IDs match
+          const combined = [
+            ...liveProjects,
+            ...staticProjects.filter(sp => !liveProjects.some(lp => lp.id === sp.id))
+          ];
+          setProjectsData(combined);
+        }
       } catch (err) {
-        console.error("Error fetching portfolio projects:", err.message);
-        // Fallback to static data if Supabase connection fails
-        setProjectsData(staticProjects);
-      } finally {
-        setLoading(false);
+        console.error("Error updating portfolio projects:", err.message);
       }
     };
 
     fetchProjects();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
-  // Extract featured project and remaining grid items safely
   const featuredProject = useMemo(() => {
     if (!Array.isArray(projectsData) || projectsData.length === 0) return null;
     return projectsData.find((p) => p.featured) || projectsData[0];
@@ -60,14 +64,7 @@ const Portfolio = () => {
     setSelectedProject(null);
   }, []);
 
-  if (loading) {
-    return (
-      <section className="py-32 px-6 text-center bg-white">
-        <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-4"></div>
-        <p className="text-slate-500 text-sm font-medium">Loading portfolio projects...</p>
-      </section>
-    );
-  }
+  // Removed blocking 'if (loading)' spinner block!
 
   return (
     <section id="portfolio" className="py-20 lg:py-32 px-6 sm:px-10 bg-white text-slate-900">
@@ -76,7 +73,7 @@ const Portfolio = () => {
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-24">
           <span className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-4 border border-blue-100">
-            Client Growth & Proven Engineering
+            Client Growth &amp; Proven Engineering
           </span>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
@@ -113,7 +110,7 @@ const Portfolio = () => {
         </div>
 
         {/* Remaining Projects Grid */}
-        {gridProjects.length > 0 ? (
+        {gridProjects.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {gridProjects.map((project) => (
               <ProjectCard
@@ -123,14 +120,6 @@ const Portfolio = () => {
               />
             ))}
           </div>
-        ) : (
-          !featuredProject && (
-            <div className="text-center py-16 px-6 bg-slate-50 rounded-3xl border border-slate-200">
-              <p className="text-slate-600 text-base font-medium">
-                Case studies and portfolio items are currently updating.
-              </p>
-            </div>
-          )
         )}
 
       </div>
@@ -146,5 +135,4 @@ const Portfolio = () => {
   );
 };
 
-// Export as Default
 export default Portfolio;
