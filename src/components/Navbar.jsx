@@ -27,7 +27,7 @@ const Navbar = ({ activeSection }) => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -66,18 +66,21 @@ const Navbar = ({ activeSection }) => {
       {/* ================= Mobile Centered Sticky Header ================= */}
       <div className="md:hidden sticky top-0 z-[9999] px-7 pt-4">
         <div
-          className={`mx-auto max-w-7xl rounded-2xl transition-all duration-500 ease-in-out backdrop-blur-xl border flex items-center justify-center px-4 ${
+          className={`mx-auto max-w-7xl rounded-2xl transition-all duration-300 ease-in-out backdrop-blur-xl border flex items-center justify-center px-4 ${
             isScrolled
               ? "bg-white/95 shadow-lg border-slate-200/80 py-2"
-              : "bg-white/70 border-white/50 py-4"
+              : "bg-white/70 border-white/50 py-3"
           }`}
         >
           <Link to="/" aria-label="HB GrowthSyncro Home" className="flex items-center justify-center">
             <img
               src={logo}
               alt="HB GrowthSyncro Logo"
-              className={`w-auto object-contain transition-all duration-500 ease-in-out origin-center ${
-                isScrolled ? "h-10 scale-100" : "h-16 scale-125 drop-shadow-sm"
+              width="152"
+              height="40"
+              fetchPriority="high"
+              className={`w-auto object-contain transition-all duration-300 ease-in-out origin-center ${
+                isScrolled ? "h-9 scale-100" : "h-11 scale-105 drop-shadow-sm"
               }`}
             />
           </Link>
@@ -143,10 +146,11 @@ const Navbar = ({ activeSection }) => {
             <Link
               key={item.id}
               to={item.path}
+              aria-label={`Navigate to ${item.label}`}
               className={`flex flex-col items-center justify-center text-[10px] font-semibold transition-all py-1 px-2 rounded-xl ${
                 activeSection === item.id
                   ? "text-blue-600 scale-105"
-                  : "text-slate-500 hover:text-slate-900"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               <span className="text-base mb-0.5">{item.icon}</span>
@@ -157,8 +161,10 @@ const Navbar = ({ activeSection }) => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
             className={`flex flex-col items-center justify-center text-[10px] font-semibold transition-all py-1 px-2 rounded-xl ${
-              isMenuOpen ? "text-blue-600" : "text-slate-500"
+              isMenuOpen ? "text-blue-600" : "text-slate-600"
             }`}
           >
             {isMenuOpen ? (
@@ -176,12 +182,14 @@ const Navbar = ({ activeSection }) => {
         <div className="md:hidden fixed inset-0 z-[99989] bg-slate-900/50 backdrop-blur-sm flex justify-center items-end pb-20 px-4">
           <div className="w-full max-w-md bg-white rounded-3xl p-5 shadow-2xl border border-slate-100 space-y-3">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
                 Explore Pages
               </span>
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="text-slate-400 p-1 hover:text-slate-600"
+                type="button"
+                aria-label="Close menu"
+                className="text-slate-500 p-1 hover:text-slate-700"
               >
                 <FaTimes />
               </button>
@@ -193,6 +201,7 @@ const Navbar = ({ activeSection }) => {
                   key={item.id}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
+                  aria-label={`Navigate to ${item.label}`}
                   className={`flex items-center gap-3 p-3 rounded-2xl text-xs font-medium border transition-all ${
                     activeSection === item.id
                       ? "bg-blue-50 border-blue-200 text-blue-600 font-bold"
