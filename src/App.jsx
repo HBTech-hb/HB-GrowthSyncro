@@ -41,12 +41,99 @@ const PageLoader = () => (
   </div>
 );
 
-// Resets scroll position to the top when navigating between routes
+// Resets scroll position to top when navigating between routes
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
+// Dynamic SEO Engine: Updates document title, description, and OpenGraph tags per route
+const SEOPageTitle = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const pageData = {
+      "/": {
+        title: "HB GrowthSyncro | Web Engineering, AI Solutions & SEO Agency",
+        description:
+          "HB GrowthSyncro builds high-converting web applications, automated AI growth funnels, organic SEO systems, and custom software.",
+      },
+      "/about": {
+        title: "About Us | HB GrowthSyncro - Digital Growth & Engineering",
+        description:
+          "Learn about HB GrowthSyncro, our mission, technical architecture, and how we help businesses scale online without physical limits.",
+      },
+      "/services": {
+        title: "Services | Web Development, SEO, AI Automation & Branding",
+        description:
+          "Explore our full suite of digital solutions: Custom React Engineering, Search Engine Optimization, AI Lead Workflows, and Brand Graphic Design.",
+      },
+      "/portfolio": {
+        title: "Portfolio & Work Showcase | HB GrowthSyncro",
+        description:
+          "Browse our portfolio of high-performance web applications, brand identities, SEO rankings, and software engineering projects.",
+      },
+      "/pricing": {
+        title: "Packages & Pricing | HB GrowthSyncro Web Engineering",
+        description:
+          "Transparent pricing plans for website development, SEO campaigns, AI automation, and ongoing retainer support.",
+      },
+      "/blog": {
+        title: "Digital Growth & Web Tech Blog | HB GrowthSyncro",
+        description:
+          "Read insights, guides, and trends on modern web development, local & national SEO tactics, AI systems, and conversion optimization.",
+      },
+      "/toolkit": {
+        title: "Digital Growth Toolkit & Recommended Tech | HB GrowthSyncro",
+        description:
+          "Explore curated tools, AI platforms, hosting software, and tech stack recommendations to supercharge your online business.",
+      },
+      "/faq": {
+        title: "Frequently Asked Questions | HB GrowthSyncro",
+        description:
+          "Get clear answers regarding project delivery timelines, SEO ranking expectations, source code ownership, and AI integrations.",
+      },
+      "/contact": {
+        title: "Contact Us | HB GrowthSyncro Strategy Consultation",
+        description:
+          "Connect directly with our engineering team via WhatsApp, phone, or inquiry form to start your web or SEO project today.",
+      },
+      "/privacy-policy": {
+        title: "Privacy Policy | HB GrowthSyncro",
+        description: "Official privacy policy and data security commitments of HB GrowthSyncro.",
+      },
+      "/terms-and-conditions": {
+        title: "Terms & Conditions | HB GrowthSyncro",
+        description: "Official terms of service and website usage agreement for HB GrowthSyncro.",
+      },
+    };
+
+    const current = pageData[pathname] || {
+      title: "HB GrowthSyncro | Web Engineering & AI Solutions",
+      description:
+        "High-converting websites, custom software, AI marketing funnels, and search growth engines.",
+    };
+
+    // Update document title
+    document.title = current.title;
+
+    // Update meta description tag dynamically
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", current.description);
+    }
+
+    // Update Open Graph tags for social sharing preview
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", current.title);
+
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.setAttribute("content", current.description);
   }, [pathname]);
 
   return null;
@@ -60,6 +147,7 @@ const PublicLayout = ({ children }) => {
   return (
     <div className="font-poppins flex flex-col min-h-screen">
       <ScrollToTop />
+      <SEOPageTitle />
       <Navbar activeSection={currentPath} />
       <main className="flex-grow">{children}</main>
       <Footer />

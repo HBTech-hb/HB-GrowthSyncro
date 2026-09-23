@@ -1,51 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiChevronDown, FiHelpCircle, FiMessageSquare, FiPhone } from "react-icons/fi";
 
 const faqData = [
   {
-    category: "Website & Development",
+    category: "Web Development & Engineering",
     questions: [
       {
-        q: "How fast can you build and deliver my website?",
-        a: "Our standard delivery turnaround for the Business Launch package is 5 to 7 business days once brand assets, logos, and service descriptions are submitted. Custom enterprise builds or platforms requiring multi-tier databases and third-party API integrations typically deploy within 10 to 14 business days.",
+        q: "How fast can HB GrowthSyncro build and deploy my website?",
+        a: "Our standard turnaround time for custom business web systems is 5 to 7 business days once project assets are finalized. Enterprise platforms requiring complex databases or custom integrations deploy within 10 to 14 business days.",
       },
       {
-        q: "Will my website work on all mobile smartphones and modern browsers?",
-        a: "Yes. Every website is engineered mobile-first using modern component-driven React and clean CSS architectures. We test each build across Safari, Chrome, Edge, iOS, and Android to ensure optimal touch navigation, zero layout shift, and sub-2.5 second Core Web Vitals loading speeds.",
+        q: "Will my website render quickly and smoothly across mobile devices?",
+        a: "Yes. Every website is engineered mobile-first using modern React architectures and clean CSS, achieving sub-2.5 second Core Web Vitals performance scores across iOS, Android, Safari, Chrome, and Edge.",
       },
       {
-        q: "Do I need technical knowledge to manage my website after launch?",
-        a: "Not at all. We deliver clean, self-sufficient web applications and provide step-by-step handover documentation. If your team requires periodic content updates, structural additions, or server maintenance, we offer flexible post-launch support retainers.",
-      },
-      {
-        q: "Who retains legal ownership of the source code and domain?",
-        a: "You retain 100% legal ownership of your domain name registration, hosting servers, production source code repositories, and user analytics from the moment final delivery is fulfilled.",
+        q: "Who retains legal ownership of the source code, domain name, and server?",
+        a: "You retain 100% full legal ownership of your domain registration, server hosting accounts, custom source code, and design assets upon project completion.",
       },
     ],
   },
   {
-    category: "Local SEO & Google Search",
+    category: "Local SEO & Traffic Growth",
     questions: [
       {
-        q: "How does Google Maps Top 3 Optimization work?",
-        a: "We perform complete Google Business Profile (GBP) optimization, correct Name-Address-Phone (NAP) consistency across verified business directories, structure local schema markup on your web pages, and set up customer review workflows to improve local relevance, distance, and prominence signals.",
+        q: "How does your Search Engine Optimization (SEO) drive local client inquiries?",
+        a: "We structure semantic HTML, dynamic schema markup, target high-intent search terms, optimize heading structures, improve loading speeds, and build citation authority so your site ranks prominently on Google Search and Google Maps.",
       },
       {
-        q: "When will I start seeing search ranking results and customer inquiries?",
-        a: "Search engine crawlers typically index new, semantic sitemaps within 7 to 14 days of launch. Organic search visibility and Google Maps local 3-pack rankings build steady compounding traction over 30 to 60 days as citation authority and user engagement grow.",
+        q: "When will my business start seeing search engine ranking improvements?",
+        a: "Google crawlers index updated sitemaps within 7 to 14 days. Organic search visibility and keyword ranking momentum build steadily over 30 to 60 days.",
       },
     ],
   },
   {
-    category: "Pricing & Infrastructure",
+    category: "Lead Generation & Direct Conversions",
     questions: [
       {
-        q: "Are there any hidden costs after the project begins?",
-        a: "No. Our pricing is completely transparent. Development estimates cover end-to-end architecture, mobile responsiveness, SSL security encryption, and deployment configuration without hidden setup charges.",
+        q: "How do WhatsApp lead funnels improve website conversion rates?",
+        a: "We replace slow contact forms with instant WhatsApp communication links and automated response triggers, letting interested visitors contact your business in one tap.",
       },
       {
-        q: "Do you offer post-launch support and warranty?",
-        a: "Yes. Every project launch includes a dedicated post-launch support window (7 days for Basic, 30 days for Business) to address any technical adjustments. Ongoing maintenance agreements are also available for growing businesses.",
+        q: "Do I need a physical office or storefront location to run an online service?",
+        a: "No. Our digital growth strategies are built for remote service providers, local contractors, e-commerce stores, and digital platforms across India.",
       },
     ],
   },
@@ -54,63 +50,98 @@ const faqData = [
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState("0-0");
 
-  const toggleAccordion = (catIdx, qIdx) => {
-    const key = `${catIdx}-${qIdx}`;
+  useEffect(() => {
+    // Generate JSON-LD FAQ Schema for Google Search Rich Results
+    const schemaQuestions = [];
+    faqData.forEach((cat) => {
+      cat.questions.forEach((item) => {
+        schemaQuestions.push({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.a,
+          },
+        });
+      });
+    });
+
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: schemaQuestions,
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  const toggleAccordion = (catIndex, qIndex) => {
+    const key = `${catIndex}-${qIndex}`;
     setOpenIndex(openIndex === key ? null : key);
   };
 
   return (
-    <section id="faq" className="py-20 lg:py-32 px-6 sm:px-10 bg-white text-slate-900">
-      <div className="max-w-5xl mx-auto space-y-16">
-        
-        {/* HEADER */}
+    <section id="faq" className="py-20 px-6 sm:px-10 bg-slate-50 text-slate-900 font-poppins">
+      <div className="max-w-4xl mx-auto space-y-12">
+        {/* SECTION HEADER WITH KEYWORD OPTIMIZED H1 */}
         <div className="text-center max-w-3xl mx-auto">
           <span className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-4 border border-blue-100">
-            Clear Answers
+            Frequently Asked Questions
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Frequently Asked <span className="text-blue-600">Questions</span>
+
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Web Development & Local SEO FAQs – HB GrowthSyncro
           </h1>
+
           <p className="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed">
-            Everything you need to know about our web development process, local SEO, delivery timelines, and growth systems.
+            Find answers to common questions regarding custom website development, turnaround times, Google Maps rankings, and lead funnel setups.
           </p>
         </div>
 
-        {/* ACCORDION GROUPS */}
-        <div className="space-y-12">
-          {faqData.map((group, catIdx) => (
-            <div key={catIdx} className="space-y-4">
-              <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-4 py-2 rounded-lg inline-block">
-                {group.category}
+        {/* ACCORDION CATEGORIES */}
+        <div className="space-y-8">
+          {faqData.map((category, catIndex) => (
+            <div key={catIndex} className="space-y-4">
+              <h2 className="text-xl font-bold text-slate-900 border-b border-slate-200 pb-2">
+                {category.category}
               </h2>
 
               <div className="space-y-3">
-                {group.questions.map((faq, qIdx) => {
-                  const key = `${catIdx}-${qIdx}`;
+                {category.questions.map((item, qIndex) => {
+                  const key = `${catIndex}-${qIndex}`;
                   const isOpen = openIndex === key;
 
                   return (
                     <div
-                      key={qIdx}
-                      className="bg-slate-50 border border-slate-200/80 rounded-2xl overflow-hidden transition-all duration-200"
+                      key={qIndex}
+                      className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs transition-all duration-200"
                     >
                       <button
-                        type="button"
-                        onClick={() => toggleAccordion(catIdx, qIdx)}
+                        onClick={() => toggleAccordion(catIndex, qIndex)}
                         aria-expanded={isOpen}
-                        className="w-full p-6 text-left flex items-center justify-between font-bold text-slate-900 hover:text-blue-600 transition-colors cursor-pointer"
+                        className="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
                       >
-                        <span className="pr-4 text-base sm:text-lg">{faq.q}</span>
+                        <h3 className="font-bold text-base sm:text-lg text-slate-800 flex items-center gap-2">
+                          <FiHelpCircle className="text-blue-600 flex-shrink-0 w-5 h-5" />
+                          {item.q}
+                        </h3>
                         <FiChevronDown
-                          className={`w-5 h-5 text-slate-500 shrink-0 transition-transform duration-300 ${
+                          className={`w-5 h-5 text-slate-500 flex-shrink-0 transition-transform duration-300 ${
                             isOpen ? "rotate-180 text-blue-600" : ""
                           }`}
                         />
                       </button>
 
                       {isOpen && (
-                        <div className="px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-200/60 pt-4 bg-white">
-                          {faq.a}
+                        <div className="px-5 pb-5 pt-0 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 mt-1 pt-3">
+                          <p>{item.a}</p>
                         </div>
                       )}
                     </div>
@@ -121,39 +152,31 @@ const FAQ = () => {
           ))}
         </div>
 
-        {/* STILL HAVE QUESTIONS CTA */}
-        <div className="bg-slate-900 text-white rounded-[24px] p-8 sm:p-12 text-center border border-slate-800 shadow-xl relative overflow-hidden">
-          <div className="max-w-2xl mx-auto space-y-4">
-            <FiHelpCircle className="w-12 h-12 text-blue-400 mx-auto" />
-            <h3 className="text-2xl sm:text-3xl font-bold">Still Have Questions?</h3>
-            <p className="text-slate-400 text-sm sm:text-base">
-              Can't find the answer you are looking for? Speak directly with our technical team on WhatsApp or give us a call.
-            </p>
-
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="https://wa.me/918080224138?text=Hi%20HB%20GrowthSyncro,%20I%20have%20a%20question%20about%20your%20services"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Ask questions on WhatsApp"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-green-600 hover:bg-green-500 text-white font-semibold text-sm transition-colors shadow-lg"
-              >
-                <FiMessageSquare className="w-4 h-4" />
-                <span>Ask on WhatsApp</span>
-              </a>
-
-              <a
-                href="tel:+918080224138"
-                aria-label="Call HB GrowthSyncro directly"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white text-slate-900 hover:bg-slate-100 font-semibold text-sm transition-colors"
-              >
-                <FiPhone className="w-4 h-4" />
-                <span>Call Us (+91 8080224138)</span>
-              </a>
-            </div>
+        {/* CTA FOOTER */}
+        <div className="bg-slate-900 text-white p-8 rounded-3xl text-center space-y-4 border border-slate-800 shadow-xl">
+          <h2 className="text-2xl font-bold">Have More Questions About Building Your Website?</h2>
+          <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+            Our technical team is ready to analyze your business requirements and answer any custom project questions directly.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a
+              href="https://wa.me/918080224138?text=Hi%20HB%20GrowthSyncro%2C%20I%20have%20questions%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition shadow-md"
+            >
+              <FiMessageSquare className="w-4 h-4" />
+              Ask via WhatsApp
+            </a>
+            <a
+              href="tel:+918080224138"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm transition border border-slate-700"
+            >
+              <FiPhone className="w-4 h-4" />
+              Call Specialist
+            </a>
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -1288,17 +1288,15 @@ const Blog = () => {
             <div className="space-y-12 max-w-4xl mx-auto w-full">
               <div className="text-center">
                 <span className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-4 border border-blue-100">
-                  Growth Insights & Guides
+                  Growth Insights & Technical Guides
                 </span>
 
                 <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                  Our <span className="text-blue-600">Blogs</span>
+                  Web Development, Local SEO & <span className="text-blue-600">Digital Growth Insights</span>
                 </h1>
 
-                <p className="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed">
-                  Practical technology guides, SEO strategies, web development
-                  insights and buying advice designed to help you make better
-                  decisions.
+                <p className="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+                  Actionable web development playbooks, Google Maps ranking strategies, conversion rate optimization, and modern technology hardware insights.
                 </p>
               </div>
 
