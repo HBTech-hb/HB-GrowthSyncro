@@ -64,11 +64,11 @@ const Home = () => {
                 <span>HB GrowthSyncro • Digital Growth Partner</span>
               </div>
 
-              {/* Dynamic Typewriter Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+              {/* Dynamic Typewriter Headline (CLS Fixed) */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
                 Turn Online Visitors Into A Reliable <br className="hidden sm:inline" />
-                <span className="text-blue-600 inline-block">
-                  <Typewriter className="display: inline-block; min-height: 1.5em; contain: layout style;"
+                <span className="text-blue-600 inline-block min-h-[1.25em] sm:min-h-[1.15em]">
+                  <Typewriter
                     words={[
                       "Customer Engine.",
                       "Lead Generator.",
@@ -190,7 +190,7 @@ const Home = () => {
                     <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
                     <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
                   </div>
-                  <div className="text-[11px] font-medium text-slate-400 bg-white px-3 py-0.5 rounded-md border border-slate-100">
+                  <div className="text-[11px] font-semibold text-slate-600 bg-white px-3 py-0.5 rounded-md border border-slate-100">
                     hbgrowthsyncro.in
                   </div>
                   <div className="w-4" />
@@ -201,6 +201,10 @@ const Home = () => {
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
                     alt="HB GrowthSyncro Production Architecture Showcase"
+                    width="1000"
+                    height="667"
+                    loading="eager"
+                    fetchPriority="high"
                     className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay"
                   />
 
@@ -208,9 +212,10 @@ const Home = () => {
                     <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-950/80 px-2.5 py-1 rounded-full border border-blue-800/50">
                       Live Conversion Engine
                     </span>
-                    <h3 className="text-xl font-bold text-white mt-3 leading-snug">
+                    {/* Changed h3 -> p to fix Accessibility heading hierarchy skip */}
+                    <p className="text-xl font-bold text-white mt-3 leading-snug">
                       High-Converting Local Search Architecture
-                    </h3>
+                    </p>
                   </div>
 
                   <div className="relative z-10 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-slate-800">
@@ -286,8 +291,8 @@ const Home = () => {
               type="button"
               onClick={() => setActiveTab("web")}
               className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${activeTab === "web"
-                  ? "bg-blue-600 text-white shadow-md"
-                  : "bg-white text-slate-600 hover:bg-slate-200"
+                ? "bg-blue-600 text-white shadow-md"
+                : "bg-white text-slate-600 hover:bg-slate-200"
                 }`}
             >
               Web Architecture
@@ -296,8 +301,8 @@ const Home = () => {
               type="button"
               onClick={() => setActiveTab("seo")}
               className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${activeTab === "seo"
-                  ? "bg-blue-600 text-white shadow-md"
-                  : "bg-white text-slate-600 hover:bg-slate-200"
+                ? "bg-blue-600 text-white shadow-md"
+                : "bg-white text-slate-600 hover:bg-slate-200"
                 }`}
             >
               Local Search SEO
@@ -306,8 +311,8 @@ const Home = () => {
               type="button"
               onClick={() => setActiveTab("funnels")}
               className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${activeTab === "funnels"
-                  ? "bg-blue-600 text-white shadow-md"
-                  : "bg-white text-slate-600 hover:bg-slate-200"
+                ? "bg-blue-600 text-white shadow-md"
+                : "bg-white text-slate-600 hover:bg-slate-200"
                 }`}
             >
               Messaging Funnels
@@ -359,7 +364,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
-              <span className="text-4xl font-extrabold text-blue-200">01</span>
+              <span className="text-4xl font-extrabold text-blue-200" aria-hidden="true">01</span>
               <h3 className="text-lg font-bold text-slate-900">Discovery &amp; Audit</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 We review your business targets, target audience, and current search positioning.
@@ -367,7 +372,7 @@ const Home = () => {
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
-              <span className="text-4xl font-extrabold text-blue-200">02</span>
+              <span className="text-4xl font-extrabold text-blue-200" aria-hidden="true">02</span>
               <h3 className="text-lg font-bold text-slate-900">System Architecture</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 We design and engineer high-speed React layouts optimized for mobile visitors.
@@ -375,7 +380,7 @@ const Home = () => {
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
-              <span className="text-4xl font-extrabold text-blue-200">03</span>
+              <span className="text-4xl font-extrabold text-blue-200" aria-hidden="true">03</span>
               <h3 className="text-lg font-bold text-slate-900">Local SEO &amp; Funnels</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Integrate Google Map ranking optimizations and direct WhatsApp enquiry triggers.
@@ -383,7 +388,7 @@ const Home = () => {
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
-              <span className="text-4xl font-extrabold text-blue-200">04</span>
+              <span className="text-4xl font-extrabold text-blue-200" aria-hidden="true">04</span>
               <h3 className="text-lg font-bold text-slate-900">Launch &amp; Scale</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Deploy with SSL security, Google indexing, and ongoing post-launch support.
@@ -408,6 +413,7 @@ const Home = () => {
               href="https://wa.me/918080224138?text=Hi%20HB%20GrowthSyncro,%20I%20would%20like%20to%20discuss%20a%20digital%20growth%20plan"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Chat with HB GrowthSyncro on WhatsApp to discuss a digital growth plan"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-green-600 hover:bg-green-500 text-white font-semibold text-sm transition-colors shadow-lg"
             >
               <FiMessageCircle className="w-4 h-4" />

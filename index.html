@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,6 +25,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+    </noscript>
 
     <!-- SEO Meta Tags -->
     <title>HB GrowthSyncro | Web Development, AI Automation, SEO & Branding Agency</title>
@@ -52,94 +55,101 @@
     <meta name="twitter:description" content="Build high-converting websites, automated AI workflows, and dominate Google search rankings." />
     <meta name="twitter:image" content="https://hbgrowthsyncro.in/og-banner.jpg" />
 
-    <!-- Cleaned JSON-LD Schema -->
+    <!-- Cleaned JSON-LD Schema using Standard @graph Architecture -->
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "https://hbgrowthsyncro.in/#website",
-        "url": "https://hbgrowthsyncro.in/",
-        "name": "HB GrowthSyncro",
-        "alternateName": ["HB Growth", "HB Syncro", "HB Growth Agency"],
-        "description": "Full-service digital agency specializing in custom web development, AI automation, SEO, and brand strategy."
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "@id": "https://hbgrowthsyncro.in/#organization",
-        "name": "HB GrowthSyncro",
-        "url": "https://hbgrowthsyncro.in/",
-        "logo": "https://hbgrowthsyncro.in/assets/WEBSITE-LOGO-BrIOJFbi.png",
-        "image": "https://hbgrowthsyncro.in/og-banner.jpg",
-        "description": "HB GrowthSyncro builds custom React applications, AI customer acquisition funnels, local & national SEO systems, and graphics.",
-        "telephone": "+918080224138",
-        "email": "hbgrowthsyncro@gmail.com",
-        "priceRange": "$$",
-        "areaServed": ["India", "Worldwide"],
-        "sameAs": [
-          "https://www.instagram.com/hbgrowthsyncro/",
-          "https://www.youtube.com/@hb_growthsyncro",
-          "https://www.linkedin.com/company/hbgrowthsyncro/"
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Digital Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Web Development & Engineering"
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://hbgrowthsyncro.in/#website",
+          "url": "https://hbgrowthsyncro.in/",
+          "name": "HB GrowthSyncro",
+          "alternateName": ["HB Growth", "HB Syncro", "HB Growth Agency"],
+          "description": "Full-service digital agency specializing in custom web development, AI automation, SEO, and brand strategy."
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://hbgrowthsyncro.in/#organization",
+          "name": "HB GrowthSyncro",
+          "url": "https://hbgrowthsyncro.in/",
+          "logo": "https://hbgrowthsyncro.in/assets/WEBSITE-LOGO-BrIOJFbi.png",
+          "image": "https://hbgrowthsyncro.in/og-banner.jpg",
+          "description": "HB GrowthSyncro builds custom React applications, AI customer acquisition funnels, local & national SEO systems, and graphics.",
+          "telephone": "+918080224138",
+          "email": "hbgrowthsyncro@gmail.com",
+          "priceRange": "$$",
+          "areaServed": ["India", "Worldwide"],
+          "sameAs": [
+            "https://www.instagram.com/hbgrowthsyncro/",
+            "https://www.youtube.com/@hb_growthsyncro",
+            "https://www.linkedin.com/company/hbgrowthsyncro/"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "@id": "https://hbgrowthsyncro.in/#service-webdev",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Web Development & Engineering"
+                }
+              },
+              {
+                "@type": "Offer",
+                "@id": "https://hbgrowthsyncro.in/#service-seo",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Search Engine Optimization (SEO)"
+                }
+              },
+              {
+                "@type": "Offer",
+                "@id": "https://hbgrowthsyncro.in/#service-ai",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI Marketing & Workflow Automation"
+                }
+              },
+              {
+                "@type": "Offer",
+                "@id": "https://hbgrowthsyncro.in/#service-design",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Graphic Design & Brand Identity"
+                }
               }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Search Engine Optimization (SEO)"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Marketing & Workflow Automation"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Graphic Design & Brand Identity"
-              }
-            }
-          ]
+            ]
+          }
         }
-      }
-    ]
+      ]
+    }
     </script>
 
     <!-- Google AdSense Account ID -->
     <meta name="google-adsense-account" content="ca-pub-6666747759149644" />
 
-    <!-- Deferred Third-Party Scripts (GTM & AdSense) -->
+    <!-- Safely Initialized Deferred Third-Party Scripts (GTM & AdSense) -->
     <script>
+      // Immediately declare dataLayer and gtag function to prevent JS runtime errors in React
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+
       window.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
-          // Google Ads / Tag Manager
+          // Google Ads / Tag Manager Script
           var gtmScript = document.createElement('script');
           gtmScript.src = "https://www.googletagmanager.com/gtag/js?id=AW-18367091844";
           gtmScript.async = true;
           document.head.appendChild(gtmScript);
 
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
           gtag('js', new Date());
           gtag('config', 'AW-18367091844');
 
-          // Google AdSense
+          // Google AdSense Script
           var adsenseScript = document.createElement('script');
           adsenseScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6666747759149644";
           adsenseScript.async = true;
