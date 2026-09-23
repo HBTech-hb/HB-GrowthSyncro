@@ -14,47 +14,93 @@ import {
   FiShield,
 } from "react-icons/fi";
 
+const SERVICE_HIGHLIGHTS = {
+  web: {
+    title: "High-Performance React Systems",
+    desc: "Custom web applications built with React for lightning-fast speeds, sub-second load times, and seamless mobile responsive layouts that pass Google Core Web Vitals.",
+    metric: "99/100 Google PageSpeed Score",
+    link: "/services",
+  },
+  seo: {
+    title: "Local SEO & Google Maps Top 3",
+    desc: "Optimized search engine strategies, structured schema markup, and Google Business Profile management that put your business in front of nearby high-intent callers.",
+    metric: "Top 3 Local Map Pack Visibility",
+    link: "/services",
+  },
+  funnels: {
+    title: "Automated WhatsApp Lead Workflows",
+    desc: "Instant customer capture systems that direct website visitors straight into your WhatsApp inbox for immediate conversation, qualification, and sales conversion.",
+    metric: "3x Higher Inquiry Conversions",
+    link: "/services",
+  },
+};
+
+const VALUE_CHECKS = [
+  "React Web Engineering",
+  "Google Maps Top 3 Ranking",
+  "WhatsApp Inquiry Automation",
+  "Transparent 5-7 Day Delivery",
+];
+
+const STATS = [
+  { icon: FiZap, value: "50+", label: "Projects Built" },
+  { icon: FiTrendingUp, value: "3.2x", label: "Avg Lead Lift" },
+  { icon: FiClock, value: "5-7 Days", label: "Turnaround" },
+  { icon: FiShield, value: "100%", label: "Code Quality" },
+];
+
+const WORKFLOW_STEPS = [
+  {
+    step: "01",
+    title: "Discovery & Audit",
+    desc: "We review your business targets, target audience, and current search positioning.",
+  },
+  {
+    step: "02",
+    title: "System Architecture",
+    desc: "We design and engineer high-speed React layouts optimized for mobile visitors.",
+  },
+  {
+    step: "03",
+    title: "Local SEO & Funnels",
+    desc: "Integrate Google Map ranking optimizations and direct WhatsApp enquiry triggers.",
+  },
+  {
+    step: "04",
+    title: "Launch & Scale",
+    desc: "Deploy with SSL security, Google indexing, and ongoing post-launch support.",
+  },
+];
+
+const TABS = [
+  { id: "web", label: "Web Architecture" },
+  { id: "seo", label: "Local Search SEO" },
+  { id: "funnels", label: "Messaging Funnels" },
+];
+
 const Home = () => {
   const [activeTab, setActiveTab] = useState("web");
-
-  const serviceHighlights = {
-    web: {
-      title: "High-Performance React Systems",
-      desc: "Custom web applications built with React for lightning-fast speeds, sub-second load times, and seamless mobile responsive layouts that pass Google Core Web Vitals.",
-      metric: "99/100 Google PageSpeed Score",
-      link: "/services",
-    },
-    seo: {
-      title: "Local SEO & Google Maps Top 3",
-      desc: "Optimized search engine strategies, structured schema markup, and Google Business Profile management that put your business in front of nearby high-intent callers.",
-      metric: "Top 3 Local Map Pack Visibility",
-      link: "/services",
-    },
-    funnels: {
-      title: "Automated WhatsApp Lead Workflows",
-      desc: "Instant customer capture systems that direct website visitors straight into your WhatsApp inbox for immediate conversation, qualification, and sales conversion.",
-      metric: "3x Higher Inquiry Conversions",
-      link: "/services",
-    },
-  };
+  const currentService = SERVICE_HIGHLIGHTS[activeTab] || SERVICE_HIGHLIGHTS.web;
 
   return (
     <div className="bg-white text-slate-900 font-poppins">
-
       {/* ================= HERO SECTION ================= */}
       <section
         id="home"
         className="relative min-h-[90vh] pt-12 pb-16 px-6 sm:px-10 overflow-hidden flex items-center border-b border-slate-100"
       >
         {/* Soft Background Glow Accent */}
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[850px] h-[380px] bg-gradient-to-tr from-blue-500/10 via-blue-200/20 to-transparent blur-3xl rounded-full pointer-events-none -z-10" />
+        <div 
+          className="absolute top-10 left-1/2 -translate-x-1/2 w-[850px] h-[380px] bg-gradient-to-tr from-blue-500/10 via-blue-200/20 to-transparent blur-3xl rounded-full pointer-events-none -z-10" 
+          aria-hidden="true"
+        />
 
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-
+            
             {/* LEFT COLUMN: Main Narrative & Primary CTAs */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-
+              
               {/* Trust Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs sm:text-sm font-semibold tracking-wide mb-6 shadow-sm">
                 <span className="flex h-2 w-2 relative">
@@ -64,7 +110,7 @@ const Home = () => {
                 <span>HB GrowthSyncro • Digital Growth Partner</span>
               </div>
 
-              {/* Dynamic Typewriter Headline (CLS Fixed) */}
+              {/* Dynamic Typewriter Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
                 Turn Online Visitors Into A Reliable <br className="hidden sm:inline" />
                 <span className="text-blue-600 inline-block min-h-[1.25em] sm:min-h-[1.15em]">
@@ -85,29 +131,19 @@ const Home = () => {
                 </span>
               </h1>
 
-              {/* High-Impact Description */}
+              {/* Description */}
               <p className="mt-6 text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl">
                 We design and engineer conversion-focused website architectures, local search dominance systems, and automated messaging workflows tailored for local businesses and growing enterprises.
               </p>
 
               {/* Quick Value Checks */}
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full max-w-xl">
-                <div className="flex items-center gap-2.5 text-slate-700 text-sm font-medium">
-                  <FiCheckCircle className="w-4 h-4 text-blue-600 shrink-0" />
-                  <span>React Web Engineering</span>
-                </div>
-                <div className="flex items-center gap-2.5 text-slate-700 text-sm font-medium">
-                  <FiCheckCircle className="w-4 h-4 text-blue-600 shrink-0" />
-                  <span>Google Maps Top 3 Ranking</span>
-                </div>
-                <div className="flex items-center gap-2.5 text-slate-700 text-sm font-medium">
-                  <FiCheckCircle className="w-4 h-4 text-blue-600 shrink-0" />
-                  <span>WhatsApp Inquiry Automation</span>
-                </div>
-                <div className="flex items-center gap-2.5 text-slate-700 text-sm font-medium">
-                  <FiCheckCircle className="w-4 h-4 text-blue-600 shrink-0" />
-                  <span>Transparent 5-7 Day Delivery</span>
-                </div>
+                {VALUE_CHECKS.map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-2.5 text-slate-700 text-sm font-medium">
+                    <FiCheckCircle className="w-4 h-4 text-blue-600 shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
 
               {/* Primary CTAs */}
@@ -131,59 +167,27 @@ const Home = () => {
 
               {/* Statistics Counter Bar */}
               <div className="mt-12 pt-8 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-6 w-full pb-20 md:pb-0">
-                <div>
-                  <div className="flex items-center gap-1.5 text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    <FiZap className="w-5 h-5 text-blue-600" />
-                    <span>50+</span>
+                {STATS.map(({ icon: Icon, value, label }, index) => (
+                  <div key={index}>
+                    <div className="flex items-center gap-1.5 text-2xl sm:text-3xl font-extrabold text-slate-900">
+                      <Icon className="w-5 h-5 text-blue-600" />
+                      <span>{value}</span>
+                    </div>
+                    <p className="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wider">
+                      {label}
+                    </p>
                   </div>
-                  <p className="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wider">
-                    Projects Built
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-1.5 text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    <FiTrendingUp className="w-5 h-5 text-blue-600" />
-                    <span>3.2x</span>
-                  </div>
-                  <p className="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wider">
-                    Avg Lead Lift
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-1.5 text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    <FiClock className="w-5 h-5 text-blue-600" />
-                    <span>5-7 Days</span>
-                  </div>
-                  <p className="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wider">
-                    Turnaround
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-1.5 text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    <FiShield className="w-5 h-5 text-blue-600" />
-                    <span>100%</span>
-                  </div>
-                  <p className="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wider">
-                    Code Quality
-                  </p>
-                </div>
+                ))}
               </div>
 
             </div>
 
-            {/* RIGHT COLUMN: Browser Mockup Showcase with Bouncing Badges */}
+            {/* RIGHT COLUMN: Browser Mockup Showcase */}
             <div className="lg:col-span-5 relative flex items-center justify-center mt-6 lg:mt-0">
-
-              {/* Outer Pulsing Glow */}
               <div className="absolute w-72 h-72 bg-blue-400/20 rounded-full blur-3xl -z-10 animate-pulse" />
 
               {/* Browser Mockup Window */}
               <div className="relative w-full max-w-lg bg-white p-3 rounded-[24px] border border-slate-200 shadow-2xl">
-
-                {/* Fake Window Header Bar */}
                 <div className="flex items-center justify-between px-3 py-2 bg-slate-50 rounded-t-2xl border-b border-slate-100">
                   <div className="flex items-center gap-1.5">
                     <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
@@ -196,7 +200,6 @@ const Home = () => {
                   <div className="w-4" />
                 </div>
 
-                {/* Window Content */}
                 <div className="relative rounded-b-xl overflow-hidden bg-slate-900 h-[360px] sm:h-[400px] flex flex-col justify-between p-6 text-white">
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
@@ -212,7 +215,6 @@ const Home = () => {
                     <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-950/80 px-2.5 py-1 rounded-full border border-blue-800/50">
                       Live Conversion Engine
                     </span>
-                    {/* Changed h3 -> p to fix Accessibility heading hierarchy skip */}
                     <p className="text-xl font-bold text-white mt-3 leading-snug">
                       High-Converting Local Search Architecture
                     </p>
@@ -228,10 +230,9 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-
               </div>
 
-              {/* FLOATING CARD 1: Organic Traffic (Top Right - Bouncing) */}
+              {/* Floating Cards */}
               <div className="absolute -top-4 -right-2 sm:right-0 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-3 animate-bounce [animation-duration:4s]">
                 <div className="p-2.5 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100">
                   <FiTrendingUp className="w-5 h-5" />
@@ -242,7 +243,6 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* FLOATING CARD 2: Direct Enquiries (Bottom Left - Bouncing) */}
               <div className="absolute -bottom-6 -left-2 sm:left-0 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-3 animate-bounce [animation-duration:5s]">
                 <div className="p-2.5 rounded-xl bg-blue-50 text-blue-600 border border-blue-100">
                   <FiMessageCircle className="w-5 h-5" />
@@ -253,7 +253,6 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* FLOATING CARD 3: Google Search (Middle Right - Pulsing) */}
               <div className="hidden sm:flex absolute top-1/2 -right-8 -translate-y-1/2 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-slate-200 shadow-xl items-center gap-3 animate-pulse">
                 <div className="p-2.5 rounded-xl bg-amber-50 text-amber-600 border border-amber-100">
                   <FiSearch className="w-5 h-5" />
@@ -285,54 +284,54 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Tab Buttons */}
-          <div className="flex justify-center gap-2 sm:gap-4 border-b border-slate-200 pb-4">
-            <button
-              type="button"
-              onClick={() => setActiveTab("web")}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${activeTab === "web"
-                ? "bg-blue-600 text-white shadow-md"
-                : "bg-white text-slate-600 hover:bg-slate-200"
-                }`}
-            >
-              Web Architecture
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab("seo")}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${activeTab === "seo"
-                ? "bg-blue-600 text-white shadow-md"
-                : "bg-white text-slate-600 hover:bg-slate-200"
-                }`}
-            >
-              Local Search SEO
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab("funnels")}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${activeTab === "funnels"
-                ? "bg-blue-600 text-white shadow-md"
-                : "bg-white text-slate-600 hover:bg-slate-200"
-                }`}
-            >
-              Messaging Funnels
-            </button>
+          {/* Accessible Tab Navigation */}
+          <div 
+            role="tablist" 
+            aria-label="Technical Pillars"
+            className="flex justify-center gap-2 sm:gap-4 border-b border-slate-200 pb-4"
+          >
+            {TABS.map((tab) => {
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  id={`tab-${tab.id}`}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls={`tabpanel-${tab.id}`}
+                  type="button"
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                    isActive
+                      ? "bg-blue-600 text-white shadow-md"
+                      : "bg-white text-slate-600 hover:bg-slate-200"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
           </div>
 
           {/* Active Tab Panel */}
-          <div className="bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-sm max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+          <div
+            id={`tabpanel-${activeTab}`}
+            role="tabpanel"
+            aria-labelledby={`tab-${activeTab}`}
+            className="bg-white p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-sm max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8"
+          >
             <div className="space-y-4 max-w-xl">
               <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-md border border-blue-100">
-                {serviceHighlights[activeTab].metric}
+                {currentService.metric}
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                {serviceHighlights[activeTab].title}
+                {currentService.title}
               </h3>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                {serviceHighlights[activeTab].desc}
+                {currentService.desc}
               </p>
               <Link
-                to={serviceHighlights[activeTab].link}
+                to={currentService.link}
                 className="inline-flex items-center gap-2 text-blue-600 font-bold text-sm hover:gap-3 transition-all"
               >
                 <span>Explore Full Specs</span>
@@ -363,37 +362,17 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
-              <span className="text-4xl font-extrabold text-blue-200" aria-hidden="true">01</span>
-              <h3 className="text-lg font-bold text-slate-900">Discovery &amp; Audit</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                We review your business targets, target audience, and current search positioning.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
-              <span className="text-4xl font-extrabold text-blue-200" aria-hidden="true">02</span>
-              <h3 className="text-lg font-bold text-slate-900">System Architecture</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                We design and engineer high-speed React layouts optimized for mobile visitors.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
-              <span className="text-4xl font-extrabold text-blue-200" aria-hidden="true">03</span>
-              <h3 className="text-lg font-bold text-slate-900">Local SEO &amp; Funnels</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Integrate Google Map ranking optimizations and direct WhatsApp enquiry triggers.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
-              <span className="text-4xl font-extrabold text-blue-200" aria-hidden="true">04</span>
-              <h3 className="text-lg font-bold text-slate-900">Launch &amp; Scale</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Deploy with SSL security, Google indexing, and ongoing post-launch support.
-              </p>
-            </div>
+            {WORKFLOW_STEPS.map((item, idx) => (
+              <div key={idx} className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3 relative">
+                <span className="text-4xl font-extrabold text-blue-200" aria-hidden="true">
+                  {item.step}
+                </span>
+                <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -429,7 +408,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };

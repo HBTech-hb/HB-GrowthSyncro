@@ -20,8 +20,11 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://hbgrowthsyncro.in/" />
 
-    <!-- Non-Render Blocking Google Fonts -->
+    <!-- Critical Assets Preconnect (Fixes LCP Delay) -->
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Non-Render Blocking Google Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
     <noscript>
@@ -130,9 +133,8 @@
     <!-- Google AdSense Account ID -->
     <meta name="google-adsense-account" content="ca-pub-6666747759149644" />
 
-    <!-- Performance-Optimized Third-Party Script Loader (GTM & AdSense) -->
+    <!-- Deferred Third-Party Scripts -->
     <script>
-      // Immediately initialize dataLayer and gtag function to prevent runtime React errors
       window.dataLayer = window.dataLayer || [];
       function gtag(){ dataLayer.push(arguments); }
       window.gtag = gtag;
@@ -142,7 +144,6 @@
         if (thirdPartyLoaded) return;
         thirdPartyLoaded = true;
 
-        // Google Ads / Tag Manager Script
         var gtmScript = document.createElement('script');
         gtmScript.src = "https://www.googletagmanager.com/gtag/js?id=AW-18367091844";
         gtmScript.async = true;
@@ -151,7 +152,6 @@
         gtag('js', new Date());
         gtag('config', 'AW-18367091844');
 
-        // Google AdSense Script
         var adsenseScript = document.createElement('script');
         adsenseScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6666747759149644";
         adsenseScript.async = true;
@@ -159,8 +159,7 @@
         document.head.appendChild(adsenseScript);
       }
 
-      // Trigger script loading on first user interaction or after a 4-second delay
-      ['touchstart', 'scroll', 'mousemove', 'keydown'].forEach(function(ev) {
+      ['touchstart', 'scroll', 'mousemove'].forEach(function(ev) {
         window.addEventListener(ev, loadThirdPartyScripts, { passive: true, once: true });
       });
       setTimeout(loadThirdPartyScripts, 4000);
