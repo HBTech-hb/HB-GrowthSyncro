@@ -90,17 +90,17 @@ const Home = () => {
         className="relative min-h-[90vh] pt-12 pb-16 px-6 sm:px-10 overflow-hidden flex items-center border-b border-slate-100"
       >
         {/* Soft Background Glow Accent */}
-        <div 
-          className="absolute top-10 left-1/2 -translate-x-1/2 w-[850px] h-[380px] bg-gradient-to-tr from-blue-500/10 via-blue-200/20 to-transparent blur-3xl rounded-full pointer-events-none -z-10" 
+        <div
+          className="absolute top-10 left-1/2 -translate-x-1/2 w-[850px] h-[380px] bg-gradient-to-tr from-blue-500/10 via-blue-200/20 to-transparent blur-3xl rounded-full pointer-events-none -z-10"
           aria-hidden="true"
         />
 
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            
+
             {/* LEFT COLUMN: Main Narrative & Primary CTAs */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-              
+
               {/* Trust Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs sm:text-sm font-semibold tracking-wide mb-6 shadow-sm">
                 <span className="flex h-2 w-2 relative">
@@ -110,10 +110,10 @@ const Home = () => {
                 <span>HB GrowthSyncro • Digital Growth Partner</span>
               </div>
 
-              {/* Dynamic Typewriter Headline */}
+              {/* Dynamic Typewriter Headline with Fixed Reserved Vertical Block */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
                 Turn Online Visitors Into A Reliable <br className="hidden sm:inline" />
-                <span className="text-blue-600 block min-h-[2.8rem] sm:min-h-[3.5rem] lg:min-h-[4rem]">
+                <span className="text-blue-600 block min-h-[3.6rem] sm:min-h-[3.8rem] lg:min-h-[4.2rem] items-center">
                   <Typewriter
                     words={[
                       "Customer Engine.",
@@ -201,11 +201,12 @@ const Home = () => {
                 </div>
 
                 <div className="relative rounded-b-xl overflow-hidden bg-slate-900 h-[360px] sm:h-[400px] flex flex-col justify-between p-6 text-white">
+                  {/* WebP compressed image request with explicit aspect ratio dimensions */}
                   <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=75&fm=webp"
                     alt="HB GrowthSyncro Production Architecture Showcase"
-                    width="1000"
-                    height="667"
+                    width="800"
+                    height="533"
                     loading="eager"
                     fetchPriority="high"
                     className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay"
@@ -285,8 +286,8 @@ const Home = () => {
           </div>
 
           {/* Accessible Tab Navigation */}
-          <div 
-            role="tablist" 
+          <div
+            role="tablist"
             aria-label="Technical Pillars"
             className="flex justify-center gap-2 sm:gap-4 border-b border-slate-200 pb-4"
           >
