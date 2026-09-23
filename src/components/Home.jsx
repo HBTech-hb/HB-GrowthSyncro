@@ -113,7 +113,7 @@ const Home = () => {
               {/* Dynamic Typewriter Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
                 Turn Online Visitors Into A Reliable <br className="hidden sm:inline" />
-                <span className="text-blue-600 inline-block min-h-[1.25em] sm:min-h-[1.15em]">
+                <span className="text-blue-600 block min-h-[2.8rem] sm:min-h-[3.5rem] lg:min-h-[4rem]">
                   <Typewriter
                     words={[
                       "Customer Engine.",
