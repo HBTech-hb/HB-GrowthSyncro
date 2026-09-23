@@ -14,18 +14,18 @@ const About = () => {
     <section id="about" className="py-16 sm:py-24 px-6 sm:px-10 bg-white text-slate-900 font-poppins">
       <div className="max-w-7xl mx-auto space-y-20">
 
-        {/* SECTION 1: HERO & HEADING (SEO OPTIMIZED H1) */}
+        {/* SECTION 1: HERO & HEADING */}
         <div className="text-center max-w-4xl mx-auto">
           <span className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-4 border border-blue-100">
-            Web Development & Local SEO Growth Agency
+            Digital Growth Partner
           </span>
 
           <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Custom Web Development & Local SEO Services: Turn Online Visitors Into <span className="text-blue-600">High-Paying Customers</span>
+            Helping Local Businesses Turn Online Visitors Into <span className="text-blue-600">Real Customers</span>
           </h1>
 
           <p className="text-slate-600 mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-            HB GrowthSyncro engineers fast React web platforms and local search systems that empower businesses in Maharashtra and across India to generate direct calls, WhatsApp leads, and real commercial revenue.
+            HB GrowthSyncro builds simple, high-performing digital systems that help small businesses get more calls, WhatsApp messages, and direct enquiries — not just followers or views.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ const About = () => {
 
           {/* Blue Main Heading */}
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1a56db] tracking-tight relative z-10">
-            About HB GrowthSyncro – Engineering Web Systems for Local Growth
+            About Us
           </h2>
 
           {/* Paragraph 1 */}
@@ -57,19 +57,21 @@ const About = () => {
             </p>
           </div>
 
-          {/* Paragraph 3 */}
+          {/* Paragraph 3: Broken Down Line-by-Line with Line Breaks */}
           <div className="space-y-4 relative z-10">
+
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-              <strong className="font-bold text-[#1a56db]">“HB”</strong> — Represents personal accountability and direct engineering. You collaborate directly with the technical specialists building your platform, eliminating agency middlemen and bureaucratic delays.
+              <strong className="font-bold text-slate-900 text-[#1a56db]">“HB”</strong> — Represents personal accountability and direct engineering. You collaborate directly with the technical specialists building your platform, eliminating agency middlemen and bureaucratic delays.
             </p>
 
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-              <strong className="font-bold text-[#1a56db]">“Growth”</strong> — Prioritizes commercial outcomes over vanity metrics: qualified phone consultations, direct WhatsApp bookings, and sustained local customer acquisition.
+              <strong className="font-bold text-slate-900 text-[#1a56db]">“Growth”</strong> — Prioritizes commercial outcomes over vanity metrics: qualified phone consultations, direct WhatsApp bookings, and sustained local customer acquisition.
             </p>
 
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-              <strong className="font-bold text-[#1a56db]">“Syncro”</strong> — Short for synchronize. Seamlessly uniting your custom web application, Google Business search presence, and messaging lead funnels into a cohesive, high-converting ecosystem.
+              <strong className="font-bold text-slate-900 text-[#1a56db]">“Syncro”</strong> — Short for synchronize. Seamlessly uniting your custom web application, Google Business search presence, and messaging lead funnels into a cohesive, high-converting ecosystem.
             </p>
+
           </div>
 
           {/* Paragraph 4 */}
@@ -81,6 +83,7 @@ const About = () => {
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed relative z-10">
             Our commitment is anchored in transparent communication, transparent pricing, and providing regional businesses with permanent ownership of their digital presence.
           </p>
+
         </div>
 
         {/* SECTION 3: MISSION & VISION */}
@@ -90,7 +93,7 @@ const About = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-blue-400 block mb-2">
-                Our Commercial Purpose
+                Our Purpose
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">Our Mission</h2>
               <p className="text-slate-300 text-base leading-relaxed">
@@ -103,7 +106,7 @@ const About = () => {
           <div className="p-8 sm:p-10 rounded-[24px] bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">
-                Strategic Direction
+                The Future
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-slate-900">Our Vision</h2>
               <p className="text-slate-600 text-base leading-relaxed">
@@ -116,54 +119,54 @@ const About = () => {
         {/* SECTION 4: WHAT WE DO */}
         <div className="bg-slate-50 p-8 md:p-12 rounded-[24px] border border-slate-200">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">Core Services</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">What We Do</span>
             <h2 className="text-3xl font-bold text-slate-900">
-              End-to-End Digital Solutions Designed for High Conversion
+              Complete Digital Solutions Built for Growth
             </h2>
             <p className="text-slate-600 text-sm sm:text-base mt-2">
-              We engineer and manage your entire digital presence so you can focus on scaling operational capacity.
+              We manage your entire digital presence so you can focus on running your operations.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ServiceCard img={socialMedia} title="Social Media Branding" desc="Build regional brand authority, maintain visual consistency, and convert engaged followers into leads." />
-            <ServiceCard img={reelEditing} title="Short-Form Video Production" desc="Engaging, high-retention video reels engineered to capture consumer attention on mobile networks." />
-            <ServiceCard img={canvaDesign} title="Conversion Design & UI" desc="High-quality, brand-focused marketing assets and conversion-optimized graphic visuals." />
-            <ServiceCard img={contentStrategy} title="Lead Funnels & Strategy" desc="Tailored inquiry funnels that direct incoming search traffic into immediate WhatsApp conversations." />
+            <ServiceCard img={socialMedia} title="Social Media" desc="Build local authority, maintain visual brand consistency, and engage your audience." />
+            <ServiceCard img={reelEditing} title="Reels Editing" desc="Engaging, high-retention video content engineered to capture consumer attention." />
+            <ServiceCard img={canvaDesign} title="Design Work" desc="High-quality, conversion-focused visual creatives and marketing assets." />
+            <ServiceCard img={contentStrategy} title="Strategy & Funnels" desc="Tailored inquiry funnels that convert incoming website visitors into direct customer inquiries." />
           </div>
         </div>
 
         {/* SECTION 5: WHAT MAKES US BETTER */}
         <div>
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">Our Competitive Advantage</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">Our Advantage</span>
             <h2 className="text-3xl font-bold text-slate-900">
-              Why Choose HB GrowthSyncro Over Traditional Digital Agencies?
+              What Makes Us Different From Agencies?
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 rounded-[20px] bg-white border border-slate-200 shadow-sm">
               <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold mb-4">1</div>
-              <h3 className="font-bold text-lg text-slate-900 mb-2">Revenue & Leads Over Likes</h3>
+              <h3 className="font-bold text-lg text-slate-900 mb-2">Leads Over Likes</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Traditional agencies focus on superficial views. We engineer lead pipelines that prompt local customers to initiate direct phone consultations and WhatsApp messages.
+                Agencies focus on viral views and vanity metrics. We focus on getting actual customers to call your business or send a direct WhatsApp enquiry.
               </p>
             </div>
 
             <div className="p-6 rounded-[20px] bg-white border border-slate-200 shadow-sm">
               <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold mb-4">2</div>
-              <h3 className="font-bold text-lg text-slate-900 mb-2">Technical Transparency</h3>
+              <h3 className="font-bold text-lg text-slate-900 mb-2">No Complex Jargon</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                We speak plain language. You retain complete clarity on your web architecture, local search milestones, and system performance benchmarks.
+                We speak plain language. You always understand what is being built, how the architecture functions, and what performance benchmarks to expect.
               </p>
             </div>
 
             <div className="p-6 rounded-[20px] bg-white border border-slate-200 shadow-sm">
               <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold mb-4">3</div>
-              <h3 className="font-bold text-lg text-slate-900 mb-2">Rapid 5-to-7 Day Deployment</h3>
+              <h3 className="font-bold text-lg text-slate-900 mb-2">Speed & Reliability</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                While agencies take months to iterate, we build and deploy production-grade React web systems and custom conversion assets in just 5 to 7 business days.
+                Most agencies take months to iterate. We engineer high-quality, fully functioning web systems and designs in just 5 to 7 business days.
               </p>
             </div>
           </div>
@@ -177,32 +180,32 @@ const About = () => {
           </div>
           <div className="p-6 sm:p-8 rounded-[24px] bg-slate-50 border border-slate-100 text-center">
             <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">20+</span>
-            <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mt-2">Businesses Scaled</p>
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mt-2">Businesses Helped</p>
           </div>
           <div className="p-6 sm:p-8 rounded-[24px] bg-slate-50 border border-slate-100 text-center">
             <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">5★</span>
-            <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mt-2">Client Satisfaction</p>
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mt-2">Client Support</p>
           </div>
           <div className="p-6 sm:p-8 rounded-[24px] bg-slate-50 border border-slate-100 text-center">
             <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">5-7 Days</span>
-            <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mt-2">Average Delivery</p>
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mt-2">Fast Delivery</p>
           </div>
         </div>
 
         {/* SECTION 7: WHY CHOOSE US */}
         <div className="bg-slate-50 p-8 sm:p-12 rounded-[24px] border border-slate-100">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">Key Strengths</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-2">Why Us</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Why Growing Businesses Trust HB GrowthSyncro
+              Why Businesses Choose HB GrowthSyncro
             </h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <Feature img={creativeContent} text="Clear & Impactful Messaging" />
-            <Feature img={clientSupport} text="Direct Specialist Support" />
-            <Feature img={fastResponse} text="Fast Turnaround Times" />
-            <Feature img={affordablePricing} text="Transparent Pricing" />
+            <Feature img={creativeContent} text="Clear & Simple Content" />
+            <Feature img={clientSupport} text="Direct Communication" />
+            <Feature img={fastResponse} text="Fast Delivery" />
+            <Feature img={affordablePricing} text="Budget Friendly" />
           </div>
         </div>
 
@@ -211,21 +214,21 @@ const About = () => {
           <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-blue-600/20 rounded-full blur-2xl pointer-events-none" />
 
           <h2 className="text-3xl font-bold mb-3 text-white">
-            Ready to Build a Fast, High-Converting Web System?
+            Ready to Sync Your Business Growth?
           </h2>
 
           <p className="text-slate-400 mb-8 max-w-xl mx-auto text-sm sm:text-base">
-            Connect directly with our engineering team to construct a web platform that delivers steady WhatsApp leads and phone calls.
+            Let’s build a high-performance digital presence that brings you real customer enquiries through WhatsApp and your website.
           </p>
 
           <a
-            href="https://wa.me/918080224138?text=Hi%20HB%20GrowthSyncro%2C%20I%20want%20to%20build%20a%20high-converting%20website%20for%20my%20business."
+            href="https://wa.me/918080224138?text=Hi%20I%20want%20a%20website%20for%20my%20business"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Contact HB GrowthSyncro on WhatsApp for web development inquiry"
+            aria-label="Connect with HB GrowthSyncro on WhatsApp"
             className="inline-block px-8 py-4 bg-green-600 text-white font-semibold rounded-full hover:bg-green-500 transition-colors shadow-lg shadow-green-600/20"
           >
-            Start Project on WhatsApp
+            Contact on WhatsApp
           </a>
         </div>
 

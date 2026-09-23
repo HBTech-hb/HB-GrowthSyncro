@@ -24,7 +24,6 @@ const Navbar = ({ activeSection }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Scale down trigger
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -32,7 +31,6 @@ const Navbar = ({ activeSection }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile drawer on route change
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
@@ -74,13 +72,12 @@ const Navbar = ({ activeSection }) => {
               : "bg-white/70 border-white/50 py-4"
           }`}
         >
-          {/* Centered Dynamic Logo: Big initially (h-16), scales down nicely on scroll (h-10) */}
           <Link to="/" aria-label="HB GrowthSyncro Home" className="flex items-center justify-center">
             <img
               src={logo}
               alt="HB GrowthSyncro Logo"
-              className={`w-auto object-contain transition-all duration-1000 ease-in-out origin-center ${
-                isScrolled ? "h-15 scale-100" : "h-26 scale-150 drop-shadow-sm"
+              className={`w-auto object-contain transition-all duration-500 ease-in-out origin-center ${
+                isScrolled ? "h-10 scale-100" : "h-16 scale-125 drop-shadow-sm"
               }`}
             />
           </Link>
@@ -88,7 +85,7 @@ const Navbar = ({ activeSection }) => {
       </div>
 
       {/* ================= Desktop Header ================= */}
-      <div className="hidden md:block sticky top-3 z-[9999] px-6 my-3">
+      <header className="hidden md:block sticky top-3 z-[9999] px-6 my-3">
         <nav
           className={`mx-auto max-w-5xl rounded-2xl transition-all duration-300 backdrop-blur-xl border ${
             isScrolled
@@ -97,13 +94,14 @@ const Navbar = ({ activeSection }) => {
           }`}
         >
           <div className="flex items-center justify-between max-w-4xl mx-auto px-6">
-            <Link to="/" aria-label="HB GrowthSyncro Home">
+            <Link to="/" aria-label="HB GrowthSyncro Home" className="flex items-center">
               <img
                 src={logo}
                 alt="HB GrowthSyncro Logo"
-                className={`w-auto object-contain transition-all duration-300 ${
-                  isScrolled ? "h-9" : "h-11"
-                }`}
+                width="182"
+                height="48"
+                className="h-12 w-auto object-contain"
+                fetchPriority="high"
               />
             </Link>
 
@@ -136,7 +134,7 @@ const Navbar = ({ activeSection }) => {
             </Link>
           </div>
         </nav>
-      </div>
+      </header>
 
       {/* ================= Mobile Bottom Floating Nav Bar ================= */}
       <div className="md:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-[99990] w-[90%] max-w-md">
@@ -156,7 +154,6 @@ const Navbar = ({ activeSection }) => {
             </Link>
           ))}
 
-          {/* More Items Drawer Trigger */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             type="button"
@@ -177,7 +174,7 @@ const Navbar = ({ activeSection }) => {
       {/* ================= Slide-Up Drawer for Additional Pages ================= */}
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 z-[99989] bg-slate-900/50 backdrop-blur-sm flex justify-center items-end pb-20 px-4">
-          <div className="w-full max-w-md bg-white rounded-3xl p-5 shadow-2xl border border-slate-100 space-y-3 animate-in slide-in-from-bottom duration-200">
+          <div className="w-full max-w-md bg-white rounded-3xl p-5 shadow-2xl border border-slate-100 space-y-3">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
                 Explore Pages

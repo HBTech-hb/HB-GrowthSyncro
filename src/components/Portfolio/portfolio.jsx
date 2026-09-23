@@ -24,17 +24,21 @@ const Portfolio = () => {
         if (error) throw error;
 
         // Merge live Supabase data with static projects in the background
-        if (data && data.length > 0 && isMounted) {
-          const liveProjects = data;
-          // Avoid duplicate items if IDs match
-          const combined = [
-            ...liveProjects,
-            ...staticProjects.filter(sp => !liveProjects.some(lp => lp.id === sp.id))
-          ];
-          setProjectsData(combined);
+        if (data && Array.isArray(data) && data.length > 0 && isMounted) {
+          setProjectsData((prevProjects) => {
+            const liveProjects = data;
+            return [
+              ...liveProjects,
+              ...prevProjects.filter((sp) => !liveProjects.some((lp) => lp.id === sp.id)),
+            ];
+          });
         }
       } catch (err) {
-        console.error("Error updating portfolio projects:", err.message);
+        // Fallback gracefully without alarming red console errors
+        if (isMounted) {
+          const errorMessage = err?.message || err?.error_description || "Network connection failed";
+          console.warn(`[Portfolio] Using static offline data (${errorMessage})`);
+        }
       }
     };
 
@@ -63,8 +67,6 @@ const Portfolio = () => {
   const handleCloseModal = useCallback(() => {
     setSelectedProject(null);
   }, []);
-
-  // Removed blocking 'if (loading)' spinner block!
 
   return (
     <section id="portfolio" className="py-20 lg:py-32 px-6 sm:px-10 bg-white text-slate-900">

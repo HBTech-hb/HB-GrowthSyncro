@@ -40,7 +40,7 @@ const Home = () => {
 
   return (
     <div className="bg-white text-slate-900 font-poppins">
-      
+
       {/* ================= HERO SECTION ================= */}
       <section
         id="home"
@@ -51,10 +51,10 @@ const Home = () => {
 
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            
+
             {/* LEFT COLUMN: Main Narrative & Primary CTAs */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-              
+
               {/* Trust Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs sm:text-sm font-semibold tracking-wide mb-6 shadow-sm">
                 <span className="flex h-2 w-2 relative">
@@ -68,7 +68,7 @@ const Home = () => {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
                 Turn Online Visitors Into A Reliable <br className="hidden sm:inline" />
                 <span className="text-blue-600 inline-block">
-                  <Typewriter
+                  <Typewriter className="display: inline-block; min-height: 1.5em; contain: layout style;"
                     words={[
                       "Customer Engine.",
                       "Lead Generator.",
@@ -130,7 +130,7 @@ const Home = () => {
               </div>
 
               {/* Statistics Counter Bar */}
-<div className="mt-12 pt-8 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-6 w-full pb-20 md:pb-0">
+              <div className="mt-12 pt-8 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-6 w-full pb-20 md:pb-0">
                 <div>
                   <div className="flex items-center gap-1.5 text-2xl sm:text-3xl font-extrabold text-slate-900">
                     <FiZap className="w-5 h-5 text-blue-600" />
@@ -176,13 +176,13 @@ const Home = () => {
 
             {/* RIGHT COLUMN: Browser Mockup Showcase with Bouncing Badges */}
             <div className="lg:col-span-5 relative flex items-center justify-center mt-6 lg:mt-0">
-              
+
               {/* Outer Pulsing Glow */}
               <div className="absolute w-72 h-72 bg-blue-400/20 rounded-full blur-3xl -z-10 animate-pulse" />
 
               {/* Browser Mockup Window */}
               <div className="relative w-full max-w-lg bg-white p-3 rounded-[24px] border border-slate-200 shadow-2xl">
-                
+
                 {/* Fake Window Header Bar */}
                 <div className="flex items-center justify-between px-3 py-2 bg-slate-50 rounded-t-2xl border-b border-slate-100">
                   <div className="flex items-center gap-1.5">
@@ -203,7 +203,7 @@ const Home = () => {
                     alt="HB GrowthSyncro Production Architecture Showcase"
                     className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay"
                   />
-                  
+
                   <div className="relative z-10">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-950/80 px-2.5 py-1 rounded-full border border-blue-800/50">
                       Live Conversion Engine
@@ -285,33 +285,30 @@ const Home = () => {
             <button
               type="button"
               onClick={() => setActiveTab("web")}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
-                activeTab === "web"
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${activeTab === "web"
                   ? "bg-blue-600 text-white shadow-md"
                   : "bg-white text-slate-600 hover:bg-slate-200"
-              }`}
+                }`}
             >
               Web Architecture
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("seo")}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
-                activeTab === "seo"
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${activeTab === "seo"
                   ? "bg-blue-600 text-white shadow-md"
                   : "bg-white text-slate-600 hover:bg-slate-200"
-              }`}
+                }`}
             >
               Local Search SEO
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("funnels")}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
-                activeTab === "funnels"
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${activeTab === "funnels"
                   ? "bg-blue-600 text-white shadow-md"
                   : "bg-white text-slate-600 hover:bg-slate-200"
-              }`}
+                }`}
             >
               Messaging Funnels
             </button>

@@ -26,6 +26,11 @@ const FAQ = lazy(() => import("./components/FAQ"));
 const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
 const TermsAndConditions = lazy(() => import("./components/TermsAndConditions"));
 
+// Dedicated Service Pages
+const WebDevelopment = lazy(() => import("./pages/WebDevelopment"));
+const AISolutions = lazy(() => import("./pages/AISolutions"));
+const LocalSEO = lazy(() => import("./pages/LocalSEO"));
+
 // Lazy-Loaded Admin Routes (Keeps heavy admin scripts out of public visitor bundles)
 const AdminLogin = lazy(() => import("./admin/AdminLogin"));
 const ProtectedRoute = lazy(() => import("./admin/ProtectedRoute"));
@@ -72,6 +77,21 @@ const SEOPageTitle = () => {
         title: "Services | Web Development, SEO, AI Automation & Branding",
         description:
           "Explore our full suite of digital solutions: Custom React Engineering, Search Engine Optimization, AI Lead Workflows, and Brand Graphic Design.",
+      },
+      "/web-development": {
+        title: "Custom Web Development & Software Engineering Services | HB GrowthSyncro",
+        description:
+          "High-converting React and Next.js web applications engineered for speed, mobile responsiveness, and lead conversion.",
+      },
+      "/ai-solutions": {
+        title: "AI Marketing & Workflow Automation Services | HB GrowthSyncro",
+        description:
+          "Automate lead management, customer support, and internal CRM workflows with custom AI agents and integration tools.",
+      },
+      "/local-seo": {
+        title: "Local SEO & Google Business Profile Optimization | HB GrowthSyncro",
+        description:
+          "Dominate local Google search rankings, get listed in the Map 3-Pack, and generate direct customer inquiry calls.",
       },
       "/portfolio": {
         title: "Portfolio & Work Showcase | HB GrowthSyncro",
@@ -183,6 +203,30 @@ const MainContent = () => {
           element={
             <PublicLayout>
               <Services />
+            </PublicLayout>
+          }
+        />
+        <Route
+          path="/web-development"
+          element={
+            <PublicLayout>
+              <WebDevelopment />
+            </PublicLayout>
+          }
+        />
+        <Route
+          path="/ai-solutions"
+          element={
+            <PublicLayout>
+              <AISolutions />
+            </PublicLayout>
+          }
+        />
+        <Route
+          path="/local-seo"
+          element={
+            <PublicLayout>
+              <LocalSEO />
             </PublicLayout>
           }
         />
